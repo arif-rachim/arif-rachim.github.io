@@ -3,6 +3,8 @@ import theme from "./theme";
 import {useEffect} from "react";
 import ToolBar from "./ToolBar";
 import pic_one from "./pics/pic-one.jpg";
+import AboutPage from "./AboutPage";
+import SkillsPage from "./SkillsPage";
 export default function App() {
     useEffect(checkIfFontIsReady, []);
     return <Vertical style={{
@@ -24,12 +26,11 @@ export default function App() {
                 <Vertical style={{borderBottom:`1px solid ${theme.font.color}`}}></Vertical>
             </Vertical>
         </Vertical>
-        <Vertical style={{padding:'1rem',fontSize:'1.1rem',fontWeight:'normal'}}>
-            <p style={{marginTop:'1rem'}}>Finally, on February 24, I purchased the domain name www.rach.im.</p>
-            <p style={{marginTop:'1rem'}}>Then I began developing a website using my preferred stack technology. React!.</p>
-            <p style={{marginTop:'1rem'}}>This website has also been asked for by my wife for a long time, so I started to think about filling this page with things.</p>
+        <AboutPage/>
+        <SkillsPage/>
+        <Vertical hAlign={'center'} style={{padding:'1rem'}}>
+            @Dubai 2022
         </Vertical>
-
     </Vertical>
 }
 
