@@ -4,7 +4,7 @@
   "description": "Arif Rachim website",
   "main": "index.js",
   "scripts": {
-    "build": "react-scripts build&&mv build docs",
+    "build": "rm -rf docs&&react-scripts build&&mv build docs",
     "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
