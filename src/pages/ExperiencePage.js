@@ -12,7 +12,7 @@ export default function ExperiencePage() {
             <Vertical>Abu Dhabi</Vertical>
         </Vertical>
         <Vertical style={{fontWeight: 300, fontFamily: theme.font.display}}>
-            <p style={{marginBottom: '1rem'}}>Arif Rachim is responsible for architecting and developing enterprise
+            <p style={{marginBottom: '1rem'}}>Responsible for architecting and developing enterprise
                 resource planning (ERP) applications, particularly in the front end and mobile versions, for one of Abu
                 Dhabi's government institutions.</p>
             <p style={{marginBottom: '1rem'}}>Due to the organization's security and distinctiveness, it requires an
@@ -26,15 +26,15 @@ export default function ExperiencePage() {
             <p style={{marginBottom: '1rem'}}>Furthermore, a mobile application is required, which enables the firm to
                 send personnel to remote regions without access to the internet or a network, where they can work
                 offline and have their data synchronized back to the center. with the use of encrypted files.</p>
-            <p style={{marginBottom: '1rem'}}>Arif Rachim began developing an application for this ERP by breaking down
-                the needs the system will employ into individual components. Arif Rachim began by creating minor
+            <p style={{marginBottom: '1rem'}}>Arif began developing an application for this ERP by breaking down
+                the needs the system will employ into individual components. He began by creating minor
                 components from scratch, eventually covering approximately 80% of the use cases.</p>
-            <p style={{marginBottom: '1rem'}}>Arif Rachim then started by creating some of the functions required by ERP
+            <p style={{marginBottom: '1rem'}}>Then started by creating some of the functions required by ERP
                 as a proof of concept and pilot project using the components that had been prepared. After several
-                iterations, Arif Rachim guides the team on how to use the developed components.</p>
-            <p style={{marginBottom: '1rem'}}>Arif Rachim is responsible for assisting and training colleagues in order
+                iterations, He guides the team on how to use the developed components.</p>
+            <p style={{marginBottom: '1rem'}}>Responsible for assisting and training colleagues in order
                 to ensure that we have the expertise necessary to design apps that meet the expectations of users.</p>
-            <p style={{marginBottom: '1rem'}}>Arif Rachim is still actively involved in application development to this
+            <p style={{marginBottom: '1rem'}}>Arif is still actively involved in application development to this
                 day, tackling new issues based on customer requirements and teaching colleagues how to construct
                 effective programs.</p>
         </Vertical>
