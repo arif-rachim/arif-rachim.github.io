@@ -1,21 +1,9 @@
-import Page, {PageSubTitle, PageTitle} from "./Page";
-import LabelText, {HorizontalLabel} from "./LabelText";
-import Vertical from "./layout/Vertical";
-import theme from "./theme";
+import Page, {PageSubTitle} from "../components/Page";
+import Vertical from "../components/Vertical";
+import theme from "../theme";
 export default function AboutPage() {
-    return <Page>
-        <PageTitle text={'About'}/>
-        <Vertical style={{marginBottom:'2rem'}}>
-        <HorizontalLabel width={'8rem'}>
-            <LabelText label={'Name'}>Achmad Arif Rachim</LabelText>
-            <LabelText label={'Email'}>a.arif.r@gmail.com</LabelText>
-            <LabelText label={'Phone'}>(+971)50-9018075</LabelText>
-            <LabelText label={'Date of Birth'}>29 January 1982</LabelText>
-            <LabelText label={'Address'}>Marina Diamond 5, Dubai Marina, Dubai, United Arab Emirates</LabelText>
-            <LabelText label={'Nationality'}>Indonesia</LabelText>
-        </HorizontalLabel>
-        </Vertical>
-        <PageSubTitle text={'Professional Profile'}/>
+    return <Page id={'about'}>
+        <PageSubTitle text={'About'}/>
         <Vertical style={{fontWeight:300,fontFamily:theme.font.display}}>
             <p style={{marginBottom:'1rem'}}>Arif Rachim is an accomplished software engineer who has spent the most of his professional career designing enterprise resource planning (ERP) solutions.</p>
             <p style={{marginBottom:'1rem'}}>He began his career as a Java Developer and has since earned the Sun Certified Enterprise Architect designation.</p>

@@ -10,5 +10,6 @@
 export default function Vertical({hAlign,vAlign,style,...props}){
     const alignItems = {left:'flex-start',right:'flex-end',center:'center'}[hAlign];
     const justifyContent = {top:'flex-start',bottom:'flex-end',center:'center'}[vAlign];
-    return <div style={{display:'flex',flexDirection:'column',justifyContent,alignItems,...style}}>{props.children}</div>
+    const {children,...properties} = props;
+    return <div style={{display:'flex',flexDirection:'column',justifyContent,alignItems,...style}} {...properties}>{children}</div>
 }

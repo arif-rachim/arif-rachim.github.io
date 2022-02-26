@@ -1,20 +1,16 @@
-import Page, {PageSubTitle, PageTitle} from "./Page";
-import LabelText, {HorizontalLabel} from "./LabelText";
-import Vertical from "./layout/Vertical";
-import Horizontal from "./layout/Horizontal";
-import theme from "./theme";
+import Page, {PageSubTitle, PageTitle} from "../components/Page";
+import LabelText, {HorizontalLabel} from "../components/LabelText";
+import Vertical from "../components/Vertical";
+import Horizontal from "../components/Horizontal";
+import theme from "../theme";
 import GaugeChart from "react-gauge-chart";
 
 export default function SkillsPage(){
-    return <Page backgroundColor={theme.background.color3}>
-        <PageTitle text={'Skills'}/>
+    return <Page id={'skills'}>
         <PageSubTitle text={'Arif Rachim skill set'}/>
-        <Vertical style={{fontWeight:300,fontFamily:theme.font.display,marginBottom:'1rem'}}>
-            Following demonstrate Arif Rachim skill set.
-        </Vertical>
         <Horizontal style={{marginBottom:'1rem'}}>
             <Vertical hAlign={'center'} style={{width:'50%'}}>
-                <Vertical hAlign={'center'}>HTML 5</Vertical>
+                <Vertical hAlign={'center'}>HTML 5 / Mobile</Vertical>
                 <GaugeChart nrOfLevels={30}
                             colors={["#FF5F6D", "#FFC371"]}
                             arcWidth={0.3}
