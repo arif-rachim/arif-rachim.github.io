@@ -17,7 +17,7 @@ export default function App() {
         height: '100%',
         fontFamily: theme.font.display
     }} hAlign={'center'}>
-        <Vertical style={{maxWidth:800}}>
+        <Vertical style={{maxWidth:800,width:'100vw'}}>
         <ToolBar/>
         <WelcomePage/>
         <AboutPage/>
