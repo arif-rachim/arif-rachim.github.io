@@ -16,7 +16,7 @@ function onLoad(onClick) {
 export default function ToolBar() {
     const [showMenu, setShowMenu] = useState(false);
     useEffect(onLoad(() => showMenu && setShowMenu(false)),[showMenu]);
-    return <Vertical style={{position: 'fixed', top: '0', width: '100vw', zIndex: 1}}>
+    return <Vertical style={{position: 'fixed', top: '0', width: '100%',maxWidth:800, zIndex: 1}}>
         <Horizontal vAlign={'center'} style={{backgroundColor: theme.backgroundColor,zIndex:1,boxShadow:`0px 0px 5px 2px rgba(0,0,0,0.7)`}}>
             <h4 style={{fontFamily: theme.font.display, fontSize: '1.2rem', fontWeight: "normal", padding: '1rem'}}>Arif
                 Rachim</h4>

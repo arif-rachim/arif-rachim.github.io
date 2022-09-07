@@ -16,7 +16,8 @@ export default function App() {
         color: theme.font.color,
         height: '100%',
         fontFamily: theme.font.display
-    }}>
+    }} hAlign={'center'}>
+        <Vertical style={{maxWidth:800}}>
         <ToolBar/>
         <WelcomePage/>
         <AboutPage/>
@@ -24,6 +25,7 @@ export default function App() {
         <SkillsPage/>
         <CertificationPage/>
         <FooterPage/>
+        </Vertical>
     </Vertical>
 }
 
