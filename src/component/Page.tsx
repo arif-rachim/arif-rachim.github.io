@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {ComponentProperties} from "./ComponentProperties.ts";
 
 const style: CSSProperties = {
-    height: '100vh',
+    minHeight: '100vh',
     display: 'flex',
     flexDirection: 'column'
 }
