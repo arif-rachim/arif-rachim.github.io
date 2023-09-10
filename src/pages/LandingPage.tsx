@@ -4,9 +4,9 @@ import style from "./LandingPage.module.css";
 
 export default function LandingPage() {
     return <Page>
-        <h1 className={style.title}>Arif Rachim</h1>
+        <h1 className={style.title} style={{marginTop:'30vh'}}>Arif Rachim</h1>
         <h3 className={style.subTitle}>Fullstack Software Architect</h3>
-        <div style={{display: 'flex', justifyContent: 'center'}}>
+        <div style={{display: 'flex', justifyContent: 'center',marginBottom:'30vh'}}>
             <a style={{
                 marginTop: '2.5rem',
                 backgroundColor: '#010101',

@@ -1,5 +1,7 @@
 import Page from "../component/Page";
 import styles from "./Experience.module.css"
+import {useLayoutEffect, useRef} from "react";
+import {gsap} from "gsap";
 
 const experience: string[] = ["Utilizing the React framework in order to methodically plan out, design, and construct design system components for an enterprise resource planning (ERP) application. This all-inclusive suite is comprised of more than 50 precisely built components, such as a DataGrid, DataLookup, DropDown, Slide Panel, and the program's Shell, which together provide a solid and adaptable basis for the application.",
     "Crafting user interface components for dynamic dashboards, exemplified by the Operation Dashboard. This entails skillfully integrating an array of features, including interactive charts and tabular data, all while enhancing the user experience with fluid animations and an aesthetically pleasing interface.",
@@ -13,8 +15,30 @@ const experience: string[] = ["Utilizing the React framework in order to methodi
 ]
 
 export default function Experience() {
+    const ref = useRef<HTMLDivElement | null>(null);
+    useLayoutEffect(() => {
+        const context = gsap.context(() => {
+            const timeLine = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref.current,
+                    start: '-100px 80%',
+                    end: '100px 50%',
+                    scrub: true
+                }
+            })
+            timeLine.fromTo(ref.current, {
+                y: 200,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            })
+        })
+        return () => context.revert()
+
+    }, [])
     return <Page>
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <div>
                 <div className={styles.title}>
                     <div>Relevant</div>

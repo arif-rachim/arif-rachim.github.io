@@ -12,9 +12,8 @@ export default function SeasonedEngineer() {
             const timeLine = gsap.timeline({
                 scrollTrigger: {
                     trigger: ref.current,
-                    markers: true,
-                    start: '-50% 80%',
-                    end: '30% 50%',
+                    start: '-100px 80%',
+                    end: '100px 50%',
                     scrub: true
                 }
             })

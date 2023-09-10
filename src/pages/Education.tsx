@@ -1,5 +1,7 @@
 import Page from "../component/Page";
 import styles from "./Education.module.css";
+import {useLayoutEffect, useRef} from "react";
+import {gsap} from "gsap";
 
 const certifications: { name: string, organization: string, issued: string, url: string, description: string, className: string }[] = [
     {
@@ -82,8 +84,30 @@ const certifications: { name: string, organization: string, issued: string, url:
     }]
 
 export default function Education() {
+    const ref = useRef<HTMLDivElement | null>(null);
+    useLayoutEffect(() => {
+        const context = gsap.context(() => {
+            const timeLine = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref.current,
+                    start: '-100px 80%',
+                    end: '100px 50%',
+                    scrub: true
+                }
+            })
+            timeLine.fromTo(ref.current, {
+                y: 200,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            })
+        })
+        return () => context.revert()
+
+    }, [])
     return <Page>
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <div>
                 <div className={styles.title}>
                     <div>Education</div>
