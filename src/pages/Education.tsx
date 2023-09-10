@@ -144,7 +144,7 @@ export default function Education() {
                             }}>{c.organization}</div>
                             <div style={{fontSize: '0.8rem', fontStyle: 'italic'}}>{c.issued}</div>
                             <div style={{color: '#555', marginTop: '1rem'}}>{c.description}</div>
-                            <a href={c.url} style={{fontSize: '0.8rem', marginTop: '0.5rem'}}>Show Credentials</a>
+                            <a href={c.url} style={{fontSize: '0.8rem', marginTop: '0.5rem'}} aria-label={c.name}>Show Credentials</a>
                         </div>
                     })}
                 </div>

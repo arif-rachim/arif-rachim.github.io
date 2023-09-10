@@ -35,8 +35,8 @@ export default function Contact() {
                 <div>+971-50-901-8075</div>
                 <div>Dubai, United Arab Emirates</div>
             </div>
-            <div style={{marginTop: '2rem'}}>Find my resume <a href={'arif-rachim-cv.pdf'}>here</a></div>
-            <div style={{marginTop: '2rem'}}><a href={'https://ae.linkedin.com/in/arifrachim'}><IoLogoLinkedin
+            <div style={{marginTop: '2rem'}}>Find my resume <a href={'arif-rachim-cv.pdf'} aria-label={"Download arif rachim resume pdf"}>and download as pdf</a></div>
+            <div style={{marginTop: '2rem'}}><a href={'https://ae.linkedin.com/in/arifrachim'} aria-label={'LinkedIn'}><IoLogoLinkedin
                 style={{fontSize: '4rem'}}/></a></div>
         </div>
     </Page>

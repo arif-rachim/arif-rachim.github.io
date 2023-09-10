@@ -5,7 +5,7 @@ import style from "./LandingPage.module.css";
 export default function LandingPage() {
     return <Page>
         <h1 className={style.title} style={{marginTop:'30vh'}}>Arif Rachim</h1>
-        <h3 className={style.subTitle}>Fullstack Software Architect</h3>
+        <h2 className={style.subTitle}>Fullstack Software Architect</h2>
         <div style={{display: 'flex', justifyContent: 'center',marginBottom:'30vh'}}>
             <a style={{
                 marginTop: '2.5rem',
@@ -17,7 +17,7 @@ export default function LandingPage() {
                 cursor: 'pointer',
                 textDecoration: 'none',
                 textAlign: 'center'
-            }} href={'mailto:a.arif.r@gmail.com'}>REACH OUT</a>
+            }} href={'mailto:a.arif.r@gmail.com'} aria-label={'reach out link'}>REACH OUT</a>
         </div>
     </Page>
 }
