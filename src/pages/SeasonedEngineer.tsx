@@ -1,10 +1,10 @@
 import Page from "../component/Page";
 import arif from "../assets/arif-photo.jpg";
-
+import styles from "./SeasonedEngineer.module.css";
 export default function SeasonedEngineer(){
     const years = new Date().getFullYear() - 2004;
-    return <Page style={{alignItems: 'center', justifyContent: 'center'}}>
-        <div style={{display: 'flex', flexDirection: 'row', gap: '5rem', maxWidth: 1024}}>
+    return <Page>
+        <div className={styles.container}>
             <div style={{display: 'flex', flexDirection: 'column'}}>
                 <h1 style={{fontWeight: 600, fontSize: '2rem'}}>Seasoned Engineer</h1>
                 <h1 style={{fontWeight: 600, fontSize: '1rem'}}>More than {years} Years software development</h1>
@@ -18,7 +18,7 @@ export default function SeasonedEngineer(){
                     for more effective solutions.
                 </div>
             </div>
-            <img src={arif} width={375} height={375} style={{borderRadius: '50rem'}} alt={'Arif photo'}/>
+            <img src={arif} className={styles.photo} style={{borderRadius: '50rem'}} alt={'Arif photo'}/>
         </div>
     </Page>
 }

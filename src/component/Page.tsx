@@ -1,16 +1,13 @@
-import {CSSProperties, useMemo} from "react";
 import {motion} from "framer-motion";
 import {ComponentProperties} from "./ComponentProperties.ts";
-
-const style: CSSProperties = {
-    minHeight: '100vh',
-    display: 'flex',
-    flexDirection: 'column'
-}
+import styles from "./Page.module.css";
 
 
 export default function Page(props: ComponentProperties<HTMLDivElement>) {
-    const {style: propStyle, children, ...properties} = props;
-    const localStyle = useMemo(() => ({...style, ...propStyle}), [propStyle]);
-    return <motion.div style={localStyle} {...properties}>{children}</motion.div>
+    const {children, ...properties} = props;
+    return <motion.div className={styles.container} {...properties}>
+        <div className={styles.content}>
+            {children}
+        </div>
+    </motion.div>
 }

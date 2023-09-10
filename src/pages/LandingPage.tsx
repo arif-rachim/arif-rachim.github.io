@@ -1,10 +1,11 @@
 import Page from "../component/Page";
 
+import style from "./LandingPage.module.css";
 export default function LandingPage() {
-    return <Page style={{alignItems: 'center', justifyContent: 'center'}}>
-        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-            <h1 style={{fontWeight: 600, fontSize: '5rem'}}>Arif Rachim</h1>
-            <h3 style={{fontWeight: 400, fontSize: '2.1rem'}}>Fullstack Software Architect</h3>
+    return <Page>
+        <h1 className={style.title}>Arif Rachim</h1>
+        <h3 className={style.subTitle}>Fullstack Software Architect</h3>
+        <div style={{display: 'flex', justifyContent: 'center'}}>
             <a style={{
                 marginTop: '2.5rem',
                 backgroundColor: '#010101',
@@ -13,7 +14,8 @@ export default function LandingPage() {
                 fontWeight: 700,
                 padding: '0.7rem 4rem',
                 cursor: 'pointer',
-                textDecoration:'none'
+                textDecoration: 'none',
+                textAlign: 'center'
             }} href={'mailto:a.arif.r@gmail.com'}>REACH OUT</a>
         </div>
     </Page>
