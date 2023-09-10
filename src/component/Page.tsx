@@ -1,13 +1,11 @@
-import {motion} from "framer-motion";
-import {ComponentProperties} from "./ComponentProperties.ts";
 import styles from "./Page.module.css";
+import {PropsWithChildren} from "react";
 
 
-export default function Page(props: ComponentProperties<HTMLDivElement>) {
-    const {children, ...properties} = props;
-    return <motion.div className={styles.container} {...properties}>
+export default function Page(props: PropsWithChildren) {
+    return <div className={styles.container}>
         <div className={styles.content}>
-            {children}
+            {props.children}
         </div>
-    </motion.div>
+    </div>
 }
