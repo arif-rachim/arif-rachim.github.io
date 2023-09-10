@@ -1,11 +1,36 @@
 import Page from "../component/Page";
 import arif from "../assets/arif-photo.jpg";
 import styles from "./SeasonedEngineer.module.css";
+import {useLayoutEffect, useRef} from "react";
+import {gsap} from "gsap";
 
-export default function SeasonedEngineer(){
+export default function SeasonedEngineer() {
     const years = new Date().getFullYear() - 2004;
+    const ref = useRef<HTMLDivElement | null>(null);
+    useLayoutEffect(() => {
+        const context = gsap.context(() => {
+            const timeLine = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ref.current,
+                    markers: true,
+                    start: '-50% 80%',
+                    end: '30% 50%',
+                    scrub: true
+                }
+            })
+            timeLine.fromTo(ref.current, {
+                y: 200,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1
+            })
+        })
+        return () => context.revert()
+
+    }, [])
     return <Page>
-        <div className={styles.container}>
+        <div className={styles.container} ref={ref}>
             <div style={{display: 'flex', flexDirection: 'column'}}>
                 <h1 style={{fontWeight: 600, fontSize: '2rem'}}>Seasoned Engineer</h1>
                 <h1 style={{fontWeight: 600, fontSize: '1rem'}}>More than {years} Years software development</h1>

@@ -90,7 +90,7 @@ export default function Education() {
                     <div>& Certifications</div>
                 </div>
             </div>
-            <div style={{display: 'flex', flexDirection: 'column', flexGrow:1, gap: '5rem'}}>
+            <div style={{display: 'flex', flexDirection: 'column', flexGrow: 1, gap: '5rem'}}>
                 <div style={{display: 'flex', flexDirection: 'column'}}>
                     <div style={{fontWeight: 600}}>BACHELOR OF ELECTRICAL ENGINEERING</div>
                     <div style={{fontStyle: 'italic', fontWeight: 300, fontSize: '0.9rem'}}>Major in Computer
@@ -111,7 +111,7 @@ export default function Education() {
                 </div>
                 <div style={{display: 'flex', flexDirection: "row", flexWrap: 'wrap'}}>
                     {certifications.map(c => {
-                        return <div key={c.name} className={c.className} >
+                        return <div key={c.name} className={c.className}>
                             <div style={{fontWeight: 700}}>{c.name}</div>
                             <div style={{
                                 marginTop: '0.5rem',
@@ -120,7 +120,7 @@ export default function Education() {
                             }}>{c.organization}</div>
                             <div style={{fontSize: '0.8rem', fontStyle: 'italic'}}>{c.issued}</div>
                             <div style={{color: '#555', marginTop: '1rem'}}>{c.description}</div>
-                            <a href={c.url} style={{fontSize:'0.8rem',marginTop:'0.5rem'}}>Show Credentials</a>
+                            <a href={c.url} style={{fontSize: '0.8rem', marginTop: '0.5rem'}}>Show Credentials</a>
                         </div>
                     })}
                 </div>

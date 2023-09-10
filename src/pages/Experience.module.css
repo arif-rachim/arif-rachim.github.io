@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 5rem;
 }
 
 .title {
@@ -54,7 +55,8 @@
         flex-direction: column;
         gap: 2rem;
     }
-    .title{
+
+    .title {
         display: flex;
         flex-direction: row;
         gap: 0.5rem;
