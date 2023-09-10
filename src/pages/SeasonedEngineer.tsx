@@ -1,6 +1,7 @@
 import Page from "../component/Page";
 import arif from "../assets/arif-photo.jpg";
 import styles from "./SeasonedEngineer.module.css";
+
 export default function SeasonedEngineer(){
     const years = new Date().getFullYear() - 2004;
     return <Page>

@@ -1,6 +1,7 @@
 import Page from "../component/Page";
 
 import style from "./LandingPage.module.css";
+
 export default function LandingPage() {
     return <Page>
         <h1 className={style.title}>Arif Rachim</h1>
