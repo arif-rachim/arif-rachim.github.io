@@ -18,10 +18,11 @@ export default function Experience() {
     const ref = useRef<HTMLDivElement | null>(null);
     useLayoutEffect(() => {
         const context = gsap.context(() => {
+
             const timeLine = gsap.timeline({
                 scrollTrigger: {
                     trigger: ref.current,
-                    start: '-100px 80%',
+                    start: '-300px 90%',
                     end: '100px 50%',
                     scrub: true
                 }

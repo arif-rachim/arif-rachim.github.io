@@ -6,7 +6,7 @@ export default function LandingPage() {
     return <Page>
         <h1 className={style.title} style={{marginTop:'30vh'}}>Arif Rachim</h1>
         <h2 className={style.subTitle}>Fullstack Software Architect</h2>
-        <div style={{display: 'flex', justifyContent: 'center',marginBottom:'30vh'}}>
+        <div style={{display: 'flex', justifyContent: 'center',marginBottom:'20vh'}}>
             <a style={{
                 marginTop: '2.5rem',
                 backgroundColor: '#010101',

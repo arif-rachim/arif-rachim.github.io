@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     padding-bottom: 5rem;
+    padding-right: 2rem;
 }
 
 @media screen and (max-width: 650px) {
@@ -35,6 +36,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        padding-right: 0rem;
     }
 }
 

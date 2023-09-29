@@ -27,7 +27,7 @@ export default function Contact() {
 
     }, [])
     return <Page>
-        <div style={{display: 'flex', flexDirection: 'column',marginBottom:'30vh'}} ref={ref}>
+        <div style={{display: 'flex', flexDirection: 'column',marginBottom:'35vh'}} ref={ref}>
             <div style={{fontWeight: 500, fontSize: '2.5rem', lineHeight: '3rem'}}>Connect with me</div>
             <div style={{fontWeight: 700, marginTop: '5rem'}}>Achmad Arif Rachim</div>
             <div style={{marginTop: '1.5rem', color: '#555'}}>
