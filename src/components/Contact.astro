@@ -1,0 +1,45 @@
+---
+import {Image} from "astro:assets"
+import Page from "./Page.astro";
+import IoLogoLinkedin from "../assets/photos/linkedin.svg";
+---
+<Page>
+    <div class="vertical">
+        <div class="connect">Connect with me</div>
+        <div class="name">Achmad Arif Rachim</div>
+        <div class="info">
+            <div>a.arif.r@gmail.com</div>
+            <div>+971-50-901-8075</div>
+            <div>Dubai, United Arab Emirates</div>
+        </div>
+        <div class="margin-top-2rem">Find my resume <a href={'arif-rachim-cv.pdf'} aria-label={"Download arif rachim resume pdf"}>and download as pdf</a></div>
+        <div class="margin-top-2rem"><a  href={'https://ae.linkedin.com/in/arifrachim'} aria-label={'LinkedIn'}><Image class="logo" src={IoLogoLinkedin} alt="linked in icon"/> </a></div>
+    </div>
+</Page>
+<style>
+    .logo{
+        width : 40px;
+        height : 40px;
+    }
+    .margin-top-2rem{
+        margin-top : 2rem
+    }
+    .info{
+        margin-top: 1.5rem;
+        color: #555;
+    }
+    .name{
+        font-weight: 700;
+        margin-top: 5rem;
+    }
+    .connect{
+        font-weight: 500;
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+    .vertical{
+        display: flex;
+        flex-direction: column;
+        margin-bottom:35vh;
+    }
+</style>

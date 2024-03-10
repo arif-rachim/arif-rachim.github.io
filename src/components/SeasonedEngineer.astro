@@ -1,0 +1,86 @@
+---
+import Page from "./Page.astro";
+import {Image} from "astro:assets";
+import arif from "../assets/photos/arif-photo.jpg";
+const years = new Date().getFullYear() - 2004;
+---
+
+<Page>
+    <div class="container">
+        <div class="vertical">
+            <h1 class="title">Seasoned Engineer</h1>
+            <h1 class="sub-title">
+                More than {years} Years software development
+            </h1>
+            <div class="description">
+                I'm a software engineer with a focus on web-based systems and
+                mobile apps, currently working on a component design system for
+                an ERP solution with a web-based interface. I've had the
+                privilege of collaborating with my team, contributing to
+                component development, and going through several iterations to
+                improve our implementation continually. Additionally, I've had
+                the opportunity to share my knowledge and offer support to my
+                colleagues, contributing to the growth of our team's skills in
+                designing user-centric applications. I remain actively engaged
+                in application development, committed to adapting to evolving
+                user requirements for more effective solutions.
+            </div>
+        </div>
+        <Image src={arif} class="photo" alt={"Arif photo"}/>
+    </div>
+</Page>
+<style>
+    .container {
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo {
+        width: 375px;
+        height: 375px;
+        border-radius: 50rem;
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+
+    .sub-title {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .description {
+        margin-top: 2rem;
+    }
+
+    @media only screen and (max-width: 850px) {
+        .container {
+            flex-direction: column;
+            gap: 3rem;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        .photo {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    @media only screen and (max-width: 450px) {
+        .photo {
+            width: 250px;
+            height: 250px;
+        }
+    }
+</style>

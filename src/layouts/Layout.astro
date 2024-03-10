@@ -1,0 +1,73 @@
+---
+interface Props {
+    title: string;
+}
+
+const {title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>{title}</title>
+    <meta
+            name="description"
+            content="Achmad Arif Rachim, full stack developer, google mobile web specialist, blockchain, deep learning, java, html5, react developer."
+    />
+    <meta
+            name="keywords"
+            content="HTML, HTML5, CSS, JavaScript, React, Google, Software Architect, Blockchain"
+    />
+    <link rel="icon" href="./favicon.ico"/>
+    <meta property="og:title" content="Arif Rachim"/>
+    <meta property="og:site_name" content="www.rach.im"/>
+    <meta property="og:url" content="https://www.rach.im"/>
+    <meta
+            property="og:description"
+            content="Arif Rachim is Google Certified Mobile Web Specialist, Front End Architect, Certified Blockchain Developer, Certified AI TensorFlow Developer, and Certified IoT Arduino Developer."
+    />
+    <meta property="og:type" content="profile"/>
+    <meta property="og:image" content="https://www.rach.im/arif-og.jpg"/>
+    <meta name="author" content="Arif Rachim"/>
+    <meta name="theme-color" content="#F4F1EB"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+    />
+</head>
+<body>
+<slot/>
+</body>
+</html>
+<style is:global>
+    :root {
+        line-height: 1.5;
+        font-weight: 400;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+        background-color: #f4f1eb;
+        color: #010101;
+    }
+
+    * {
+        font-family: "Hanken Grotesk", Inter, system-ui, Avenir, Helvetica,
+        Arial, sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+</style>

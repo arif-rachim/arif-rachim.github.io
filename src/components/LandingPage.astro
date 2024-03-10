@@ -1,0 +1,48 @@
+---
+import Page from "./Page.astro";
+---
+
+<Page>
+    <h1 class="title">Arif Rachim</h1>
+    <h2 class="sub-title">Fullstack Software Architect</h2>
+    <div class="mail-to">
+        <a
+                href={"mailto:a.arif.r@gmail.com"}
+                aria-label={"reach out link"}>REACH OUT</a>
+    </div>
+</Page>
+<style>
+    .title {
+        margin-top: 30vh;
+        font-weight: 600;
+        font-size: 5rem;
+        text-align: center;
+        line-height: 4rem;
+    }
+
+    .sub-title {
+        font-weight: 400;
+        font-size: 2.1rem;
+        text-align: center;
+        line-height: 2rem;
+        margin-top: 1.2rem;
+    }
+
+    .mail-to {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20vh;
+    }
+
+    a {
+        margin-top: 2.5rem;
+        background-color: #010101;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 0.7rem 4rem;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+    }
+</style>
