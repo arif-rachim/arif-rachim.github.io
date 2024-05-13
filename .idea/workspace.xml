@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="update changes" />
+    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="update changes">
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-CkAU6Dns.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-DrqC3Pmy.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-DrKfxnWT.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-jD5c9Ebl.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-CxxNZKSf.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-zH85eGri.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-B3Dh0wWE.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-CvKAFpqC.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium--CkBqYxp.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium-BSZSiXeC.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-CKrYIn4N.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-DI0MP34m.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-BERyBeUd.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-QuqOQKhs.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-DdXDfMAg.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-Di4cI677.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-BGDuvQdi.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-CaMCXjyd.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-BLaJBKF4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-CJXwTJCx.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,12 +35,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "arif-rachim"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/arif-rachim/arif-rachim.github.io.git",
+    "accountId": "9b03819b-7e8a-4564-802c-f149e094f188"
+  }
+}]]></component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2dVLxydUgvZ8lxcK7AoHBjCEfkd" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -28,7 +62,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/arif/workspace/arif-rachim.github.io",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/arif/WebstormProjects/arif-rachim.github.io/public/tc39-signal-proposal-react",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -43,6 +78,13 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-2e7d6887c066-JavaScript-WS-241.15989.47" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710088550017</updated>
       <workItem from="1710088551317" duration="2192000" />
+      <workItem from="1715618242016" duration="300000" />
     </task>
     <servers />
   </component>
