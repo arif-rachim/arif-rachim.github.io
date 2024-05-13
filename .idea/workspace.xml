@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="update changes">
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-CkAU6Dns.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-DrqC3Pmy.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-DrKfxnWT.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-jD5c9Ebl.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-CxxNZKSf.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-zH85eGri.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-B3Dh0wWE.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-CvKAFpqC.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium--CkBqYxp.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium-BSZSiXeC.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-CKrYIn4N.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-DI0MP34m.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-BERyBeUd.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-QuqOQKhs.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-DdXDfMAg.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-Di4cI677.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-BGDuvQdi.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-CaMCXjyd.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-BLaJBKF4.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-CJXwTJCx.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tc39-signal-proposal-react/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +43,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arif/WebstormProjects/arif-rachim.github.io/public/tc39-signal-proposal-react",
+    "last_opened_file_path": "C:/Users/arif/WebstormProjects/arif-rachim.github.io/docs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,6 +55,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\docs" />
+      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\public\tc39-signal-proposal-react" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -94,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710088550017</updated>
       <workItem from="1710088551317" duration="2192000" />
-      <workItem from="1715618242016" duration="300000" />
+      <workItem from="1715618242016" duration="2594000" />
     </task>
     <servers />
   </component>
