@@ -5,68 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="update changes">
-      <change afterPath="$PROJECT_DIR$/public/stock-watch/assets/icon-CvBmUWw3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stock-watch/assets/index-CBjqMAgX.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/todo-list/assets/icon-CvBmUWw3.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/todo-list/assets/index-BZvLBk49.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/todo-list/assets/index-BnOzBIcN.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/todo-list/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.well-known/atproto-did" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/arif-og.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/arif-rachim-cv.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/arif.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/arif-photo.DhYaDVcc_ZyEvAn.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/index.vs3erzY5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/linkedin.DHifK0AR_1ljJxB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-CkAU6Dns.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-BlackItalic-CkAU6Dns.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-DrqC3Pmy.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-BlackItalic-DrqC3Pmy.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Bold-DrKfxnWT.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Bold-DrKfxnWT.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Bold-jD5c9Ebl.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Bold-jD5c9Ebl.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-CxxNZKSf.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-HeavyItalic-CxxNZKSf.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-zH85eGri.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-HeavyItalic-zH85eGri.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-B3Dh0wWE.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-LightItalic-B3Dh0wWE.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-CvKAFpqC.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-LightItalic-CvKAFpqC.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Medium--CkBqYxp.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Medium--CkBqYxp.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Medium-BSZSiXeC.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Medium-BSZSiXeC.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Regular-CKrYIn4N.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Regular-CKrYIn4N.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-Regular-DI0MP34m.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-Regular-DI0MP34m.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-BERyBeUd.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-SemiboldItalic-BERyBeUd.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-QuqOQKhs.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-SemiboldItalic-QuqOQKhs.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-DdXDfMAg.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-ThinItalic-DdXDfMAg.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-Di4cI677.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-ThinItalic-Di4cI677.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-BGDuvQdi.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-UltralightItalic-BGDuvQdi.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-CaMCXjyd.woff" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/SFProDisplay-UltralightItalic-CaMCXjyd.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/index-BLaJBKF4.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/assets/index-DuVVAKTS.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/assets/index-CJXwTJCx.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tc39-signal-proposal-react/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/stock-watch/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/arif-rachim-cv.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/public/arif-rachim-cv.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-CkAU6Dns.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-BlackItalic-DrqC3Pmy.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-DrKfxnWT.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Bold-jD5c9Ebl.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-CxxNZKSf.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-HeavyItalic-zH85eGri.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-B3Dh0wWE.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-LightItalic-CvKAFpqC.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium--CkBqYxp.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Medium-BSZSiXeC.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-CKrYIn4N.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-Regular-DI0MP34m.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-BERyBeUd.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-SemiboldItalic-QuqOQKhs.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-DdXDfMAg.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-ThinItalic-Di4cI677.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-BGDuvQdi.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/SFProDisplay-UltralightItalic-CaMCXjyd.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-BLaJBKF4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/assets/index-CJXwTJCx.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/tc39-signal-proposal-react/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Experience.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,12 +44,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/arif/WebstormProjects/arif-rachim.github.io/public",
+    "last_opened_file_path": "C:/Users/arif/WebstormProjects/arif-rachim.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "npm.build.executor": "Run",
     "ts.external.directory.path": "/Users/arif/workspace/arif-rachim.github.io/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
@@ -125,6 +66,23 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\assets" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -144,7 +102,10 @@
       <workItem from="1710088551317" duration="2192000" />
       <workItem from="1715618242016" duration="3244000" />
       <workItem from="1715940502049" duration="11000" />
-      <workItem from="1716712764806" duration="1768000" />
+      <workItem from="1716712764806" duration="2099000" />
+      <workItem from="1716726594853" duration="314000" />
+      <workItem from="1716727949161" duration="7000" />
+      <workItem from="1732031392818" duration="103000" />
     </task>
     <servers />
   </component>
