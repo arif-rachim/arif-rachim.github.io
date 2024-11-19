@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="update changes">
-      <change afterPath="$PROJECT_DIR$/public/.well-known/atproto-did" afterDir="false" />
+    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,11 +104,33 @@
       <workItem from="1716712764806" duration="2099000" />
       <workItem from="1716726594853" duration="314000" />
       <workItem from="1716727949161" duration="7000" />
-      <workItem from="1732031392818" duration="103000" />
+      <workItem from="1732031392818" duration="1162000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository.">
+      <option name="closed" value="true" />
+      <created>1732031613892</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732031613892</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository.">
+      <option name="closed" value="true" />
+      <created>1732031629943</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732031629943</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update changes" />
+    <MESSAGE value="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository." />
   </component>
 </project>
