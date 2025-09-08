@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 7: Week 1 Mock Test - Foundation Assessment | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - MOCK TEST THEME */
+        .day-header {
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #fce4ec;
+            border-left: 4px solid #e91e63;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .test-section {
+            background: #ffebee;
+            border: 2px solid #e91e63;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .subject-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        
+        .biology-header { background: #e8f5e8; color: #2e7d32; padding: 0.5rem; border-radius: 4px; }
+        .physics-header { background: #e3f2fd; color: #1565c0; padding: 0.5rem; border-radius: 4px; }
+        .chemistry-header { background: #fff3e0; color: #ef6c00; padding: 0.5rem; border-radius: 4px; }
+        .earth-header { background: #f1f8e9; color: #558b2f; padding: 0.5rem; border-radius: 4px; }
+        .math-header { background: #f3e5f5; color: #7b1fa2; padding: 0.5rem; border-radius: 4px; }
+        
+        .question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: #fafafa;
+            border-radius: 6px;
+            border-left: 4px solid #e91e63;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #fce4ec;
+        }
+        
+        .options li.selected {
+            background: #e91e63;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer-section {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #e91e63;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            z-index: 1000;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .results-section {
+            background: #f0f8ff;
+            border: 2px solid #2196f3;
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            display: none;
+        }
+        
+        .btn-primary {
+            background: #e91e63;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #ad1457;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        .pre-test-info {
+            background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+            border: 2px solid #ffc107;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .math-expression {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1em;
+            background: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- TIMER SECTION -->
+        <div class="timer-section" id="timer">
+            ⏱️ Time: <span id="time-display">45:00</span>
+        </div>
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>🎯 Day 7: Week 1 Mock Test - Foundation Assessment</h1>
+            <p><strong>Test Goal:</strong> Assess your mastery of all 5 foundation subjects and identify areas for improvement</p>
+            <div style="text-align: center; font-size: 1.1rem; margin-top: 1rem;">
+                📝 25 Questions | ⏱️ 45 Minutes | 🎯 HUSO Format
+            </div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Assessment Objectives</h2>
+                <ul>
+                    <li>Demonstrate mastery of core concepts from all 5 subjects studied this week</li>
+                    <li>Practice HUSO exam timing and question format under test conditions</li>
+                    <li>Identify strengths and weaknesses to guide Week 2 preparation strategy</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- PRE-TEST INFORMATION -->
+        <section class="learning-section">
+            <div class="pre-test-info">
+                <h3>📋 Mock Test Instructions</h3>
+                
+                <h4>🎯 Test Format:</h4>
+                <ul>
+                    <li><strong>25 Questions Total:</strong> 5 Biology, 5 Physics, 5 Chemistry, 5 Earth Science, 5 Mathematics</li>
+                    <li><strong>Time Limit:</strong> 45 minutes (practice for real HUSO timing pressure)</li>
+                    <li><strong>Question Types:</strong> Multiple choice with 5 options (A, B, C, D, E)</li>
+                    <li><strong>Difficulty:</strong> Mixed foundation and application questions</li>
+                </ul>
+                
+                <h4>📊 Scoring System:</h4>
+                <ul>
+                    <li><strong>Correct Answer:</strong> +1 point</li>
+                    <li><strong>Incorrect Answer:</strong> -0.25 points</li>
+                    <li><strong>Blank Answer:</strong> 0 points</li>
+                    <li><strong>Maximum Score:</strong> 25 points</li>
+                    <li><strong>Target Score:</strong> 20+ points (80%+) for strong foundation</li>
+                </ul>
+                
+                <h4>💡 Test Strategy Tips:</h4>
+                <ul>
+                    <li><strong>Time Management:</strong> ~1.8 minutes per question average</li>
+                    <li><strong>Answer Strategy:</strong> If unsure, eliminate wrong options first</li>
+                    <li><strong>Don't Panic:</strong> Skip difficult questions and return to them</li>
+                    <li><strong>Check Your Work:</strong> Use remaining time to review answers</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <button class="btn-primary" onclick="startTest()">🚀 Start Mock Test</button>
+                    <p style="margin-top: 0.5rem; font-size: 0.9rem; color: #666;">
+                        <em>When you click start, the 45-minute timer begins immediately!</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MOCK TEST SECTION -->
+        <section class="test-section" id="test-section" style="display: none;">
+            <h2>🎯 Week 1 Foundation Mock Test</h2>
+            <p><strong>Instructions:</strong> Answer all questions within the time limit. Good luck!</p>
+            
+            <!-- BIOLOGY SECTION -->
+            <div class="subject-section">
+                <div class="biology-header">
+                    <h3>🧬 BIOLOGY QUESTIONS (1-5)</h3>
+                </div>
+                
+                <!-- Q1 Biology -->
+                <div class="question" id="q1">
+                    <h4>Question 1: Which organelle is responsible for producing ATP energy in eukaryotic cells?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(1, 'A')">A) Nucleus</li>
+                        <li onclick="selectAnswer(1, 'B')">B) Mitochondria</li>
+                        <li onclick="selectAnswer(1, 'C')">C) Ribosome</li>
+                        <li onclick="selectAnswer(1, 'D')">D) Golgi apparatus</li>
+                        <li onclick="selectAnswer(1, 'E')">E) Endoplasmic reticulum</li>
+                    </ul>
+                    <div class="feedback" id="feedback1"></div>
+                </div>
+
+                <!-- Q2 Biology -->
+                <div class="question" id="q2">
+                    <h4>Question 2: What is the main difference between prokaryotic and eukaryotic cells?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(2, 'A')">A) Prokaryotes are larger than eukaryotes</li>
+                        <li onclick="selectAnswer(2, 'B')">B) Prokaryotes lack membrane-bound organelles</li>
+                        <li onclick="selectAnswer(2, 'C')">C) Eukaryotes cannot reproduce</li>
+                        <li onclick="selectAnswer(2, 'D')">D) Prokaryotes have more DNA</li>
+                        <li onclick="selectAnswer(2, 'E')">E) Only eukaryotes can perform photosynthesis</li>
+                    </ul>
+                    <div class="feedback" id="feedback2"></div>
+                </div>
+
+                <!-- Q3 Biology -->
+                <div class="question" id="q3">
+                    <h4>Question 3: Which organelle would you expect to find in large numbers in muscle cells?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(3, 'A')">A) Vacuoles</li>
+                        <li onclick="selectAnswer(3, 'B')">B) Chloroplasts</li>
+                        <li onclick="selectAnswer(3, 'C')">C) Mitochondria</li>
+                        <li onclick="selectAnswer(3, 'D')">D) Cell walls</li>
+                        <li onclick="selectAnswer(3, 'E')">E) Centrioles</li>
+                    </ul>
+                    <div class="feedback" id="feedback3"></div>
+                </div>
+
+                <!-- Q4 Biology -->
+                <div class="question" id="q4">
+                    <h4>Question 4: The cell membrane is best described as:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(4, 'A')">A) A rigid wall that protects the cell</li>
+                        <li onclick="selectAnswer(4, 'B')">B) A selective barrier that controls what enters and leaves</li>
+                        <li onclick="selectAnswer(4, 'C')">C) A storage compartment for genetic material</li>
+                        <li onclick="selectAnswer(4, 'D')">D) An organelle that produces proteins</li>
+                        <li onclick="selectAnswer(4, 'E')">E) A transport system inside the cell</li>
+                    </ul>
+                    <div class="feedback" id="feedback4"></div>
+                </div>
+
+                <!-- Q5 Biology -->
+                <div class="question" id="q5">
+                    <h4>Question 5: Which of the following best represents the hierarchy of cell organization from smallest to largest?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(5, 'A')">A) Organ → Tissue → Cell → Organism</li>
+                        <li onclick="selectAnswer(5, 'B')">B) Cell → Tissue → Organ → Organism</li>
+                        <li onclick="selectAnswer(5, 'C')">C) Tissue → Cell → Organ → Organism</li>
+                        <li onclick="selectAnswer(5, 'D')">D) Organism → Organ → Tissue → Cell</li>
+                        <li onclick="selectAnswer(5, 'E')">E) Cell → Organ → Tissue → Organism</li>
+                    </ul>
+                    <div class="feedback" id="feedback5"></div>
+                </div>
+            </div>
+
+            <!-- PHYSICS SECTION -->
+            <div class="subject-section">
+                <div class="physics-header">
+                    <h3>⚛️ PHYSICS QUESTIONS (6-10)</h3>
+                </div>
+                
+                <!-- Q6 Physics -->
+                <div class="question" id="q6">
+                    <h4>Question 6: A car travels 100 meters north, then 60 meters south. What are the car's distance and displacement?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(6, 'A')">A) Distance = 100m, Displacement = 60m</li>
+                        <li onclick="selectAnswer(6, 'B')">B) Distance = 160m, Displacement = 40m north</li>
+                        <li onclick="selectAnswer(6, 'C')">C) Distance = 40m, Displacement = 160m</li>
+                        <li onclick="selectAnswer(6, 'D')">D) Distance = 160m, Displacement = 160m</li>
+                        <li onclick="selectAnswer(6, 'E')">E) Distance = 40m, Displacement = 40m</li>
+                    </ul>
+                    <div class="feedback" id="feedback6"></div>
+                </div>
+
+                <!-- Q7 Physics -->
+                <div class="question" id="q7">
+                    <h4>Question 7: A ball is thrown upward with initial velocity 20 m/s. Using g = 10 m/s², how long does it take to reach maximum height?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(7, 'A')">A) 1 second</li>
+                        <li onclick="selectAnswer(7, 'B')">B) 2 seconds</li>
+                        <li onclick="selectAnswer(7, 'C')">C) 3 seconds</li>
+                        <li onclick="selectAnswer(7, 'D')">D) 4 seconds</li>
+                        <li onclick="selectAnswer(7, 'E')">E) 5 seconds</li>
+                    </ul>
+                    <div class="feedback" id="feedback7"></div>
+                </div>
+
+                <!-- Q8 Physics -->
+                <div class="question" id="q8">
+                    <h4>Question 8: Which equation correctly relates velocity, acceleration, and time?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(8, 'A')">A) v = u + at²</li>
+                        <li onclick="selectAnswer(8, 'B')">B) v = u + at</li>
+                        <li onclick="selectAnswer(8, 'C')">C) v = u + a/t</li>
+                        <li onclick="selectAnswer(8, 'D')">D) v² = u + at</li>
+                        <li onclick="selectAnswer(8, 'E')">E) v = u - at</li>
+                    </ul>
+                    <div class="feedback" id="feedback8"></div>
+                </div>
+
+                <!-- Q9 Physics -->
+                <div class="question" id="q9">
+                    <h4>Question 9: An object starts from rest and accelerates at 2 m/s² for 5 seconds. What is its final velocity?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(9, 'A')">A) 2 m/s</li>
+                        <li onclick="selectAnswer(9, 'B')">B) 5 m/s</li>
+                        <li onclick="selectAnswer(9, 'C')">C) 7 m/s</li>
+                        <li onclick="selectAnswer(9, 'D')">D) 10 m/s</li>
+                        <li onclick="selectAnswer(9, 'E')">E) 25 m/s</li>
+                    </ul>
+                    <div class="feedback" id="feedback9"></div>
+                </div>
+
+                <!-- Q10 Physics -->
+                <div class="question" id="q10">
+                    <h4>Question 10: What is the difference between speed and velocity?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(10, 'A')">A) Speed includes direction, velocity does not</li>
+                        <li onclick="selectAnswer(10, 'B')">B) Velocity includes direction, speed does not</li>
+                        <li onclick="selectAnswer(10, 'C')">C) Speed is always greater than velocity</li>
+                        <li onclick="selectAnswer(10, 'D')">D) There is no difference</li>
+                        <li onclick="selectAnswer(10, 'E')">E) Velocity is always negative</li>
+                    </ul>
+                    <div class="feedback" id="feedback10"></div>
+                </div>
+            </div>
+
+            <!-- CHEMISTRY SECTION -->
+            <div class="subject-section">
+                <div class="chemistry-header">
+                    <h3>🧪 CHEMISTRY QUESTIONS (11-15)</h3>
+                </div>
+                
+                <!-- Q11 Chemistry -->
+                <div class="question" id="q11">
+                    <h4>Question 11: An atom has 6 protons, 8 neutrons, and 6 electrons. What element is this?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(11, 'A')">A) Oxygen</li>
+                        <li onclick="selectAnswer(11, 'B')">B) Carbon</li>
+                        <li onclick="selectAnswer(11, 'C')">C) Nitrogen</li>
+                        <li onclick="selectAnswer(11, 'D')">D) Silicon</li>
+                        <li onclick="selectAnswer(11, 'E')">E) Boron</li>
+                    </ul>
+                    <div class="feedback" id="feedback11"></div>
+                </div>
+
+                <!-- Q12 Chemistry -->
+                <div class="question" id="q12">
+                    <h4>Question 12: What is the mass number of the atom in Question 11?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(12, 'A')">A) 6</li>
+                        <li onclick="selectAnswer(12, 'B')">B) 8</li>
+                        <li onclick="selectAnswer(12, 'C')">C) 12</li>
+                        <li onclick="selectAnswer(12, 'D')">D) 14</li>
+                        <li onclick="selectAnswer(12, 'E')">E) 20</li>
+                    </ul>
+                    <div class="feedback" id="feedback12"></div>
+                </div>
+
+                <!-- Q13 Chemistry -->
+                <div class="question" id="q13">
+                    <h4>Question 13: Elements in the same group of the periodic table have:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(13, 'A')">A) The same number of protons</li>
+                        <li onclick="selectAnswer(13, 'B')">B) The same number of neutrons</li>
+                        <li onclick="selectAnswer(13, 'C')">C) The same number of electron shells</li>
+                        <li onclick="selectAnswer(13, 'D')">D) The same number of outer electrons</li>
+                        <li onclick="selectAnswer(13, 'E')">E) The same atomic mass</li>
+                    </ul>
+                    <div class="feedback" id="feedback13"></div>
+                </div>
+
+                <!-- Q14 Chemistry -->
+                <div class="question" id="q14">
+                    <h4>Question 14: Carbon-12 and carbon-14 are:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(14, 'A')">A) Different elements</li>
+                        <li onclick="selectAnswer(14, 'B')">B) Isotopes of carbon</li>
+                        <li onclick="selectAnswer(14, 'C')">C) Ions of carbon</li>
+                        <li onclick="selectAnswer(14, 'D')">D) Compounds containing carbon</li>
+                        <li onclick="selectAnswer(14, 'E')">E) Molecules of carbon</li>
+                    </ul>
+                    <div class="feedback" id="feedback14"></div>
+                </div>
+
+                <!-- Q15 Chemistry -->
+                <div class="question" id="q15">
+                    <h4>Question 15: Which of the following elements is a noble gas?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(15, 'A')">A) Hydrogen</li>
+                        <li onclick="selectAnswer(15, 'B')">B) Oxygen</li>
+                        <li onclick="selectAnswer(15, 'C')">C) Sodium</li>
+                        <li onclick="selectAnswer(15, 'D')">D) Argon</li>
+                        <li onclick="selectAnswer(15, 'E')">E) Chlorine</li>
+                    </ul>
+                    <div class="feedback" id="feedback15"></div>
+                </div>
+            </div>
+
+            <!-- EARTH SCIENCE SECTION -->
+            <div class="subject-section">
+                <div class="earth-header">
+                    <h3>🌍 EARTH SCIENCE QUESTIONS (16-20)</h3>
+                </div>
+                
+                <!-- Q16 Earth Science -->
+                <div class="question" id="q16">
+                    <h4>Question 16: In which atmospheric layer do commercial airplanes typically fly?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(16, 'A')">A) Troposphere</li>
+                        <li onclick="selectAnswer(16, 'B')">B) Stratosphere</li>
+                        <li onclick="selectAnswer(16, 'C')">C) Mesosphere</li>
+                        <li onclick="selectAnswer(16, 'D')">D) Thermosphere</li>
+                        <li onclick="selectAnswer(16, 'E')">E) Exosphere</li>
+                    </ul>
+                    <div class="feedback" id="feedback16"></div>
+                </div>
+
+                <!-- Q17 Earth Science -->
+                <div class="question" id="q17">
+                    <h4>Question 17: What happens to temperature as altitude increases in the troposphere?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(17, 'A')">A) Temperature increases</li>
+                        <li onclick="selectAnswer(17, 'B')">B) Temperature decreases</li>
+                        <li onclick="selectAnswer(17, 'C')">C) Temperature stays constant</li>
+                        <li onclick="selectAnswer(17, 'D')">D) Temperature fluctuates randomly</li>
+                        <li onclick="selectAnswer(17, 'E')">E) Temperature first increases, then decreases</li>
+                    </ul>
+                    <div class="feedback" id="feedback17"></div>
+                </div>
+
+                <!-- Q18 Earth Science -->
+                <div class="question" id="q18">
+                    <h4>Question 18: A cold front typically brings:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(18, 'A')">A) Light, steady rain for many hours</li>
+                        <li onclick="selectAnswer(18, 'B')">B) Clear skies and calm winds</li>
+                        <li onclick="selectAnswer(18, 'C')">C) Heavy thunderstorms followed by clearing</li>
+                        <li onclick="selectAnswer(18, 'D')">D) Fog and drizzle</li>
+                        <li onclick="selectAnswer(18, 'E')">E) Steady snow for days</li>
+                    </ul>
+                    <div class="feedback" id="feedback18"></div>
+                </div>
+
+                <!-- Q19 Earth Science -->
+                <div class="question" id="q19">
+                    <h4>Question 19: The ozone layer is important because it:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(19, 'A')">A) Creates weather patterns</li>
+                        <li onclick="selectAnswer(19, 'B')">B) Blocks harmful UV radiation</li>
+                        <li onclick="selectAnswer(19, 'C')">C) Provides oxygen for breathing</li>
+                        <li onclick="selectAnswer(19, 'D')">D) Creates atmospheric pressure</li>
+                        <li onclick="selectAnswer(19, 'E')">E) Helps satellites stay in orbit</li>
+                    </ul>
+                    <div class="feedback" id="feedback19"></div>
+                </div>
+
+                <!-- Q20 Earth Science -->
+                <div class="question" id="q20">
+                    <h4>Question 20: High pressure weather systems are typically associated with:</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(20, 'A')">A) Stormy weather and precipitation</li>
+                        <li onclick="selectAnswer(20, 'B')">B) Clear skies and stable conditions</li>
+                        <li onclick="selectAnswer(20, 'C')">C) Tornado formation</li>
+                        <li onclick="selectAnswer(20, 'D')">D) Heavy snow and blizzards</li>
+                        <li onclick="selectAnswer(20, 'E')">E) Hurricane development</li>
+                    </ul>
+                    <div class="feedback" id="feedback20"></div>
+                </div>
+            </div>
+
+            <!-- MATHEMATICS SECTION -->
+            <div class="subject-section">
+                <div class="math-header">
+                    <h3>📐 MATHEMATICS QUESTIONS (21-25)</h3>
+                </div>
+                
+                <!-- Q21 Mathematics -->
+                <div class="question" id="q21">
+                    <h4>Question 21: What is the degree of the polynomial 2x³ - 4x⁵ + 7x + 1?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(21, 'A')">A) 2</li>
+                        <li onclick="selectAnswer(21, 'B')">B) 3</li>
+                        <li onclick="selectAnswer(21, 'C')">C) 4</li>
+                        <li onclick="selectAnswer(21, 'D')">D) 5</li>
+                        <li onclick="selectAnswer(21, 'E')">E) 7</li>
+                    </ul>
+                    <div class="feedback" id="feedback21"></div>
+                </div>
+
+                <!-- Q22 Mathematics -->
+                <div class="question" id="q22">
+                    <h4>Question 22: Factor completely: <span class="math-expression">x² - 16</span></h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(22, 'A')">A) (x - 4)²</li>
+                        <li onclick="selectAnswer(22, 'B')">B) (x + 4)(x - 4)</li>
+                        <li onclick="selectAnswer(22, 'C')">C) (x + 16)(x - 1)</li>
+                        <li onclick="selectAnswer(22, 'D')">D) Cannot be factored</li>
+                        <li onclick="selectAnswer(22, 'E')">E) (x - 16)(x + 1)</li>
+                    </ul>
+                    <div class="feedback" id="feedback22"></div>
+                </div>
+
+                <!-- Q23 Mathematics -->
+                <div class="question" id="q23">
+                    <h4>Question 23: For the quadratic equation x² - 7x + 12 = 0, what is the product of the roots according to Vieta's formulas?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(23, 'A')">A) -7</li>
+                        <li onclick="selectAnswer(23, 'B')">B) 7</li>
+                        <li onclick="selectAnswer(23, 'C')">C) 12</li>
+                        <li onclick="selectAnswer(23, 'D')">D) -12</li>
+                        <li onclick="selectAnswer(23, 'E')">E) 19</li>
+                    </ul>
+                    <div class="feedback" id="feedback23"></div>
+                </div>
+
+                <!-- Q24 Mathematics -->
+                <div class="question" id="q24">
+                    <h4>Question 24: Factor: <span class="math-expression">3x² + 7x + 2</span></h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(24, 'A')">A) (3x + 1)(x + 2)</li>
+                        <li onclick="selectAnswer(24, 'B')">B) (3x + 2)(x + 1)</li>
+                        <li onclick="selectAnswer(24, 'C')">C) (x + 1)(x + 2)</li>
+                        <li onclick="selectAnswer(24, 'D')">D) (3x - 1)(x - 2)</li>
+                        <li onclick="selectAnswer(24, 'E')">E) Cannot be factored</li>
+                    </ul>
+                    <div class="feedback" id="feedback24"></div>
+                </div>
+
+                <!-- Q25 Mathematics -->
+                <div class="question" id="q25">
+                    <h4>Question 25: Which of the following is a perfect square trinomial?</h4>
+                    <ul class="options">
+                        <li onclick="selectAnswer(25, 'A')">A) x² + 4x + 3</li>
+                        <li onclick="selectAnswer(25, 'B')">B) x² + 6x + 9</li>
+                        <li onclick="selectAnswer(25, 'C')">C) x² + 5x + 6</li>
+                        <li onclick="selectAnswer(25, 'D')">D) x² + 3x + 4</li>
+                        <li onclick="selectAnswer(25, 'E')">E) x² + 2x + 3</li>
+                    </ul>
+                    <div class="feedback" id="feedback25"></div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn-primary" onclick="calculateFinalScore()">📊 Submit Test & Get Results</button>
+            </div>
+        </section>
+
+        <!-- RESULTS SECTION -->
+        <section class="results-section" id="results-section">
+            <h2>📊 Your Mock Test Results</h2>
+            <div id="test-results"></div>
+            <div id="subject-breakdown"></div>
+            <div id="recommendations"></div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="../index.html" class="btn-secondary">← Back to Dashboard</a>
+            <a href="day_08.html" class="btn-primary">Continue to Week 2 →</a>
+        </nav>
+    </div>
+
+    <script>
+        // Test variables
+        let testStarted = false;
+        let timeRemaining = 45 * 60; // 45 minutes in seconds
+        let timerInterval;
+        
+        const answers = ['B', 'B', 'C', 'B', 'B', 'B', 'B', 'B', 'D', 'B', 
+                        'B', 'D', 'D', 'B', 'D', 'B', 'B', 'C', 'B', 'B', 
+                        'D', 'B', 'C', 'A', 'B'];
+        
+        const explanations = [
+            "Mitochondria are the powerhouses of the cell, producing ATP through cellular respiration.",
+            "The key difference is that prokaryotes lack membrane-bound organelles like nuclei.",
+            "Muscle cells need lots of energy for contraction, so they have many mitochondria.",
+            "The cell membrane selectively controls what enters and leaves the cell.",
+            "The biological hierarchy goes: Cell → Tissue → Organ → Organism.",
+            "Distance = total path (160m), Displacement = net change in position (40m north).",
+            "At maximum height, velocity = 0. Using v = u + at: 0 = 20 + (-10)t, so t = 2s.",
+            "The basic kinematic equation relating velocity, initial velocity, acceleration, and time.",
+            "Using v = u + at: v = 0 + (2)(5) = 10 m/s.",
+            "Velocity includes direction (vector), while speed does not (scalar).",
+            "The number of protons determines the element. 6 protons = Carbon.",
+            "Mass number = protons + neutrons = 6 + 8 = 14.",
+            "Elements in the same group have the same number of outer (valence) electrons.",
+            "Isotopes have the same number of protons but different numbers of neutrons.",
+            "Argon is in Group 18 (noble gases) and is chemically inert.",
+            "Commercial aircraft cruise in the lower stratosphere to avoid weather.",
+            "Temperature decreases by about 6.5°C per kilometer in the troposphere.",
+            "Cold fronts create intense but brief storms as they rapidly push warm air up.",
+            "The ozone layer absorbs harmful UV radiation from the sun.",
+            "High pressure systems involve sinking air that prevents cloud formation.",
+            "The degree is the highest power of the variable, which is 5 (from -4x⁵).",
+            "x² - 16 is a difference of squares: x² - 4² = (x+4)(x-4).",
+            "For ax² + bx + c, product of roots = c/a = 12/1 = 12.",
+            "Using the AC method: 3×2=6, need factors of 6 that add to 7 (6+1). So (3x+1)(x+2).",
+            "x² + 6x + 9 = (x+3)² since it follows the pattern a² + 2ab + b²."
+        ];
+        
+        let userAnswers = {};
+        
+        function startTest() {
+            testStarted = true;
+            document.querySelector('.pre-test-info').style.display = 'none';
+            document.getElementById('test-section').style.display = 'block';
+            
+            // Start timer
+            timerInterval = setInterval(updateTimer, 1000);
+            updateTimer();
+        }
+        
+        function updateTimer() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('time-display').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (timeRemaining <= 0) {
+                clearInterval(timerInterval);
+                calculateFinalScore();
+                alert('Time\'s up! Your test has been automatically submitted.');
+            } else {
+                timeRemaining--;
+            }
+        }
+        
+        function selectAnswer(questionNum, answer) {
+            userAnswers[questionNum] = answer;
+            
+            // Clear previous selections
+            const options = document.querySelectorAll(`#q${questionNum} .options li`);
+            options.forEach(li => {
+                li.classList.remove('selected');
+            });
+            
+            // Mark current selection
+            event.target.classList.add('selected');
+        }
+        
+        function calculateFinalScore() {
+            clearInterval(timerInterval);
+            
+            let correct = 0;
+            let incorrect = 0;
+            let blank = 0;
+            let subjectScores = {
+                biology: { correct: 0, total: 5 },
+                physics: { correct: 0, total: 5 },
+                chemistry: { correct: 0, total: 5 },
+                earthScience: { correct: 0, total: 5 },
+                mathematics: { correct: 0, total: 5 }
+            };
+            
+            const subjectRanges = {
+                biology: [1, 5],
+                physics: [6, 10],
+                chemistry: [11, 15],
+                earthScience: [16, 20],
+                mathematics: [21, 25]
+            };
+            
+            for (let i = 1; i <= 25; i++) {
+                const feedback = document.getElementById(`feedback${i}`);
+                const options = document.querySelectorAll(`#q${i} .options li`);
+                
+                // Determine subject
+                let currentSubject = '';
+                for (const [subject, [start, end]] of Object.entries(subjectRanges)) {
+                    if (i >= start && i <= end) {
+                        currentSubject = subject;
+                        break;
+                    }
+                }
+                
+                if (userAnswers[i]) {
+                    if (userAnswers[i] === answers[i-1]) {
+                        correct++;
+                        subjectScores[currentSubject].correct++;
+                        feedback.className = 'feedback correct';
+                        feedback.innerHTML = `✅ ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    } else {
+                        incorrect++;
+                        feedback.className = 'feedback incorrect';
+                        feedback.innerHTML = `❌ Incorrect. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(userAnswers[i])) {
+                                li.classList.add('incorrect');
+                            }
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    }
+                } else {
+                    blank++;
+                    feedback.className = 'feedback incorrect';
+                    feedback.innerHTML = `⚠️ No answer selected. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                }
+                
+                feedback.style.display = 'block';
+            }
+            
+            const totalScore = correct - (incorrect * 0.25);
+            const percentage = ((correct / 25) * 100).toFixed(1);
+            
+            // Display results
+            displayResults(correct, incorrect, blank, totalScore, percentage, subjectScores);
+            
+            // Save results to localStorage
+            const today = new Date().toDateString();
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            progress['day7_mock_test'] = {
+                completed: true,
+                totalScore: totalScore,
+                percentage: percentage,
+                correct: correct,
+                incorrect: incorrect,
+                blank: blank,
+                subjectScores: subjectScores,
+                date: today
+            };
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        function displayResults(correct, incorrect, blank, totalScore, percentage, subjectScores) {
+            const resultsSection = document.getElementById('results-section');
+            resultsSection.style.display = 'block';
+            
+            // Overall results
+            const results = document.getElementById('test-results');
+            let performanceLevel = '';
+            let resultColor = '';
+            
+            if (percentage >= 80) {
+                performanceLevel = '🌟 EXCELLENT - Strong foundation ready for advanced topics!';
+                resultColor = '#4caf50';
+            } else if (percentage >= 70) {
+                performanceLevel = '✅ GOOD - Solid foundation with minor gaps to address';
+                resultColor = '#2196f3';
+            } else if (percentage >= 60) {
+                performanceLevel = '⚠️ DEVELOPING - Foundation building in progress';
+                resultColor = '#ff9800';
+            } else {
+                performanceLevel = '🔄 NEEDS IMPROVEMENT - Focus on core concept review';
+                resultColor = '#f44336';
+            }
+            
+            results.innerHTML = `
+                <div style="text-align: center; padding: 2rem; background: ${resultColor}15; border-radius: 8px; border: 2px solid ${resultColor};">
+                    <h3 style="color: ${resultColor};">${performanceLevel}</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                        <div><strong>Final Score:</strong><br>${totalScore.toFixed(2)}/25.00</div>
+                        <div><strong>Percentage:</strong><br>${percentage}%</div>
+                        <div><strong>Correct:</strong><br>${correct}/25</div>
+                        <div><strong>Incorrect:</strong><br>${incorrect}/25</div>
+                        <div><strong>Blank:</strong><br>${blank}/25</div>
+                    </div>
+                </div>
+            `;
+            
+            // Subject breakdown
+            const breakdown = document.getElementById('subject-breakdown');
+            const subjectNames = {
+                biology: '🧬 Biology',
+                physics: '⚛️ Physics', 
+                chemistry: '🧪 Chemistry',
+                earthScience: '🌍 Earth Science',
+                mathematics: '📐 Mathematics'
+            };
+            
+            let subjectHTML = '<h3>📊 Subject-by-Subject Breakdown</h3><div style="display: grid; gap: 1rem;">';
+            
+            for (const [subject, scores] of Object.entries(subjectScores)) {
+                const subjectPercentage = ((scores.correct / scores.total) * 100).toFixed(1);
+                let subjectColor = scores.correct >= 4 ? '#4caf50' : scores.correct >= 3 ? '#ff9800' : '#f44336';
+                
+                subjectHTML += `
+                    <div style="display: flex; justify-content: space-between; align-items: center; padding: 1rem; background: ${subjectColor}15; border-left: 4px solid ${subjectColor}; border-radius: 6px;">
+                        <span><strong>${subjectNames[subject]}</strong></span>
+                        <span>${scores.correct}/${scores.total} (${subjectPercentage}%)</span>
+                    </div>
+                `;
+            }
+            subjectHTML += '</div>';
+            breakdown.innerHTML = subjectHTML;
+            
+            // Recommendations
+            const recommendations = document.getElementById('recommendations');
+            let recHTML = '<h3>💡 Personalized Study Recommendations</h3>';
+            
+            const weakSubjects = [];
+            for (const [subject, scores] of Object.entries(subjectScores)) {
+                if (scores.correct < 3) {
+                    weakSubjects.push(subjectNames[subject]);
+                }
+            }
+            
+            if (weakSubjects.length > 0) {
+                recHTML += `<div style="background: #fff3cd; padding: 1rem; border-radius: 6px; margin-bottom: 1rem;">
+                    <strong>🎯 Priority Review Areas:</strong>
+                    <ul>${weakSubjects.map(subject => `<li>${subject} - Review Day ${getSubjectDay(subject)} materials</li>`).join('')}</ul>
+                </div>`;
+            }
+            
+            if (totalScore >= 20) {
+                recHTML += `<div style="background: #e8f5e8; padding: 1rem; border-radius: 6px;">
+                    <strong>🚀 Ready for Week 2!</strong> Your foundation is solid. Focus on advanced concepts and application problems.
+                </div>`;
+            } else if (totalScore >= 15) {
+                recHTML += `<div style="background: #fff3e0; padding: 1rem; border-radius: 6px;">
+                    <strong>⚡ Almost Ready!</strong> Review weak areas before advancing. Consider spending extra time on fundamental concepts.
+                </div>`;
+            } else {
+                recHTML += `<div style="background: #ffebee; padding: 1rem; border-radius: 6px;">
+                    <strong>🔄 Foundation Review Needed:</strong> Spend additional time reviewing Week 1 materials before moving to Week 2.
+                </div>`;
+            }
+            
+            recommendations.innerHTML = recHTML;
+            
+            // Scroll to results
+            resultsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function getSubjectDay(subjectName) {
+            const dayMap = {
+                '🧬 Biology': 1,
+                '⚛️ Physics': 2,
+                '🧪 Chemistry': 3,
+                '🌍 Earth Science': 4,
+                '📐 Mathematics': 5
+            };
+            return dayMap[subjectName] || 1;
+        }
+        
+        // Auto-save progress periodically during test
+        setInterval(function() {
+            if (testStarted) {
+                const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+                progress['day7_test_in_progress'] = {
+                    answers: userAnswers,
+                    timeRemaining: timeRemaining,
+                    date: new Date().toDateString()
+                };
+                localStorage.setItem('husoProgress', JSON.stringify(progress));
+            }
+        }, 30000); // Save every 30 seconds
+    </script>
+</body>
+</html>

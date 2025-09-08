@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5: Mathematics - Polynomials & Factorization | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - MATHEMATICS THEME */
+        .day-header {
+            background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box {
+            background: #f3e5f5;
+            border-left: 4px solid #9c27b0;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .concept-box {
+            background: #faf9fc;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .fact-box {
+            background: #f3e5f5;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .importance-box {
+            background: #f3e5f5;
+            border: 2px solid #9c27b0;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .worked-example {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .practice-problem {
+            background: #f3e5f5;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .quiz-section {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #f3e5f5;
+        }
+        
+        .options li.selected {
+            background: #9c27b0;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checklist li.completed {
+            background: #e8f5e8;
+            border-color: #4caf50;
+        }
+        
+        .btn-primary {
+            background: #9c27b0;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #7b1fa2;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+
+        .math-expression {
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1em;
+            background: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>📐 Day 5: Mathematics - Polynomials & Factorization</h1>
+            <p><strong>Learning Goal:</strong> Master polynomial operations and discover elegant factoring patterns that make complex algebra simple</p>
+            <div class="timer">⏱️ Estimated Time: 60-75 minutes</div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Learning Objectives</h2>
+                <ul>
+                    <li>Perform polynomial operations (addition, subtraction, multiplication, division) with confidence</li>
+                    <li>Master factoring techniques including special patterns and the factor theorem</li>
+                    <li>Apply Vieta's formulas to solve problems involving polynomial roots efficiently</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CORE CONCEPTS SECTION -->
+        <section class="learning-section">
+            <h2>📚 Core Concepts (25-30 min read)</h2>
+            
+            <!-- Discovery Story Box -->
+            <div class="story-box">
+                <h3>🌟 The Amazing Discovery Story</h3>
+                <p>Picture this: It's 1545 in Renaissance Italy, and a brilliant mathematician named Gerolamo Cardano is about to publish one of the most controversial books in mathematical history. His work, "Ars Magna" (The Great Art), contained the secret formulas for solving cubic and quartic equations that had puzzled mathematicians for over a thousand years!</p>
+                
+                <p>But here's where it gets dramatic: Cardano had promised his colleague Niccolò Tartaglia that he would keep these formulas secret. When Cardano published them anyway, it sparked one of the greatest mathematical feuds in history - complete with public challenges, insults, and mathematical duels fought in town squares!</p>
+                
+                <p>What Cardano revealed changed everything. He showed that polynomials weren't just abstract mathematical objects - they were powerful tools that could model real-world phenomena. His work on polynomial roots and factoring techniques laid the groundwork for modern algebra, engineering, and even the algorithms that power your smartphone today.</p>
+                
+                <p>The most mind-blowing part? Cardano discovered that even when dealing with "impossible" square roots of negative numbers, the mathematics still worked perfectly! He accidentally invented complex numbers 300 years before anyone understood what they meant. Today, every GPS navigation system, every computer graphics card, and every wireless signal uses the polynomial techniques Cardano pioneered in his mathematical rebellion!</p>
+            </div>
+
+            <!-- CONCEPT BOX 1 - Polynomial Basics -->
+            <div class="concept-box">
+                <h3>1. Understanding Polynomials - The Building Blocks of Algebra!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🏗️ Think of polynomials like building with mathematical LEGO blocks!</strong> Each term is a different colored block, and you can stack them, combine them, and rearrange them using specific rules. Just like LEGO, the fun comes from seeing what amazing structures you can build when you understand how the pieces fit together!</p>
+                </div>
+
+                <!-- Polynomial Anatomy -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🔍 Anatomy of a Polynomial - Meet the Family!</h4>
+                    <p><strong>Example Polynomial:</strong> <span class="math-expression">3x⁴ - 2x³ + 5x² - 7x + 9</span></p>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🧱 Terms - The Individual LEGO Blocks</h5>
+                            <p><strong>What they are:</strong> Each piece separated by + or - signs</p>
+                            <p><strong>In our example:</strong> 3x⁴, -2x³, 5x², -7x, and 9</p>
+                            <p><strong>Real-life analogy:</strong> Like ingredients in a recipe - each adds something different to the final result</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #ff9800; padding: 1rem;">
+                            <h5>🔢 Coefficients - The Multipliers</h5>
+                            <p><strong>What they are:</strong> The numbers in front of the variables</p>
+                            <p><strong>In our example:</strong> 3, -2, 5, -7, and 9</p>
+                            <p><strong>Real-life analogy:</strong> Like saying "3 apples" or "5 cars" - the coefficient tells you how many</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #4caf50; padding: 1rem;">
+                            <h5>📈 Degree - The Power Level</h5>
+                            <p><strong>What it is:</strong> The highest exponent in the polynomial</p>
+                            <p><strong>In our example:</strong> Degree 4 (because of x⁴)</p>
+                            <p><strong>Real-life analogy:</strong> Like the difficulty level in a video game - higher degree = more complex behavior</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #9c27b0; padding: 1rem;">
+                            <h5>🎯 Leading Term & Coefficient</h5>
+                            <p><strong>What they are:</strong> The term with the highest degree and its coefficient</p>
+                            <p><strong>In our example:</strong> Leading term = 3x⁴, Leading coefficient = 3</p>
+                            <p><strong>Real-life analogy:</strong> Like the captain of a team - this term dominates the polynomial's behavior for large values</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Mind-Blowing Polynomial Facts:</strong></p>
+                        <ul>
+                            <li>A 5th-degree polynomial can have up to 4 turning points - it can go up and down like a roller coaster!</li>
+                            <li>Google's PageRank algorithm uses polynomials to rank web pages!</li>
+                            <li>Your phone's autocorrect uses polynomial interpolation to predict what you're typing!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Types of Polynomials -->
+                <div style="margin: 2rem 0;">
+                    <h4>👥 The Polynomial Family Tree</h4>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #ffe6e6; padding: 1rem; border-radius: 8px; border: 2px solid #ff9999;">
+                            <h6>📏 Linear (Degree 1)</h6>
+                            <p><strong>Form:</strong> <span class="math-expression">ax + b</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">3x + 7</span></p>
+                            <p><strong>Personality:</strong> Straight line - simple and predictable</p>
+                            <p><strong>Real life:</strong> Distance = speed × time</p>
+                        </div>
+                        
+                        <div style="background: #e6ffe6; padding: 1rem; border-radius: 8px; border: 2px solid #99cc99;">
+                            <h6>📈 Quadratic (Degree 2)</h6>
+                            <p><strong>Form:</strong> <span class="math-expression">ax² + bx + c</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">x² - 5x + 6</span></p>
+                            <p><strong>Personality:</strong> U-shaped curve - one turning point</p>
+                            <p><strong>Real life:</strong> Projectile motion, profit curves</p>
+                        </div>
+                        
+                        <div style="background: #e6e6ff; padding: 1rem; border-radius: 8px; border: 2px solid #9999ff;">
+                            <h6>📊 Cubic (Degree 3)</h6>
+                            <p><strong>Form:</strong> <span class="math-expression">ax³ + bx² + cx + d</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">2x³ - x² + 4</span></p>
+                            <p><strong>Personality:</strong> S-shaped curve - up to 2 turning points</p>
+                            <p><strong>Real life:</strong> Volume relationships, population growth</p>
+                        </div>
+                        
+                        <div style="background: #fff0e6; padding: 1rem; border-radius: 8px; border: 2px solid #ffcc99;">
+                            <h6>🎢 Quartic (Degree 4)</h6>
+                            <p><strong>Form:</strong> <span class="math-expression">ax⁴ + bx³ + cx² + dx + e</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">x⁴ - 3x² + 2</span></p>
+                            <p><strong>Personality:</strong> W or M shaped - up to 3 turning points</p>
+                            <p><strong>Real life:</strong> Bridge engineering, optimization problems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 2 - Factoring Techniques -->
+            <div class="concept-box">
+                <h3>2. Factoring Techniques - The Art of Mathematical Archaeology!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🏺 Think of factoring like being an archaeological detective!</strong> You have this complex polynomial "artifact," and your job is to dig through it and discover the simple, beautiful building blocks hidden inside. Each factoring technique is like a different archaeological tool - some work on certain types of "artifacts," others work on different ones!</p>
+                </div>
+
+                <!-- Basic Factoring Methods -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🛠️ The Factoring Toolkit</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🎯 Greatest Common Factor (GCF) - Finding the Shared DNA</h5>
+                            <p><strong>The technique:</strong> Pull out what all terms have in common</p>
+                            <p><strong>Example:</strong> <span class="math-expression">6x³ + 9x² + 3x = 3x(2x² + 3x + 1)</span></p>
+                            <p><strong>Detective work:</strong> All terms contain 3x, so factor it out!</p>
+                            <p><strong>Pro tip:</strong> Always look for GCF first - it's like clearing the dust off your artifact</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #ff9800; padding: 1rem;">
+                            <h5>🔲 Difference of Squares - The Perfect Split</h5>
+                            <p><strong>The pattern:</strong> <span class="math-expression">a² - b² = (a + b)(a - b)</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">x² - 25 = (x + 5)(x - 5)</span></p>
+                            <p><strong>Detective work:</strong> Look for two perfect squares being subtracted</p>
+                            <p><strong>Memory trick:</strong> "Difference of squares always factors into sum times difference!"</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #4caf50; padding: 1rem;">
+                            <h5>📦 Perfect Square Trinomials - The Beautiful Patterns</h5>
+                            <p><strong>The patterns:</strong></p>
+                            <p><span class="math-expression">a² + 2ab + b² = (a + b)²</span></p>
+                            <p><span class="math-expression">a² - 2ab + b² = (a - b)²</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">x² + 6x + 9 = (x + 3)²</span></p>
+                            <p><strong>Detective work:</strong> First and last terms are perfect squares, middle term is twice their product</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #9c27b0; padding: 1rem;">
+                            <h5>🎲 Grouping - The Divide and Conquer Strategy</h5>
+                            <p><strong>The technique:</strong> Group terms strategically and factor each group</p>
+                            <p><strong>Example:</strong> <span class="math-expression">ax + ay + bx + by = a(x + y) + b(x + y) = (a + b)(x + y)</span></p>
+                            <p><strong>Detective work:</strong> Look for common factors within groups</p>
+                            <p><strong>Strategy:</strong> Usually works best with 4-term expressions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Factoring -->
+                <div style="margin: 2rem 0;">
+                    <h4>🧙‍♂️ Advanced Factoring Magic</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #f44336; padding: 1rem;">
+                            <h5>🎭 Quadratic Trinomials - The AC Method</h5>
+                            <p><strong>For:</strong> <span class="math-expression">ax² + bx + c</span> where a ≠ 1</p>
+                            <p><strong>The magic:</strong> Find two numbers that multiply to ac and add to b</p>
+                            <p><strong>Example:</strong> <span class="math-expression">2x² + 7x + 3</span></p>
+                            <p>AC = 2×3 = 6, need numbers that multiply to 6 and add to 7</p>
+                            <p>Answer: 6 and 1! So: <span class="math-expression">2x² + 6x + x + 3 = 2x(x + 3) + 1(x + 3) = (2x + 1)(x + 3)</span></p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #795548; padding: 1rem;">
+                            <h5>📐 Sum/Difference of Cubes - The Cube Patterns</h5>
+                            <p><strong>Sum of cubes:</strong> <span class="math-expression">a³ + b³ = (a + b)(a² - ab + b²)</span></p>
+                            <p><strong>Difference of cubes:</strong> <span class="math-expression">a³ - b³ = (a - b)(a² + ab + b²)</span></p>
+                            <p><strong>Example:</strong> <span class="math-expression">x³ + 8 = x³ + 2³ = (x + 2)(x² - 2x + 4)</span></p>
+                            <p><strong>Memory trick:</strong> "Same sign, Opposite sign, Always positive!"</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Factoring Fun Facts:</strong></p>
+                        <ul>
+                            <li>The ancient Babylonians knew how to factor quadratics 4000 years ago!</li>
+                            <li>RSA encryption (used for online security) relies on the difficulty of factoring very large numbers!</li>
+                            <li>Quantum computers might break current encryption by factoring numbers too quickly!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 3 - Vieta's Formulas -->
+            <div class="concept-box">
+                <h3>3. Vieta's Formulas - The Ultimate Polynomial Shortcut!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>⚡ Think of Vieta's formulas like having cheat codes for video games!</strong> Instead of doing all the hard work to find polynomial roots, these formulas let you jump straight to relationships between roots and coefficients. It's like having X-ray vision that lets you see inside polynomials without solving them completely!</p>
+                </div>
+
+                <!-- Vieta's for Quadratics -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🎯 Quadratic Magic - The Power of Two</h4>
+                    <p><strong>For polynomial:</strong> <span class="math-expression">ax² + bx + c = 0</span> with roots r₁ and r₂</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; border: 2px solid #4caf50;">
+                            <h6>➕ Sum of Roots</h6>
+                            <p><strong>Formula:</strong> <span class="math-expression">r₁ + r₂ = -b/a</span></p>
+                            <p><strong>Example:</strong> For <span class="math-expression">x² - 5x + 6 = 0</span></p>
+                            <p>Sum = -(-5)/1 = 5</p>
+                            <p><strong>Magic:</strong> You know the sum without finding individual roots!</p>
+                        </div>
+                        
+                        <div style="background: #ffe8e8; padding: 1rem; border-radius: 8px; border: 2px solid #f44336;">
+                            <h6>✖️ Product of Roots</h6>
+                            <p><strong>Formula:</strong> <span class="math-expression">r₁ × r₂ = c/a</span></p>
+                            <p><strong>Example:</strong> For <span class="math-expression">x² - 5x + 6 = 0</span></p>
+                            <p>Product = 6/1 = 6</p>
+                            <p><strong>Magic:</strong> You know the product instantly!</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <p><strong>🔍 Verification:</strong> The actual roots are 2 and 3</p>
+                        <p>Sum: 2 + 3 = 5 ✓</p>
+                        <p>Product: 2 × 3 = 6 ✓</p>
+                        <p><strong>Vieta was right!</strong></p>
+                    </div>
+                </div>
+
+                <!-- Vieta's for Cubics -->
+                <div style="margin: 2rem 0;">
+                    <h4>🎪 Cubic Complexity - The Power of Three</h4>
+                    <p><strong>For polynomial:</strong> <span class="math-expression">ax³ + bx² + cx + d = 0</span> with roots r₁, r₂, and r₃</p>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>📊 The Three Sacred Relationships</h5>
+                            <p><strong>Sum of roots:</strong> <span class="math-expression">r₁ + r₂ + r₃ = -b/a</span></p>
+                            <p><strong>Sum of products taken two at a time:</strong> <span class="math-expression">r₁r₂ + r₁r₃ + r₂r₃ = c/a</span></p>
+                            <p><strong>Product of all roots:</strong> <span class="math-expression">r₁r₂r₃ = -d/a</span></p>
+                        </div>
+                        
+                        <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; border: 2px solid #ff9800;">
+                            <h5>🎯 Example Application</h5>
+                            <p><strong>Polynomial:</strong> <span class="math-expression">x³ - 6x² + 11x - 6 = 0</span></p>
+                            <p><strong>Without solving:</strong></p>
+                            <ul>
+                                <li>Sum of roots = 6</li>
+                                <li>Sum of paired products = 11</li>
+                                <li>Product of all roots = 6</li>
+                            </ul>
+                            <p><strong>Actual roots:</strong> 1, 2, 3 (Check: 1+2+3=6, 1×2+1×3+2×3=11, 1×2×3=6) ✓</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Applications -->
+                <div style="margin: 2rem 0;">
+                    <h4>🚀 Real-World Applications</h4>
+                    
+                    <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5>🏗️ Engineering Applications</h5>
+                        <p><strong>Bridge Design:</strong> Engineers use Vieta's formulas to analyze stress distribution without solving complex cubic equations completely</p>
+                        <p><strong>Signal Processing:</strong> Audio engineers use these relationships to design filters and equalizers</p>
+                        <p><strong>Economics:</strong> Market analysts use polynomial relationships to model supply and demand curves</p>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Vieta's Historical Fun Facts:</strong></p>
+                        <ul>
+                            <li>François Viète (Vieta) was a lawyer who did math as a hobby and revolutionized algebra!</li>
+                            <li>He was the first to use letters for variables - before him, everything was written in words!</li>
+                            <li>His work helped break enemy codes during wartime - polynomial relationships are still used in cryptography!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Should You Care Section -->
+            <div class="importance-box">
+                <h3>🤔 But Why Should You Care About All This?</h3>
+                
+                <div style="margin: 1rem 0;">
+                    <h4>💻 For Your Digital Life:</h4>
+                    <p>Polynomials power the technology you use every day:</p>
+                    <ul>
+                        <li>Your phone's camera uses polynomial interpolation to enhance photos and create portrait mode effects</li>
+                        <li>Video games use polynomial curves to create smooth character animations and realistic physics</li>
+                        <li>Music streaming apps use polynomial algorithms to compress audio without losing quality</li>
+                        <li>Your GPS uses polynomial equations to calculate the fastest route and predict arrival times</li>
+                        <li>Social media recommendation algorithms are based on polynomial regression models</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🔬 For Your Future Career:</h4>
+                    <p>Polynomial mastery is essential for:</p>
+                    <ul>
+                        <li><strong>Data Science:</strong> Polynomial regression helps predict trends from weather to stock prices</li>
+                        <li><strong>Engineering:</strong> Bridge designs, aerodynamics, and structural analysis all use polynomial modeling</li>
+                        <li><strong>Computer Graphics:</strong> Bezier curves (polynomials) create every smooth curve in animation and design</li>
+                        <li><strong>Finance:</strong> Risk analysis and option pricing models are built on polynomial mathematics</li>
+                        <li><strong>Medicine:</strong> Drug dosage calculations and medical imaging rely on polynomial relationships</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🌟 For Your Problem-Solving Power:</h4>
+                    <p>Understanding polynomials gives you a superpower - the ability to see patterns and relationships that others miss! When you master factoring, you're training your brain to break down complex problems into simple, manageable pieces. This skill transfers to everything: organizing your study schedule, solving coding problems, even figuring out the best way to pack a suitcase. You're literally rewiring your brain to be a pattern-recognition machine!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES SECTION -->
+        <section class="learning-section">
+            <h2>🔬 Worked Examples (15-20 min)</h2>
+            <p><em>Let's solve some problems together, step by step, like we're mathematical detectives uncovering hidden patterns!</em></p>
+            
+            <!-- Detective Case 1 -->
+            <div class="worked-example">
+                <h3>🕵️ Detective Case 1: The Quadratic Factoring Mystery</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Mystery:</strong> A student claims that <span class="math-expression">6x² + 13x + 6</span> cannot be factored because "it looks too complicated." Can we prove them wrong by finding the hidden factors?</p>
+                </div>
+                
+                <p><strong>🧠 Let's think like factoring detectives:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 1: "Use the AC method"</strong></p>
+                    <p>a = 6, b = 13, c = 6, so AC = 6 × 6 = 36</p>
+                    <p>We need two numbers that multiply to 36 and add to 13</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 2: "Factor pairs of 36"</strong></p>
+                    <p>Possible pairs: 1×36, 2×18, 3×12, 4×9, 6×6</p>
+                    <p>Which pair adds to 13? Let's check: 4 + 9 = 13 ✓</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 3: "Rewrite and group"</strong></p>
+                    <p><span class="math-expression">6x² + 13x + 6 = 6x² + 4x + 9x + 6</span></p>
+                    <p>Group: <span class="math-expression">(6x² + 4x) + (9x + 6)</span></p>
+                    <p>Factor each group: <span class="math-expression">2x(3x + 2) + 3(3x + 2)</span></p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Case Solved!</strong></p>
+                    <p><span class="math-expression">6x² + 13x + 6 = (2x + 3)(3x + 2)</span></p>
+                    <p><strong>Verification:</strong> (2x + 3)(3x + 2) = 6x² + 4x + 9x + 6 = 6x² + 13x + 6 ✓</p>
+                    <p>The student was wrong - it factors beautifully!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 2 -->
+            <div class="worked-example">
+                <h3>⚡ The Vieta's Formula Challenge</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🤔 The Question:</strong> Without solving the equation <span class="math-expression">2x² - 7x + 3 = 0</span>, can you find the sum and product of its roots? Then use this information to create a new quadratic with roots that are each 1 more than the original roots.</p>
+                </div>
+                
+                <p><strong>🧙‍♂️ Let's use Vieta's magic:</strong></p>
+                
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Step 1: Apply Vieta's formulas</strong></p>
+                    <p>For <span class="math-expression">2x² - 7x + 3 = 0</span>: a = 2, b = -7, c = 3</p>
+                    <p>Sum of roots = -b/a = -(-7)/2 = 7/2</p>
+                    <p>Product of roots = c/a = 3/2</p>
+                </div>
+
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Step 2: Find new roots</strong></p>
+                    <p>If original roots are r₁ and r₂, new roots are (r₁ + 1) and (r₂ + 1)</p>
+                    <p>New sum = (r₁ + 1) + (r₂ + 1) = (r₁ + r₂) + 2 = 7/2 + 2 = 11/2</p>
+                    <p>New product = (r₁ + 1)(r₂ + 1) = r₁r₂ + r₁ + r₂ + 1 = 3/2 + 7/2 + 1 = 7</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; border: 2px solid #ff9800;">
+                    <p><strong>🎯 New Quadratic Magic!</strong></p>
+                    <p>For a quadratic with sum = 11/2 and product = 7:</p>
+                    <p><span class="math-expression">x² - (sum)x + product = x² - (11/2)x + 7</span></p>
+                    <p>Or in standard form: <span class="math-expression">2x² - 11x + 14 = 0</span></p>
+                    <p>We created a new quadratic without ever finding the original roots!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 3 -->
+            <div class="worked-example">
+                <h3>🎲 The Cubic Polynomial Investigation</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Scenario:</strong> A polynomial <span class="math-expression">P(x) = x³ - 6x² + 11x - 6</span> represents the profit function for a small business. The owner knows that there are exactly three break-even points (where profit = 0) but wants to find them efficiently.</p>
+                </div>
+                
+                <p><strong>🧠 Strategic polynomial solving:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Strategy: Try simple integer values first</strong></p>
+                    <p>P(1) = 1 - 6 + 11 - 6 = 0 ✓</p>
+                    <p>Great! x = 1 is a root, so (x - 1) is a factor</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Polynomial division:</strong></p>
+                    <p><span class="math-expression">x³ - 6x² + 11x - 6 = (x - 1)(x² - 5x + 6)</span></p>
+                    <p>Now factor the quadratic: <span class="math-expression">x² - 5x + 6 = (x - 2)(x - 3)</span></p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Business Insight!</strong></p>
+                    <p><span class="math-expression">P(x) = (x - 1)(x - 2)(x - 3)</span></p>
+                    <p>The three break-even points are at x = 1, 2, and 3</p>
+                    <p><strong>Vieta verification:</strong> Sum = 1+2+3 = 6, Product = 1×2×3 = 6</p>
+                    <p>Using Vieta's: Sum = -(-6)/1 = 6 ✓, Product = -(-6)/1 = 6 ✓</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 4 -->
+            <div class="worked-example">
+                <h3>🚨 The Factor Theorem Emergency</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>⚡ The Situation:</strong> You need to quickly determine if (x - 4) is a factor of <span class="math-expression">f(x) = 2x³ - 5x² - 11x + 12</span> without doing long division. Time is critical!</p>
+                </div>
+                
+                <p><strong>🔍 Factor theorem to the rescue:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Factor Theorem:</strong> (x - a) is a factor of f(x) if and only if f(a) = 0</p>
+                    <p>For (x - 4) to be a factor, we need f(4) = 0</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Quick calculation:</strong></p>
+                    <p>f(4) = 2(4)³ - 5(4)² - 11(4) + 12</p>
+                    <p>f(4) = 2(64) - 5(16) - 44 + 12</p>
+                    <p>f(4) = 128 - 80 - 44 + 12 = 16</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Emergency Decision!</strong> Since f(4) = 16 ≠ 0, (x - 4) is NOT a factor of the polynomial. Mission accomplished in under 30 seconds!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS SECTION -->
+        <section class="learning-section">
+            <h2>💪 Practice Problems (25-35 min)</h2>
+            <p><em>Now it's your turn to be the polynomial detective! Try these real-world scenarios and see how much you've learned.</em></p>
+            
+            <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                <p><strong>💡 Pro Tip:</strong> For each problem, try to explain your answer like you're teaching it to a friend. This helps you really understand it!</p>
+            </div>
+            
+            <!-- Problem 1 -->
+            <div class="practice-problem">
+                <h4>🔬 Problem 1: The Engineering Design Challenge</h4>
+                <p><strong>Scenario:</strong> An engineer is designing a rectangular garden where the length is 3 meters more than twice the width. If the total area must be 44 square meters, find the dimensions.</p>
+                <p><strong>Your Mission:</strong></p>
+                <ol>
+                    <li>Set up the polynomial equation using width as your variable</li>
+                    <li>Factor the resulting quadratic equation</li>
+                    <li>Determine which solution is physically meaningful</li>
+                    <li>Verify your answer by calculating the actual area</li>
+                    <li>Use Vieta's formulas to check that your factoring is correct</li>
+                </ol>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="practice-problem">
+                <h4>🏥 Problem 2: The Medicine Dosage Optimization</h4>
+                <p><strong>Story:</strong> A pharmaceutical company models the concentration of a drug in the bloodstream using <span class="math-expression">C(t) = -t³ + 6t² - 9t + 4</span>, where t is time in hours and C is concentration in mg/L. They need to find when the concentration is zero.</p>
+                <p><strong>Your Challenge:</strong></p>
+                <ol>
+                    <li>Use the factor theorem to test if t = 1 is a root</li>
+                    <li>If it is, factor out (t - 1) from the cubic polynomial</li>
+                    <li>Factor the remaining quadratic completely</li>
+                    <li>Find all times when drug concentration is zero</li>
+                    <li>Verify your factorization using Vieta's formulas</li>
+                </ol>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="practice-problem">
+                <h4>🌱 Problem 3: The Agricultural Profit Analysis</h4>
+                <p><strong>Real-Life Situation:</strong> A farmer's profit function is <span class="math-expression">P(x) = -2x² + 12x - 10</span> dollars, where x is the number of acres planted. Analyze this function completely.</p>
+                <p><strong>Your Task:</strong></p>
+                <ol>
+                    <li>Factor out the GCF first to simplify the expression</li>
+                    <li>Factor the resulting quadratic expression</li>
+                    <li>Find the break-even points (where profit = 0)</li>
+                    <li>Use Vieta's formulas to verify the sum and product of roots</li>
+                    <li>Determine the number of acres that maximizes profit</li>
+                </ol>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="practice-problem">
+                <h4>🔋 Problem 4: The Physics Trajectory Problem</h4>
+                <p><strong>Physics Scenario:</strong> A projectile's height is modeled by <span class="math-expression">h(t) = -16t² + 64t + 80</span> feet, where t is time in seconds. Analyze this motion completely.</p>
+                <p><strong>Your Analysis:</strong></p>
+                <ol>
+                    <li>Factor out the GCF to simplify the expression</li>
+                    <li>Complete the square or use the quadratic formula to find when the projectile hits the ground</li>
+                    <li>Without solving completely, use Vieta's formulas to find the sum of the two times</li>
+                    <li>What is the physical meaning of the sum of roots in this context?</li>
+                    <li>Find the maximum height and when it occurs</li>
+                </ol>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="practice-problem">
+                <h4>🎢 Problem 5: The Complex Factoring Challenge</h4>
+                <p><strong>Advanced Scenario:</strong> You encounter the polynomial <span class="math-expression">8x³ - 27</span> in a calculus problem and need to factor it completely.</p>
+                <p><strong>Your Challenge:</strong></p>
+                <ol>
+                    <li>Recognize this as a difference of cubes pattern</li>
+                    <li>Apply the difference of cubes formula</li>
+                    <li>Verify your factoring by expanding back to the original</li>
+                    <li>Find the real root and explain why the other factors don't give real roots</li>
+                    <li>Graph or describe the behavior of this cubic function</li>
+                </ol>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="practice-problem">
+                <h4>✈️ Problem 6: The Optimization Problem</h4>
+                <p><strong>Business Scenario:</strong> A company's revenue is modeled by <span class="math-expression">R(x) = x(100 - x)</span> where x is the price per unit. They want to understand this function completely.</p>
+                <p><strong>Business Analysis:</strong></p>
+                <ol>
+                    <li>Expand this expression into standard quadratic form</li>
+                    <li>Find the roots and explain their business meaning</li>
+                    <li>Use Vieta's formulas to verify your roots</li>
+                    <li>Find the price that maximizes revenue without using calculus</li>
+                    <li>Create a new polynomial for a scenario where they decrease all prices by $5</li>
+                    <li>Compare the maximum revenue in both scenarios</li>
+                </ol>
+            </div>
+
+            <!-- Challenge Section -->
+            <div style="background: #e8f4fd; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #2196f3;">
+                <h4>🎯 Challenge Yourself Further:</h4>
+                <p><strong>After solving these problems, try this:</strong></p>
+                <ul>
+                    <li>Find examples of parabolas in architecture (bridges, arches) and identify their polynomial equations</li>
+                    <li>Research how polynomial regression is used in predicting stock prices or sports statistics</li>
+                    <li>Explore how Bezier curves (polynomials) are used in computer graphics and design software</li>
+                    <li>Investigate how polynomial error-correcting codes are used in QR codes and data transmission</li>
+                    <li>Create your own polynomial word problem based on a real situation you encounter</li>
+                </ul>
+                <p><em>Remember: Every smooth curve you see - from roller coasters to smartphone screens - is likely based on polynomial mathematics!</em></p>
+            </div>
+        </section>
+
+        <!-- QUICK QUIZ SECTION -->
+        <section class="quiz-section">
+            <h2>⚡ Quick Quiz (10 min)</h2>
+            <p><strong>Instructions:</strong> Answer all 5 questions. +1 point for correct answers, -0.25 for incorrect, 0 for blank.</p>
+            
+            <!-- Quiz Question 1 -->
+            <div class="quiz-question" id="q1">
+                <h4>Question 1: What is the degree of the polynomial 3x⁴ - 2x² + 7x - 1?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(1, 'A')">A) 3</li>
+                    <li onclick="selectAnswer(1, 'B')">B) 4</li>
+                    <li onclick="selectAnswer(1, 'C')">C) 7</li>
+                    <li onclick="selectAnswer(1, 'D')">D) -1</li>
+                    <li onclick="selectAnswer(1, 'E')">E) 2</li>
+                </ul>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <!-- Quiz Question 2 -->
+            <div class="quiz-question" id="q2">
+                <h4>Question 2: Factor completely: x² - 9</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(2, 'A')">A) (x - 3)²</li>
+                    <li onclick="selectAnswer(2, 'B')">B) (x + 3)(x - 3)</li>
+                    <li onclick="selectAnswer(2, 'C')">C) (x + 9)(x - 1)</li>
+                    <li onclick="selectAnswer(2, 'D')">D) Cannot be factored</li>
+                    <li onclick="selectAnswer(2, 'E')">E) (x - 3)(x - 3)</li>
+                </ul>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <!-- Quiz Question 3 -->
+            <div class="quiz-question" id="q3">
+                <h4>Question 3: For the quadratic equation x² - 5x + 6 = 0, what is the sum of the roots according to Vieta's formulas?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(3, 'A')">A) -5</li>
+                    <li onclick="selectAnswer(3, 'B')">B) 5</li>
+                    <li onclick="selectAnswer(3, 'C')">C) 6</li>
+                    <li onclick="selectAnswer(3, 'D')">D) -6</li>
+                    <li onclick="selectAnswer(3, 'E')">E) 1</li>
+                </ul>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+
+            <!-- Quiz Question 4 -->
+            <div class="quiz-question" id="q4">
+                <h4>Question 4: Which of the following is a perfect square trinomial?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(4, 'A')">A) x² + 6x + 8</li>
+                    <li onclick="selectAnswer(4, 'B')">B) x² + 6x + 9</li>
+                    <li onclick="selectAnswer(4, 'C')">C) x² + 6x + 10</li>
+                    <li onclick="selectAnswer(4, 'D')">D) x² + 8x + 9</li>
+                    <li onclick="selectAnswer(4, 'E')">E) x² + 4x + 8</li>
+                </ul>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+
+            <!-- Quiz Question 5 -->
+            <div class="quiz-question" id="q5">
+                <h4>Question 5: Factor: 2x² + 7x + 3</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(5, 'A')">A) (2x + 1)(x + 3)</li>
+                    <li onclick="selectAnswer(5, 'B')">B) (2x + 3)(x + 1)</li>
+                    <li onclick="selectAnswer(5, 'C')">C) (2x - 1)(x - 3)</li>
+                    <li onclick="selectAnswer(5, 'D')">D) (x + 1)(x + 3)</li>
+                    <li onclick="selectAnswer(5, 'E')">E) Cannot be factored</li>
+                </ul>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn-primary" onclick="calculateScore()">Submit Quiz</button>
+                <div id="quiz-results" style="margin-top: 1rem; font-size: 1.2rem;"></div>
+            </div>
+        </section>
+
+        <!-- SELF-ASSESSMENT SECTION -->
+        <section class="learning-section">
+            <div class="progress-tracker">
+                <h2>📊 Self-Assessment Checklist</h2>
+                <p><em>Check off each item as you master it:</em></p>
+                <ul class="checklist" id="checklist">
+                    <li onclick="toggleCheck(this)">✓ I can identify polynomial degree, leading coefficient, and terms accurately</li>
+                    <li onclick="toggleCheck(this)">✓ I can factor polynomials using GCF, difference of squares, and special patterns</li>
+                    <li onclick="toggleCheck(this)">✓ I can factor quadratic trinomials using multiple methods (AC method, grouping)</li>
+                    <li onclick="toggleCheck(this)">✓ I can apply Vieta's formulas to find relationships between roots and coefficients</li>
+                    <li onclick="toggleCheck(this)">✓ I can use the factor theorem to test for polynomial factors quickly</li>
+                    <li onclick="toggleCheck(this)">✓ I can solve real-world problems involving polynomial modeling and optimization</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TOMORROW'S PREVIEW -->
+        <section class="learning-section">
+            <h2>🔗 Week 1 Complete! Days 6-7: Review & Assessment</h2>
+            <div style="background: #e8f4fd; padding: 1rem; border-radius: 6px;">
+                <h3>🚀 Weekend Review & Mock Test</h3>
+                <p><strong>What's coming up:</strong></p>
+                <ul>
+                    <li>Comprehensive review of all Week 1 topics (Biology, Physics, Chemistry, Earth Science, Math)</li>
+                    <li>Practice problems that combine multiple subjects</li>
+                    <li>Your first mini mock test to assess foundation knowledge</li>
+                </ul>
+                <p><em>💡 Celebration time: You've completed your first week of HUSO preparation! Take a moment to appreciate how much you've learned across five different subjects!</em></p>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="../index.html" class="btn-secondary">← Back to Dashboard</a>
+            <a href="day_06.html" class="btn-primary">Continue to Week 1 Review →</a>
+        </nav>
+    </div>
+
+    <!-- QUIZ JAVASCRIPT -->
+    <script>
+        // Quiz functionality
+        const answers = ['B', 'B', 'B', 'B', 'A']; // CORRECT ANSWERS
+        const explanations = [
+            "The degree is the highest power of the variable. In 3x⁴ - 2x² + 7x - 1, the highest power is 4, so the degree is 4.",
+            "x² - 9 is a difference of squares: x² - 3². Using the pattern a² - b² = (a+b)(a-b), we get (x+3)(x-3).",
+            "For ax² + bx + c = 0, the sum of roots = -b/a. Here a=1, b=-5, so sum = -(-5)/1 = 5. The actual roots are 2 and 3, and 2+3=5!",
+            "A perfect square trinomial has the form (a+b)² = a² + 2ab + b². For x² + 6x + 9, we have (x+3)² since x² + 2(x)(3) + 3² = x² + 6x + 9.",
+            "Using the AC method: a=2, c=3, so AC=6. Need numbers that multiply to 6 and add to 7: that's 6 and 1. So 2x² + 7x + 3 = 2x² + 6x + x + 3 = 2x(x+3) + 1(x+3) = (2x+1)(x+3)."
+        ];
+        
+        let userAnswers = {};
+        
+        function selectAnswer(questionNum, answer) {
+            userAnswers[questionNum] = answer;
+            
+            // Clear previous selections
+            const options = document.querySelectorAll(`#q${questionNum} .options li`);
+            options.forEach(li => {
+                li.classList.remove('selected');
+            });
+            
+            // Mark current selection
+            event.target.classList.add('selected');
+        }
+        
+        function calculateScore() {
+            let correct = 0;
+            let incorrect = 0;
+            let blank = 0;
+            
+            for (let i = 1; i <= 5; i++) {
+                const feedback = document.getElementById(`feedback${i}`);
+                const options = document.querySelectorAll(`#q${i} .options li`);
+                
+                if (userAnswers[i]) {
+                    if (userAnswers[i] === answers[i-1]) {
+                        correct++;
+                        feedback.className = 'feedback correct';
+                        feedback.innerHTML = `✅ ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    } else {
+                        incorrect++;
+                        feedback.className = 'feedback incorrect';
+                        feedback.innerHTML = `❌ Incorrect. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(userAnswers[i])) {
+                                li.classList.add('incorrect');
+                            }
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    }
+                } else {
+                    blank++;
+                    feedback.className = 'feedback incorrect';
+                    feedback.innerHTML = `⚠️ No answer selected. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                }
+                
+                feedback.style.display = 'block';
+            }
+            
+            const score = correct - (incorrect * 0.25);
+            const percentage = ((correct / 5) * 100).toFixed(1);
+            
+            const results = document.getElementById('quiz-results');
+            results.innerHTML = `
+                <strong>Quiz Results:</strong><br>
+                Correct: ${correct} | Incorrect: ${incorrect} | Blank: ${blank}<br>
+                Score: ${score.toFixed(2)}/5.00 (${percentage}%)
+            `;
+            
+            // Save progress to localStorage
+            const today = new Date().toDateString();
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '5';
+            progress[`day${dayNum}`] = {
+                completed: true,
+                score: score,
+                percentage: percentage,
+                date: today
+            };
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        function toggleCheck(item) {
+            item.classList.toggle('completed');
+            
+            // Save checklist progress
+            const checklistItems = document.querySelectorAll('.checklist li');
+            const completed = document.querySelectorAll('.checklist li.completed').length;
+            const total = checklistItems.length;
+            
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '5';
+            if (!progress[`day${dayNum}`]) progress[`day${dayNum}`] = {};
+            progress[`day${dayNum}`].checklist = completed;
+            progress[`day${dayNum}`].checklistTotal = total;
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        // Load saved progress on page load
+        window.onload = function() {
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '5';
+            if (progress[`day${dayNum}`] && progress[`day${dayNum}`].checklist) {
+                const checklistItems = document.querySelectorAll('.checklist li');
+                for (let i = 0; i < progress[`day${dayNum}`].checklist && i < checklistItems.length; i++) {
+                    checklistItems[i].classList.add('completed');
+                }
+            }
+        };
+    </script>
+</body>
+</html>

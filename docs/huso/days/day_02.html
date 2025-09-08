@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2: Physics - Motion & Kinematics | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - COPY TO EACH DAILY LESSON */
+        .day-header {
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box {
+            background: #e8f4fd;
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .concept-box {
+            background: #f8f9ff;
+            border: 1px solid #e1e5fe;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .fact-box {
+            background: #f0f8ff;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .importance-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .worked-example {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .practice-problem {
+            background: #f3e5f5;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .quiz-section {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #e3f2fd;
+        }
+        
+        .options li.selected {
+            background: #2196f3;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checklist li.completed {
+            background: #e8f5e8;
+            border-color: #4caf50;
+        }
+        
+        .btn-primary {
+            background: #2196f3;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #1976d2;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>⚛️ Day 2: Physics - Motion & Kinematics Basics</h1>
+            <p><strong>Learning Goal:</strong> Master the fundamentals of motion and understand how objects move in the real world</p>
+            <div class="timer">⏱️ Estimated Time: 60-75 minutes</div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Learning Objectives</h2>
+                <ul>
+                    <li>Understand the difference between distance, displacement, speed, and velocity</li>
+                    <li>Calculate motion using kinematic equations for constant acceleration</li>
+                    <li>Apply motion concepts to real-world scenarios and sports situations</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CORE CONCEPTS SECTION -->
+        <section class="learning-section">
+            <h2>📚 Core Concepts (25-30 min read)</h2>
+            
+            <!-- Discovery Story Box -->
+            <div class="story-box">
+                <h3>🌟 The Amazing Discovery Story</h3>
+                <p>Picture this: It's 1638, and a brilliant Italian scientist named Galileo Galilei is about to change everything we thought we knew about motion. For centuries, people believed that heavier objects fell faster than lighter ones - after all, drop a rock and a feather, and the rock hits the ground first, right?</p>
+                
+                <p>But Galileo was suspicious. Legend says he climbed the famous Leaning Tower of Pisa with two cannonballs - one heavy, one light. When he dropped them simultaneously from the top, something amazing happened: they hit the ground at almost exactly the same time! The crowd below gasped in amazement.</p>
+                
+                <p>This simple experiment shattered 2000 years of "common sense" and launched the scientific revolution. Galileo discovered that all objects fall at the same rate in a vacuum, and more importantly, he figured out the mathematical rules that govern ALL motion. Today, every GPS satellite, every rocket launch, and every video game physics engine uses Galileo's discoveries. Your smartphone literally couldn't work without understanding motion!</p>
+            </div>
+
+            <!-- CONCEPT BOX 1 - Position and Motion -->
+            <div class="concept-box">
+                <h3>1. Position & Motion - Your Personal GPS System</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🗺️ Think of motion like using Google Maps on your phone!</strong> When you're navigating, your phone needs to know exactly where you are, where you're going, and how fast you're moving. Physics works exactly the same way - we need to track position, direction, and speed to understand motion completely.</p>
+                </div>
+
+                <!-- Distance vs Displacement -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>📏 Distance vs Displacement: The Hiking Trail Story</h4>
+                    <p><strong>Simple Story:</strong> Imagine you're hiking with your friend. You both start at the parking lot and want to reach the waterfall.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                        <div style="background: #ffe6e6; padding: 1rem; border-radius: 8px; border: 2px solid #ff9999;">
+                            <h5>🥾 Your Friend's Path (Distance)</h5>
+                            <p><strong>Think of:</strong> The winding hiking trail</p>
+                            <p><strong>What it measures:</strong> Total path length walked</p>
+                            <p>Your friend follows the zigzag trail: 2 km east, then 1.5 km north, then 1 km west, then 2.5 km north. Total distance walked = 7 km</p>
+                            <p><strong>Key point:</strong> Distance is ALWAYS positive!</p>
+                        </div>
+
+                        <div style="background: #e6ffe6; padding: 1rem; border-radius: 8px; border: 2px solid #99cc99;">
+                            <h5>🧭 Your Path (Displacement)</h5>
+                            <p><strong>Think of:</strong> A straight line "as the crow flies"</p>
+                            <p><strong>What it measures:</strong> Straight-line distance from start to finish</p>
+                            <p>You use a helicopter view: The waterfall is exactly 3 km northeast of the parking lot. Your displacement = 3 km northeast</p>
+                            <p><strong>Key point:</strong> Displacement has DIRECTION!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Mind-Blowing Facts:</strong></p>
+                        <ul>
+                            <li>A NASCAR driver completing one lap travels ~3.2 km distance but 0 km displacement!</li>
+                            <li>The Earth travels 940 million km around the sun each year, but its displacement is 0!</li>
+                            <li>When you walk to school and back home, your total displacement is zero even though you walked many kilometers!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Speed vs Velocity -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🏃 Speed vs Velocity: The Race Track Challenge</h4>
+                    <p><strong>Simple Story:</strong> You and your cousin are having a race around the neighborhood block. Your parents are watching from the front yard with stopwatches.</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                        <div style="background: #ffe6e6; padding: 1rem; border-radius: 8px; border: 2px solid #ff9999;">
+                            <h5>⚡ Speed - The Speedometer Reading</h5>
+                            <p><strong>Think of:</strong> Your car's speedometer</p>
+                            <p><strong>What it tells you:</strong> How fast you're going</p>
+                            <p>You complete the 400m block in 80 seconds. Your speed = 400m ÷ 80s = 5 m/s</p>
+                            <p><strong>Important:</strong> Speed is ALWAYS positive (you can't have "negative fast"!)</p>
+                        </div>
+
+                        <div style="background: #e6ffe6; padding: 1rem; border-radius: 8px; border: 2px solid #99cc99;">
+                            <h5>🧭 Velocity - The Navigation System</h5>
+                            <p><strong>Think of:</strong> Your phone's GPS navigation</p>
+                            <p><strong>What it tells you:</strong> How fast AND which direction</p>
+                            <p>After 80 seconds, you're back where you started. Your velocity = 0 m/s (because displacement = 0!)</p>
+                            <p><strong>Important:</strong> Velocity can be negative (means opposite direction)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 2 - Acceleration -->
+            <div class="concept-box">
+                <h3>2. Acceleration - The Ultimate Speed Change Detective</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🎢 Think of acceleration like riding a roller coaster!</strong> Sometimes you speed up going down a hill, sometimes you slow down going up, and sometimes you change direction around curves. Acceleration measures ALL these changes in velocity - speeding up, slowing down, AND changing direction!</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h4>🚗 The Sports Car Story</h4>
+                    <p><strong>Scenario:</strong> You're test-driving a Tesla Model S on a test track. Let's follow your velocity changes:</p>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>⏰ Time 0-5 seconds: Launch Control</h5>
+                            <p><strong>What happens:</strong> Car goes from 0 to 25 m/s (90 km/h)</p>
+                            <p><strong>Real-life comparison:</strong> Like being shot out of a cannon (but much more comfortable!)</p>
+                            <p><strong>Acceleration:</strong> (25 - 0) ÷ 5 = +5 m/s² (positive = speeding up)</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>⚡ Time 5-15 seconds: Cruise Control</h5>
+                            <p><strong>What happens:</strong> Car maintains steady 25 m/s</p>
+                            <p><strong>Real-life comparison:</strong> Like walking at a steady pace on a flat sidewalk</p>
+                            <p><strong>Acceleration:</strong> (25 - 25) ÷ 10 = 0 m/s² (zero = constant speed)</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🛑 Time 15-20 seconds: Emergency Braking</h5>
+                            <p><strong>What happens:</strong> Car slows from 25 m/s to 0 m/s</p>
+                            <p><strong>Real-life comparison:</strong> Like sliding on ice (but controlled!)</p>
+                            <p><strong>Acceleration:</strong> (0 - 25) ÷ 5 = -5 m/s² (negative = slowing down)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Mind-Blowing Acceleration Facts:</strong></p>
+                        <ul>
+                            <li>A fighter jet pilot experiences 9g acceleration (9 × 9.8 = 88.2 m/s²) - that's like weighing 9 times your normal weight!</li>
+                            <li>A cheetah can accelerate from 0 to 29 m/s in just 3 seconds - that's 9.7 m/s² acceleration!</li>
+                            <li>When you drop your phone, it accelerates at exactly 9.8 m/s² - the same as a dropped elephant!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 3 - Kinematic Equations -->
+            <div class="concept-box">
+                <h3>3. Kinematic Equations - The Motion Prediction Machine!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔮 Think of kinematic equations like a crystal ball for predicting motion!</strong> Give them any three pieces of information about an object's motion (position, velocity, acceleration, time), and they'll tell you everything else. It's like having superpowers to see the future of moving objects!</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h4>🧙‍♂️ The Four Magic Motion Spells</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🪄 Spell #1: The Velocity Predictor</h5>
+                            <p><strong>Formula:</strong> v = u + at</p>
+                            <p><strong>Translation:</strong> Final speed = Starting speed + (acceleration × time)</p>
+                            <p><strong>When to use:</strong> When you want to know how fast something will be moving</p>
+                            <p><strong>Example:</strong> "If I drop a ball, how fast will it be going after 2 seconds?"</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🔍 Spell #2: The Distance Calculator</h5>
+                            <p><strong>Formula:</strong> s = ut + ½at²</p>
+                            <p><strong>Translation:</strong> Distance = (Starting speed × time) + ½(acceleration × time²)</p>
+                            <p><strong>When to use:</strong> When you want to know how far something traveled</p>
+                            <p><strong>Example:</strong> "How far will my car go if I accelerate for 10 seconds?"</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>⚡ Spell #3: The Speed-Distance Connector</h5>
+                            <p><strong>Formula:</strong> v² = u² + 2as</p>
+                            <p><strong>Translation:</strong> (Final speed)² = (Starting speed)² + 2(acceleration × distance)</p>
+                            <p><strong>When to use:</strong> When time is unknown but you know distance</p>
+                            <p><strong>Example:</strong> "How fast is a car going when it hits the wall?"</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>📏 Spell #4: The Average Distance Formula</h5>
+                            <p><strong>Formula:</strong> s = ½(u + v)t</p>
+                            <p><strong>Translation:</strong> Distance = ½(starting speed + final speed) × time</p>
+                            <p><strong>When to use:</strong> When you want to double-check your other calculations</p>
+                            <p><strong>Example:</strong> "Let me verify my distance calculation using average speed"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Should You Care Section -->
+            <div class="importance-box">
+                <h3>🤔 But Why Should You Care About All This?</h3>
+                
+                <div style="margin: 1rem 0;">
+                    <h4>🏥 For Your Health & Safety:</h4>
+                    <p>Understanding motion helps you understand why:</p>
+                    <ul>
+                        <li>Seat belts save lives during car crashes (your body continues moving at the car's original speed!)</li>
+                        <li>You need to warm up before sprinting (your muscles need time to accelerate safely)</li>
+                        <li>Walking on ice is dangerous (low friction means you can't control your acceleration)</li>
+                        <li>Helmets are crucial for cycling (your brain doesn't handle sudden deceleration well!)</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🔬 For Your Future Career:</h4>
+                    <p>Motion physics is the foundation for:</p>
+                    <ul>
+                        <li><strong>Aerospace Engineering:</strong> Designing rockets and satellites that navigate space</li>
+                        <li><strong>Sports Science:</strong> Optimizing athlete performance and preventing injuries</li>
+                        <li><strong>Game Development:</strong> Creating realistic physics in video games</li>
+                        <li><strong>Transportation Design:</strong> Building safer cars, trains, and planes</li>
+                        <li><strong>Robotics:</strong> Programming robots to move efficiently and safely</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🌟 For Your Wonder & Curiosity:</h4>
+                    <p>Motion is everywhere around you! Every step you take, every ball you throw, every ride you take in a car involves these same principles. When you understand motion, you start seeing the invisible mathematical patterns that govern everything from falling raindrops to orbiting planets. You're literally learning the secret language that the universe uses to move everything around you!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES SECTION -->
+        <section class="learning-section">
+            <h2>🔬 Worked Examples (15-20 min)</h2>
+            <p><em>Let's solve some problems together, step by step, like we're detectives solving mysteries!</em></p>
+            
+            <!-- Detective Case 1 -->
+            <div class="worked-example">
+                <h3>🕵️ Detective Case 1: The Mysterious Skydiving Accident</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Mystery:</strong> A professional skydiver's parachute failed to open properly. Investigators found that she fell for exactly 4 seconds before her emergency chute deployed. They need to know how fast she was falling when the emergency chute opened to determine if the equipment worked correctly.</p>
+                </div>
+                
+                <p><strong>🧠 Let's think like detectives:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 1: "She started from rest"</strong></p>
+                    <p>This tells us her initial velocity u = 0 m/s (she stepped out of the plane, not jumped)</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 2: "Fell for exactly 4 seconds"</strong></p>
+                    <p>This gives us time t = 4 seconds. Also, we know acceleration due to gravity a = 9.8 m/s² downward</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 3: "How fast when emergency chute opened?"</strong></p>
+                    <p>We need to find final velocity v. We have u, a, and t, so we use: v = u + at</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Case Solved!</strong></p>
+                    <p>v = 0 + (9.8)(4) = 39.2 m/s</p>
+                    <p>She was falling at 39.2 m/s (about 141 km/h) when her emergency chute deployed. This speed is within safety limits for emergency chutes, confirming the equipment worked as designed!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 2 -->
+            <div class="worked-example">
+                <h3>⚡ The Racing Car Challenge</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🤔 The Question:</strong> Your friend claims their car can accelerate from 0 to 30 m/s in exactly 100 meters. You want to calculate how long this takes to see if it's physically possible for a regular car.</p>
+                </div>
+                
+                <p><strong>🏭 Let's solve this step-by-step:</strong></p>
+                
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Given information:</strong></p>
+                    <ul>
+                        <li>Initial velocity u = 0 m/s (starting from rest)</li>
+                        <li>Final velocity v = 30 m/s</li>
+                        <li>Distance s = 100 m</li>
+                        <li>We need to find: time t</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Strategy:</strong> We have u, v, and s, but need t. Let's use s = ½(u + v)t</p>
+                    <p>100 = ½(0 + 30)t</p>
+                    <p>100 = 15t</p>
+                    <p>t = 100 ÷ 15 = 6.67 seconds</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; border: 2px solid #ff9800;">
+                    <p><strong>🤯 Fun Fact to Blow Your Mind:</strong> This acceleration would be about 4.5 m/s², which is actually achievable by a good sports car! For comparison, a typical family car accelerates at about 2-3 m/s², while a Formula 1 car can achieve 10+ m/s²!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 3 -->
+            <div class="worked-example">
+                <h3>🎾 The Tennis Ball Serve Mystery</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Scenario:</strong> During a tennis match, Serena Williams serves a ball horizontally at 40 m/s from 2.4 meters high. A spectator wants to know how long the ball is in the air and how far it travels horizontally before hitting the ground.</p>
+                </div>
+                
+                <p><strong>🧠 Detective work (vertical motion):</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p>Vertically: u = 0 (horizontal serve), s = 2.4 m down, a = 9.8 m/s²</p>
+                    <p>Using s = ut + ½at²: 2.4 = 0 + ½(9.8)t²</p>
+                    <p>t² = 2.4 ÷ 4.9 = 0.49, so t = 0.7 seconds</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Horizontal distance:</strong> speed × time = 40 × 0.7 = 28 meters</p>
+                    <p>The ball travels 28 meters horizontally - that's longer than a tennis court!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 4 -->
+            <div class="worked-example">
+                <h3>🚨 The Emergency Braking Investigation</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🚗 The Situation:</strong> A car traveling at 25 m/s (90 km/h) needs to stop before hitting a wall that's 50 meters away. The maximum braking acceleration is -8 m/s². Will the car stop in time?</p>
+                </div>
+                
+                <p><strong>🔍 Critical calculation:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p>Using v² = u² + 2as to find stopping distance:</p>
+                    <p>0² = 25² + 2(-8)s</p>
+                    <p>0 = 625 - 16s</p>
+                    <p>s = 625 ÷ 16 = 39.1 meters</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Verdict:</strong> The car needs 39.1 meters to stop, but has 50 meters available. The car will stop safely with 10.9 meters to spare! Crisis averted!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS SECTION -->
+        <section class="learning-section">
+            <h2>💪 Practice Problems (25-35 min)</h2>
+            <p><em>Now it's your turn to be the detective! Try these real-world scenarios and see how much you've learned.</em></p>
+            
+            <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                <p><strong>💡 Pro Tip:</strong> For each problem, try to explain your answer like you're teaching it to a friend. This helps you really understand it!</p>
+            </div>
+            
+            <!-- Problem 1 -->
+            <div class="practice-problem">
+                <h4>🚀 Problem 1: The Rocket Launch Analysis</h4>
+                <p><strong>Scenario:</strong> A model rocket launches straight up with an initial velocity of 50 m/s. You need to analyze its flight for a science project.</p>
+                <p><strong>Your Mission:</strong></p>
+                <ol>
+                    <li>How high will the rocket go before it starts falling back down?</li>
+                    <li>How long will it take to reach maximum height?</li>
+                    <li>What will be the rocket's velocity when it hits the ground again?</li>
+                    <li>Explain why the upward and downward speeds are the same (ignoring air resistance).</li>
+                </ol>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="practice-problem">
+                <h4>🏥 Problem 2: The Medical Emergency</h4>
+                <p><strong>Story:</strong> An ambulance needs to accelerate from rest to 30 m/s in exactly 200 meters to reach a patient quickly. The paramedic wants to know if this acceleration level will be safe for the patient inside.</p>
+                <p><strong>Your Challenge:</strong></p>
+                <ol>
+                    <li>Calculate the required acceleration for this situation.</li>
+                    <li>How long does this acceleration take?</li>
+                    <li>Compare this acceleration to normal car acceleration (2-3 m/s²) - is it reasonable?</li>
+                    <li>If the acceleration feels too harsh, suggest a safer alternative approach.</li>
+                </ol>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="practice-problem">
+                <h4>🎯 Problem 3: The Basketball Free Throw</h4>
+                <p><strong>Real-Life Situation:</strong> You're analyzing your basketball free throw technique. You release the ball 2.2 meters above the ground with an initial upward velocity of 6 m/s. The basketball hoop is 3.05 meters high and 4.6 meters away horizontally.</p>
+                <p><strong>Your Task:</strong></p>
+                <ol>
+                    <li>How long is the ball in the air?</li>
+                    <li>What horizontal velocity do you need for the ball to travel 4.6 meters?</li>
+                    <li>Will the ball be at the right height (3.05 m) when it reaches the hoop?</li>
+                    <li>Explain why basketball players shoot in an arc rather than straight at the hoop.</li>
+                </ol>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="practice-problem">
+                <h4>🏃 Problem 4: The Athletic Performance Analysis</h4>
+                <p><strong>Sports Scenario:</strong> A sprinter accelerates from the starting blocks at 4 m/s² for the first 3 seconds, then maintains constant speed for the next 7 seconds.</p>
+                <p><strong>Your Analysis:</strong></p>
+                <ol>
+                    <li>What speed does the sprinter reach after the acceleration phase?</li>
+                    <li>How far does the sprinter travel during acceleration?</li>
+                    <li>How far does the sprinter travel at constant speed?</li>
+                    <li>What is the sprinter's total distance and average speed for the entire 10-second period?</li>
+                    <li>Compare this performance to world-class sprinters (who run 100m in about 10 seconds).</li>
+                </ol>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="practice-problem">
+                <h4>🎢 Problem 5: The Amusement Park Physics</h4>
+                <p><strong>Thrilling Scenario:</strong> You're designing a roller coaster drop. Cars start from rest at the top of a 45-meter tall hill and accelerate down due to gravity.</p>
+                <p><strong>Design Challenge:</strong></p>
+                <ol>
+                    <li>How fast are the cars moving at the bottom of the hill?</li>
+                    <li>How long does it take to reach the bottom?</li>
+                    <li>If you want to limit the maximum speed to 25 m/s for safety, how high should the hill be?</li>
+                    <li>Explain why steeper hills make cars go faster, even from the same height.</li>
+                </ol>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="practice-problem">
+                <h4>✈️ Problem 6: The Airport Runway Investigation</h4>
+                <p><strong>Aviation Mystery:</strong> A small airplane needs to reach 35 m/s for takeoff. The runway is 800 meters long, and the plane can accelerate at 2.5 m/s².</p>
+                <p><strong>Flight Safety Analysis:</strong></p>
+                <ol>
+                    <li>How long does it take the plane to reach takeoff speed?</li>
+                    <li>How much runway does the plane use to reach takeoff speed?</li>
+                    <li>Is the 800-meter runway long enough for safe takeoff?</li>
+                    <li>If the runway were wet and acceleration reduced to 2 m/s², would takeoff still be safe?</li>
+                    <li>What minimum runway length would you recommend for this aircraft?</li>
+                </ol>
+            </div>
+
+            <!-- Challenge Section -->
+            <div style="background: #e8f4fd; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #2196f3;">
+                <h4>🎯 Challenge Yourself Further:</h4>
+                <p><strong>After solving these problems, try this:</strong></p>
+                <ul>
+                    <li>Time yourself walking to school and calculate your average speed</li>
+                    <li>Drop different objects from the same height and time their fall</li>
+                    <li>Analyze a video of a car chase scene and estimate the accelerations involved</li>
+                    <li>Design a "physics-friendly" video game level using real motion equations</li>
+                    <li>Calculate the motion involved in your favorite sport or activity</li>
+                </ul>
+                <p><em>Remember: Physics is everywhere! Once you understand motion, you'll start seeing these patterns in everything around you!</em></p>
+            </div>
+        </section>
+
+        <!-- QUICK QUIZ SECTION -->
+        <section class="quiz-section">
+            <h2>⚡ Quick Quiz (10 min)</h2>
+            <p><strong>Instructions:</strong> Answer all 5 questions. +1 point for correct answers, -0.25 for incorrect, 0 for blank.</p>
+            
+            <!-- Quiz Question 1 -->
+            <div class="quiz-question" id="q1">
+                <h4>Question 1: A car accelerates from rest to 20 m/s in 4 seconds. What is its acceleration?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(1, 'A')">A) 4 m/s²</li>
+                    <li onclick="selectAnswer(1, 'B')">B) 5 m/s²</li>
+                    <li onclick="selectAnswer(1, 'C')">C) 16 m/s²</li>
+                    <li onclick="selectAnswer(1, 'D')">D) 80 m/s²</li>
+                    <li onclick="selectAnswer(1, 'E')">E) 24 m/s²</li>
+                </ul>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <!-- Quiz Question 2 -->
+            <div class="quiz-question" id="q2">
+                <h4>Question 2: Sarah runs 400m around a circular track and returns to her starting point. What are her distance and displacement?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(2, 'A')">A) Distance = 400m, Displacement = 400m</li>
+                    <li onclick="selectAnswer(2, 'B')">B) Distance = 400m, Displacement = 0m</li>
+                    <li onclick="selectAnswer(2, 'C')">C) Distance = 0m, Displacement = 400m</li>
+                    <li onclick="selectAnswer(2, 'D')">D) Distance = 0m, Displacement = 0m</li>
+                    <li onclick="selectAnswer(2, 'E')">E) Cannot be determined from given information</li>
+                </ul>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <!-- Quiz Question 3 -->
+            <div class="quiz-question" id="q3">
+                <h4>Question 3: A ball is thrown upward with initial velocity 15 m/s. How long does it take to reach maximum height? (g = 10 m/s²)</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(3, 'A')">A) 1.0 seconds</li>
+                    <li onclick="selectAnswer(3, 'B')">B) 1.5 seconds</li>
+                    <li onclick="selectAnswer(3, 'C')">C) 2.0 seconds</li>
+                    <li onclick="selectAnswer(3, 'D')">D) 2.5 seconds</li>
+                    <li onclick="selectAnswer(3, 'E')">E) 3.0 seconds</li>
+                </ul>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+
+            <!-- Quiz Question 4 -->
+            <div class="quiz-question" id="q4">
+                <h4>Question 4: A car brakes from 30 m/s to rest over a distance of 90 meters. What is the braking acceleration?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(4, 'A')">A) -3 m/s²</li>
+                    <li onclick="selectAnswer(4, 'B')">B) -5 m/s²</li>
+                    <li onclick="selectAnswer(4, 'C')">C) -6 m/s²</li>
+                    <li onclick="selectAnswer(4, 'D')">D) -10 m/s²</li>
+                    <li onclick="selectAnswer(4, 'E')">E) -15 m/s²</li>
+                </ul>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+
+            <!-- Quiz Question 5 -->
+            <div class="quiz-question" id="q5">
+                <h4>Question 5: Which statement about velocity and speed is correct?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(5, 'A')">A) Velocity and speed are always equal</li>
+                    <li onclick="selectAnswer(5, 'B')">B) Velocity can be negative, but speed cannot</li>
+                    <li onclick="selectAnswer(5, 'C')">C) Speed can be negative, but velocity cannot</li>
+                    <li onclick="selectAnswer(5, 'D')">D) Both velocity and speed can be negative</li>
+                    <li onclick="selectAnswer(5, 'E')">E) Neither velocity nor speed can be negative</li>
+                </ul>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn-primary" onclick="calculateScore()">Submit Quiz</button>
+                <div id="quiz-results" style="margin-top: 1rem; font-size: 1.2rem;"></div>
+            </div>
+        </section>
+
+        <!-- SELF-ASSESSMENT SECTION -->
+        <section class="learning-section">
+            <div class="progress-tracker">
+                <h2>📊 Self-Assessment Checklist</h2>
+                <p><em>Check off each item as you master it:</em></p>
+                <ul class="checklist" id="checklist">
+                    <li onclick="toggleCheck(this)">✓ I can explain the difference between distance and displacement using real examples</li>
+                    <li onclick="toggleCheck(this)">✓ I can distinguish between speed and velocity and know when each can be negative</li>
+                    <li onclick="toggleCheck(this)">✓ I can use kinematic equations to solve motion problems step by step</li>
+                    <li onclick="toggleCheck(this)">✓ I understand that acceleration can be positive (speeding up), negative (slowing down), or zero (constant speed)</li>
+                    <li onclick="toggleCheck(this)">✓ I can analyze real-world motion scenarios like car crashes, sports, and falling objects</li>
+                    <li onclick="toggleCheck(this)">✓ I can explain why understanding motion is important for safety and career applications</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TOMORROW'S PREVIEW -->
+        <section class="learning-section">
+            <h2>🔗 Tomorrow's Preview: Day 3 Chemistry</h2>
+            <div style="background: #fff3e0; padding: 1rem; border-radius: 6px;">
+                <h3>🚀 Atomic Structure & The Periodic Table</h3>
+                <p><strong>What you'll learn:</strong></p>
+                <ul>
+                    <li>Meet the tiny building blocks of everything - protons, neutrons, and electrons!</li>
+                    <li>Discover why the periodic table is like a giant cheat sheet for predicting element behavior</li>
+                    <li>Learn how atoms are like tiny solar systems (but way cooler!)</li>
+                </ul>
+                <p><em>💡 Quick prep: Look around your room and try to identify 10 different elements you can see (hint: there's iron in your bed springs, carbon in your pencils, and silicon in your electronics!).</em></p>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="../index.html" class="btn-secondary">← Back to Dashboard</a>
+            <a href="day_03.html" class="btn-primary">Continue to Day 3 →</a>
+        </nav>
+    </div>
+
+    <!-- QUIZ JAVASCRIPT -->
+    <script>
+        // Quiz functionality
+        const answers = ['B', 'B', 'B', 'B', 'B']; // CORRECT ANSWERS
+        const explanations = [
+            "Using v = u + at: 20 = 0 + a(4), so a = 5 m/s². Like a detective solving for the unknown acceleration!",
+            "Sarah returns to her starting point, so displacement = 0 (straight line distance), but she walked 400m total distance. Remember: distance is path length, displacement is start-to-finish!",
+            "At maximum height, velocity = 0. Using v = u + at: 0 = 15 + (-10)t, so t = 1.5 seconds. The ball takes the same time to go up as it does to come back down!",
+            "Using v² = u² + 2as: 0² = 30² + 2a(90). Solving: 0 = 900 + 180a, so a = -5 m/s². Negative because it's slowing down!",
+            "Speed is always positive (it's just 'how fast'), but velocity includes direction, so it can be negative if moving in the opposite direction. Think of velocity as speed with an attitude!"
+        ];
+        
+        let userAnswers = {};
+        
+        function selectAnswer(questionNum, answer) {
+            userAnswers[questionNum] = answer;
+            
+            // Clear previous selections
+            const options = document.querySelectorAll(`#q${questionNum} .options li`);
+            options.forEach(li => {
+                li.classList.remove('selected');
+            });
+            
+            // Mark current selection
+            event.target.classList.add('selected');
+        }
+        
+        function calculateScore() {
+            let correct = 0;
+            let incorrect = 0;
+            let blank = 0;
+            
+            for (let i = 1; i <= 5; i++) {
+                const feedback = document.getElementById(`feedback${i}`);
+                const options = document.querySelectorAll(`#q${i} .options li`);
+                
+                if (userAnswers[i]) {
+                    if (userAnswers[i] === answers[i-1]) {
+                        correct++;
+                        feedback.className = 'feedback correct';
+                        feedback.innerHTML = `✅ ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    } else {
+                        incorrect++;
+                        feedback.className = 'feedback incorrect';
+                        feedback.innerHTML = `❌ Incorrect. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(userAnswers[i])) {
+                                li.classList.add('incorrect');
+                            }
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    }
+                } else {
+                    blank++;
+                    feedback.className = 'feedback incorrect';
+                    feedback.innerHTML = `⚠️ No answer selected. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                }
+                
+                feedback.style.display = 'block';
+            }
+            
+            const score = correct - (incorrect * 0.25);
+            const percentage = ((correct / 5) * 100).toFixed(1);
+            
+            const results = document.getElementById('quiz-results');
+            results.innerHTML = `
+                <strong>Quiz Results:</strong><br>
+                Correct: ${correct} | Incorrect: ${incorrect} | Blank: ${blank}<br>
+                Score: ${score.toFixed(2)}/5.00 (${percentage}%)
+            `;
+            
+            // Save progress to localStorage
+            const today = new Date().toDateString();
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '2';
+            progress[`day${dayNum}`] = {
+                completed: true,
+                score: score,
+                percentage: percentage,
+                date: today
+            };
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        function toggleCheck(item) {
+            item.classList.toggle('completed');
+            
+            // Save checklist progress
+            const checklistItems = document.querySelectorAll('.checklist li');
+            const completed = document.querySelectorAll('.checklist li.completed').length;
+            const total = checklistItems.length;
+            
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '2';
+            if (!progress[`day${dayNum}`]) progress[`day${dayNum}`] = {};
+            progress[`day${dayNum}`].checklist = completed;
+            progress[`day${dayNum}`].checklistTotal = total;
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        // Load saved progress on page load
+        window.onload = function() {
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '2';
+            if (progress[`day${dayNum}`] && progress[`day${dayNum}`].checklist) {
+                const checklistItems = document.querySelectorAll('.checklist li');
+                for (let i = 0; i < progress[`day${dayNum}`].checklist && i < checklistItems.length; i++) {
+                    checklistItems[i].classList.add('completed');
+                }
+            }
+        };
+    </script>
+</body>
+</html>

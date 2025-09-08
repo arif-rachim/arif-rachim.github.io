@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3: Chemistry - Atomic Structure & Periodic Table | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - CHEMISTRY THEME */
+        .day-header {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .concept-box {
+            background: #fff8f0;
+            border: 1px solid #ffcc80;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .fact-box {
+            background: #fff3e0;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .importance-box {
+            background: #fff3e0;
+            border: 2px solid #ff9800;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .worked-example {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .practice-problem {
+            background: #f3e5f5;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .quiz-section {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #fff3e0;
+        }
+        
+        .options li.selected {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checklist li.completed {
+            background: #e8f5e8;
+            border-color: #4caf50;
+        }
+        
+        .btn-primary {
+            background: #ff9800;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #f57c00;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>🧪 Day 3: Chemistry - Atomic Structure & The Periodic Table</h1>
+            <p><strong>Learning Goal:</strong> Discover the invisible building blocks of everything around you and learn to decode the periodic table's secrets</p>
+            <div class="timer">⏱️ Estimated Time: 60-75 minutes</div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Learning Objectives</h2>
+                <ul>
+                    <li>Understand atomic structure: protons, neutrons, electrons, and how they determine element properties</li>
+                    <li>Navigate the periodic table and predict element behavior using patterns and trends</li>
+                    <li>Calculate atomic mass, atomic number, and identify isotopes in real-world applications</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CORE CONCEPTS SECTION -->
+        <section class="learning-section">
+            <h2>📚 Core Concepts (25-30 min read)</h2>
+            
+            <!-- Discovery Story Box -->
+            <div class="story-box">
+                <h3>🌟 The Amazing Discovery Story</h3>
+                <p>Picture the year 1911: A brilliant scientist named Ernest Rutherford was about to discover something that would change everything we thought we knew about matter. At the time, everyone believed atoms were like "plum puddings" - solid balls of positive charge with electrons scattered throughout like raisins in a cake.</p>
+                
+                <p>But Rutherford had a wild idea. He decided to fire tiny alpha particles (essentially helium nuclei) at a thin sheet of gold foil, expecting them to pass straight through like bullets through tissue paper. What happened next shocked the scientific world!</p>
+                
+                <p>Most particles did go straight through, but some bounced back at impossible angles - as if they had hit something incredibly small but unimaginably dense. Rutherford famously said, "It was quite the most incredible event that has ever happened to me in my life. It was almost as incredible as if you fired a 15-inch shell at a piece of tissue paper and it came back and hit you!"</p>
+                
+                <p>This experiment revealed that atoms aren't solid at all - they're mostly empty space with a tiny, dense nucleus at the center. Today, every smartphone, every medical scan, every nuclear power plant, and every star in the sky operates on the principles Rutherford discovered in that gold foil experiment!</p>
+            </div>
+
+            <!-- CONCEPT BOX 1 - Atomic Structure -->
+            <div class="concept-box">
+                <h3>1. Inside the Atom - The Ultimate Mini Solar System!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🏙️ Think of an atom like a massive city with three types of residents!</strong> The atom is like a huge metropolitan area where different particles live in different neighborhoods, each with their own jobs and responsibilities. But here's the mind-blowing part - the city center (nucleus) is incredibly tiny compared to the suburbs (electron cloud), yet contains almost all the mass!</p>
+                </div>
+
+                <!-- The Three Residents -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>👥 Meet the Three Atomic Residents</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>⚡ Protons - The City Officials (Positive Charge)</h5>
+                            <p><strong>Where they live:</strong> Downtown in the nucleus (city center)</p>
+                            <p><strong>Their job:</strong> They're like the mayor and city council - they determine what element you are! More protons = different element</p>
+                            <p><strong>Real-life comparison:</strong> Think of them as the ID card of an atom. Just like your ID determines who you are, the number of protons determines which element the atom is</p>
+                            <p><strong>Fun fact:</strong> They have a +1 charge and mass of approximately 1 amu (atomic mass unit)</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #757575; padding: 1rem;">
+                            <h5>😐 Neutrons - The Peacekeepers (No Charge)</h5>
+                            <p><strong>Where they live:</strong> Right next to protons in the nucleus</p>
+                            <p><strong>Their job:</strong> They're like security guards keeping the protons from fighting each other (protons repel because they're all positive!)</p>
+                            <p><strong>Real-life comparison:</strong> Like referees in a sports game - they keep things stable and prevent chaos</p>
+                            <p><strong>Fun fact:</strong> Same mass as protons (~1 amu) but completely neutral. More or fewer neutrons create isotopes!</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #f44336; padding: 1rem;">
+                            <h5>🔄 Electrons - The Busy Workers (Negative Charge)</h5>
+                            <p><strong>Where they live:</strong> In the suburbs (electron shells/orbitals) surrounding the nucleus</p>
+                            <p><strong>Their job:</strong> They handle all the atom's interactions with other atoms - bonding, electricity, chemical reactions</p>
+                            <p><strong>Real-life comparison:</strong> Like workers who commute from the suburbs to different job sites, sometimes switching companies (atoms) entirely!</p>
+                            <p><strong>Fun fact:</strong> Incredibly tiny (1/1837 the mass of a proton) but they determine ALL chemical properties!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 Mind-Blowing Scale Facts:</strong></p>
+                        <ul>
+                            <li>If an atom were the size of a football stadium, the nucleus would be the size of a marble at the center!</li>
+                            <li>Atoms are 99.9999999% empty space - you're mostly nothing, but held together by forces!</li>
+                            <li>In a single drop of water, there are more atoms than there are drops of water in all the oceans on Earth!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 2 - Atomic Numbers and Mass -->
+            <div class="concept-box">
+                <h3>2. Atomic Address System - Every Element's Unique ID</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>📬 Think of atomic numbers like postal addresses!</strong> Just like every house has a unique address that tells the mailman exactly where to go, every element has unique numbers that tell you exactly what it is and how much it weighs. No two elements can have the same atomic number - it's impossible!</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                    <div style="background: #ffe6e6; padding: 1rem; border-radius: 8px; border: 2px solid #ff9999;">
+                        <h5>🏠 Atomic Number - The House Number</h5>
+                        <p><strong>What it is:</strong> Number of protons in the nucleus</p>
+                        <p><strong>Why it matters:</strong> This IS the element's identity!</p>
+                        <p><strong>Example:</strong> Carbon always has 6 protons (atomic number 6). If it had 7 protons, it would be nitrogen, not carbon!</p>
+                        <p><strong>Real-life analogy:</strong> Like your fingerprint - completely unique and unchangeable</p>
+                    </div>
+
+                    <div style="background: #e6ffe6; padding: 1rem; border-radius: 8px; border: 2px solid #99cc99;">
+                        <h5>⚖️ Atomic Mass - The House Weight</h5>
+                        <p><strong>What it is:</strong> Average mass of all an element's isotopes</p>
+                        <p><strong>How to calculate:</strong> (Protons + Neutrons) ≈ Mass number</p>
+                        <p><strong>Example:</strong> Carbon-12 has 6 protons + 6 neutrons = 12 amu</p>
+                        <p><strong>Real-life analogy:</strong> Like weighing all the different models of cars from one manufacturer and taking the average</p>
+                    </div>
+                </div>
+
+                <!-- Isotopes Explanation -->
+                <div style="margin: 2rem 0;">
+                    <h4>🎭 Isotopes - Same Person, Different Weight!</h4>
+                    <p><strong>The Family Story:</strong> Imagine three brothers named Carbon. They're all definitely Carbon (same DNA/protons), but they've been lifting different amounts of weights (neutrons):</p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h6>Carbon-12 (The Athlete)</h6>
+                            <p>6 protons + 6 neutrons</p>
+                            <p><strong>98.9% common</strong></p>
+                            <p>Perfect balance!</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h6>Carbon-13 (The Bulked-Up Brother)</h6>
+                            <p>6 protons + 7 neutrons</p>
+                            <p><strong>1.1% common</strong></p>
+                            <p>A bit heavier, still stable</p>
+                        </div>
+                        
+                        <div style="background: #fff3cd; padding: 1rem; border-radius: 8px; text-align: center;">
+                            <h6>Carbon-14 (The Radioactive Rebel)</h6>
+                            <p>6 protons + 8 neutrons</p>
+                            <p><strong>Trace amounts</strong></p>
+                            <p>Unstable, used for dating fossils!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 3 - Periodic Table -->
+            <div class="concept-box">
+                <h3>3. The Periodic Table - Nature's Ultimate Cheat Sheet!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🗺️ Think of the periodic table like the ultimate video game strategy guide!</strong> It's not just a list of elements - it's a magical map that lets you predict how elements will behave, what they'll look like, and how they'll interact with each other. Master this map, and you can predict chemistry like a fortune teller!</p>
+                </div>
+
+                <div style="margin: 2rem 0;">
+                    <h4>🏢 The Apartment Building Layout</h4>
+                    <p><strong>Imagine the periodic table as a giant apartment building:</strong></p>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🏠 Periods (Rows) - The Floors</h5>
+                            <p><strong>What they represent:</strong> Each floor (period) represents atoms with the same number of electron shells</p>
+                            <p><strong>The pattern:</strong> As you go down floors, atoms get bigger because they have more electron shells</p>
+                            <p><strong>Example:</strong> Period 1 (hydrogen, helium) = 1 shell. Period 2 (lithium through neon) = 2 shells</p>
+                            <p><strong>Real-life analogy:</strong> Like floors in a building - higher floors = bigger atoms with more space</p>
+                        </div>
+                        
+                        <div style="background: #f0f8ff; border-left: 4px solid #ff9800; padding: 1rem;">
+                            <h5>🏘️ Groups (Columns) - The Neighborhoods</h5>
+                            <p><strong>What they represent:</strong> Elements with similar personalities (same number of outer electrons)</p>
+                            <p><strong>The pattern:</strong> Elements in the same column act almost identically in chemical reactions</p>
+                            <p><strong>Example:</strong> Group 1 (lithium, sodium, potassium) all explode in water because they all have 1 outer electron!</p>
+                            <p><strong>Real-life analogy:</strong> Like neighborhoods where all residents have similar jobs and lifestyles</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Key Neighborhoods -->
+                    <div style="margin: 2rem 0;">
+                        <h4>🗺️ The Famous Neighborhoods You Should Know</h4>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+                            <div style="background: #ffe6e6; padding: 1rem; border-radius: 8px; border: 2px solid #ff9999;">
+                                <h6>⚡ Group 1 - The Alkali Metals (The Explosive Neighborhood)</h6>
+                                <p><strong>Residents:</strong> Lithium, Sodium, Potassium, etc.</p>
+                                <p><strong>Personality:</strong> Extremely reactive, love to give away their 1 outer electron</p>
+                                <p><strong>Famous for:</strong> Exploding in water, making fireworks colorful</p>
+                            </div>
+                            
+                            <div style="background: #e6ffe6; padding: 1rem; border-radius: 8px; border: 2px solid #99cc99;">
+                                <h6>💨 Group 18 - The Noble Gases (The Antisocial Neighborhood)</h6>
+                                <p><strong>Residents:</strong> Helium, Neon, Argon, etc.</p>
+                                <p><strong>Personality:</strong> Completely stable, don't want to react with anyone</p>
+                                <p><strong>Famous for:</strong> Being chemically inert, filling balloons and lights</p>
+                            </div>
+                            
+                            <div style="background: #f0e6ff; padding: 1rem; border-radius: 8px; border: 2px solid #cc99ff;">
+                                <h6>🔥 Group 17 - The Halogens (The Hungry Neighborhood)</h6>
+                                <p><strong>Residents:</strong> Fluorine, Chlorine, Bromine, Iodine</p>
+                                <p><strong>Personality:</strong> Desperately want 1 more electron to be complete</p>
+                                <p><strong>Famous for:</strong> Being highly reactive, used in disinfectants and salt</p>
+                            </div>
+                            
+                            <div style="background: #fff3e0; padding: 1rem; border-radius: 8px; border: 2px solid #ffb366;">
+                                <h6>🏗️ Transition Metals (The Handy Worker Neighborhood)</h6>
+                                <p><strong>Residents:</strong> Iron, Copper, Gold, Silver, etc.</p>
+                                <p><strong>Personality:</strong> Strong, durable, good at conducting electricity</p>
+                                <p><strong>Famous for:</strong> Making tools, jewelry, and electronics</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fact-box">
+                        <p><strong>🤯 Periodic Table Prediction Powers:</strong></p>
+                        <ul>
+                            <li>Dmitri Mendeleev predicted the existence of gallium, scandium, and germanium BEFORE they were discovered!</li>
+                            <li>You can predict an element's melting point, boiling point, and reactivity just from its position!</li>
+                            <li>The table even predicted how many natural elements exist - exactly 92 from hydrogen to uranium!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Should You Care Section -->
+            <div class="importance-box">
+                <h3>🤔 But Why Should You Care About All This?</h3>
+                
+                <div style="margin: 1rem 0;">
+                    <h4>🏥 For Your Health & Daily Life:</h4>
+                    <p>Understanding atoms helps you understand why:</p>
+                    <ul>
+                        <li>Your body needs iron (Fe) for oxygen transport in blood - without it, you'd be anemic!</li>
+                        <li>Calcium (Ca) makes your bones strong, and why milk contains it</li>
+                        <li>Iodine in salt prevents thyroid problems - it's literally an essential element for life</li>
+                        <li>Carbon monoxide (CO) is deadly while carbon dioxide (CO₂) is just what you exhale - atomic structure matters!</li>
+                        <li>Sunscreen contains zinc oxide (ZnO) because zinc atoms block UV radiation perfectly</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🔬 For Your Future Career:</h4>
+                    <p>Atomic knowledge is the foundation for:</p>
+                    <ul>
+                        <li><strong>Medicine:</strong> MRI machines use hydrogen atoms in your body to create images</li>
+                        <li><strong>Technology:</strong> Silicon computer chips, lithium phone batteries, LED lights - all based on atomic properties</li>
+                        <li><strong>Environmental Science:</strong> Understanding how pollutants interact at the atomic level</li>
+                        <li><strong>Materials Engineering:</strong> Creating stronger metals, better plastics, and revolutionary nanomaterials</li>
+                        <li><strong>Energy:</strong> Nuclear power, solar panels, and fuel cells all depend on atomic behavior</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🌟 For Your Wonder & Understanding:</h4>
+                    <p>You're made of atoms that were forged in the hearts of dying stars billions of years ago! The carbon in your muscles, the calcium in your bones, the iron in your blood - all of it was created when massive stars exploded as supernovas. You are literally made of star dust, and understanding atomic structure helps you appreciate that every breath you take connects you to the cosmic history of the universe!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES SECTION -->
+        <section class="learning-section">
+            <h2>🔬 Worked Examples (15-20 min)</h2>
+            <p><em>Let's solve some problems together, step by step, like we're detectives investigating the atomic world!</em></p>
+            
+            <!-- Detective Case 1 -->
+            <div class="worked-example">
+                <h3>🕵️ Detective Case 1: The Mysterious Medical Scan</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Mystery:</strong> A patient gets a PET scan and doctors inject them with fluorine-18. The medical technician needs to know: How many protons, neutrons, and electrons does fluorine-18 have? And why does it work for medical imaging?</p>
+                </div>
+                
+                <p><strong>🧠 Let's think like atomic detectives:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 1: "It's fluorine"</strong></p>
+                    <p>This tells us to look at the periodic table. Fluorine is element #9, so it ALWAYS has 9 protons (that's what makes it fluorine!)</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 2: "The number 18"</strong></p>
+                    <p>This is the mass number (protons + neutrons). So: neutrons = 18 - 9 = 9 neutrons</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Clue 3: "It's an atom, not an ion"</strong></p>
+                    <p>Neutral atoms have equal protons and electrons, so it has 9 electrons</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Case Solved!</strong></p>
+                    <p>Fluorine-18: 9 protons, 9 neutrons, 9 electrons</p>
+                    <p><strong>Medical bonus:</strong> F-18 is radioactive (unstable isotope) and decays predictably, making it perfect for tracking biological processes in PET scans!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 2 -->
+            <div class="worked-example">
+                <h3>⚡ The Archaeological Dating Mystery</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🤔 The Question:</strong> Archaeologists found a wooden artifact and want to use carbon-14 dating. They need to understand: What's the difference between carbon-12 and carbon-14? And why can only carbon-14 be used for dating?</p>
+                </div>
+                
+                <p><strong>🏺 Let's solve this archaeological puzzle:</strong></p>
+                
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Both are carbon (element #6):</strong></p>
+                    <ul>
+                        <li>Carbon-12: 6 protons + 6 neutrons = 12 total</li>
+                        <li>Carbon-14: 6 protons + 8 neutrons = 14 total</li>
+                        <li>Both have 6 electrons (same element = same electron count)</li>
+                    </ul>
+                </div>
+
+                <div style="background: #f0f8ff; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>The key difference:</strong> Stability!</p>
+                    <p>Carbon-12: Perfectly stable (6+6 is balanced)</p>
+                    <p>Carbon-14: Unstable! Those extra 2 neutrons make it radioactive</p>
+                </div>
+                
+                <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; border: 2px solid #ff9800;">
+                    <p><strong>🤯 Dating Magic:</strong> Carbon-14 decays at a predictable rate (half-life of 5,730 years). Living things constantly replace their carbon, but when they die, the C-14 starts disappearing. By measuring how much is left, we can calculate how long ago the organism died!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 3 -->
+            <div class="worked-example">
+                <h3>🧪 The Kitchen Chemistry Investigation</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🔍 The Scenario:</strong> You're making bread and the recipe calls for sodium bicarbonate (NaHCO₃ - baking soda). Your friend asks: "What elements are in baking soda and what makes it work for baking?" Time to use your periodic table detective skills!</p>
+                </div>
+                
+                <p><strong>🧠 Element-by-element analysis:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Na (Sodium):</strong> Group 1, atomic number 11</p>
+                    <p>Highly reactive metal that loves to give away its outer electron</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>H (Hydrogen):</strong> Atomic number 1</p>
+                    <p>The simplest atom - just 1 proton, 1 electron</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>C (Carbon):</strong> Atomic number 6</p>
+                    <p>The backbone of life - great at forming bonds</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>O (Oxygen):</strong> Atomic number 8</p>
+                    <p>Highly electronegative - loves to grab electrons from other atoms</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Baking Magic Revealed!</strong> When heated, baking soda decomposes and releases CO₂ gas, creating bubbles that make bread fluffy. The atomic structure of these elements determines exactly how they interact!</p>
+                </div>
+            </div>
+
+            <!-- Detective Case 4 -->
+            <div class="worked-example">
+                <h3>🚨 The Nuclear Power Plant Analysis</h3>
+                <div style="background: #fff8e1; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>⚡ The Situation:</strong> A nuclear engineer explains that uranium-235 is used for nuclear power, but uranium-238 isn't suitable. A student asks: "Both are uranium - why does changing just 3 neutrons make such a huge difference?"</p>
+                </div>
+                
+                <p><strong>🔍 Nuclear detective work:</strong></p>
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>Both isotopes:</strong> 92 protons, 92 electrons (same element)</p>
+                    <p>U-235: 92 + 143 neutrons = 235 total mass</p>
+                    <p>U-238: 92 + 146 neutrons = 238 total mass</p>
+                </div>
+                
+                <div style="background: #f3e5f5; padding: 1rem; border-radius: 6px; margin: 0.5rem 0;">
+                    <p><strong>The critical difference:</strong> Nuclear stability</p>
+                    <p>U-235: Just unstable enough to split when hit by a neutron</p>
+                    <p>U-238: Too stable for easy fission reactions</p>
+                </div>
+                
+                <div style="background: #e8f5e8; padding: 1rem; border-radius: 6px; border: 2px solid #4caf50;">
+                    <p><strong>🎯 Nuclear Engineering Insight:</strong> Those 3 extra neutrons in U-238 create a more stable nuclear configuration. It's like the difference between a house of cards that falls at a touch (U-235) versus one that needs a hammer (U-238)!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS SECTION -->
+        <section class="learning-section">
+            <h2>💪 Practice Problems (25-35 min)</h2>
+            <p><em>Now it's your turn to be the atomic detective! Try these real-world scenarios and see how much you've learned.</em></p>
+            
+            <div style="background: #fff3cd; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                <p><strong>💡 Pro Tip:</strong> For each problem, try to explain your answer like you're teaching it to a friend. This helps you really understand it!</p>
+            </div>
+            
+            <!-- Problem 1 -->
+            <div class="practice-problem">
+                <h4>🔬 Problem 1: The Medical Isotope Mystery</h4>
+                <p><strong>Scenario:</strong> A hospital uses technetium-99m for medical imaging. The "99m" refers to the mass number, and technetium has atomic number 43.</p>
+                <p><strong>Your Mission:</strong></p>
+                <ol>
+                    <li>How many protons, neutrons, and electrons does Tc-99m have?</li>
+                    <li>What would change if it lost an electron and became Tc⁺?</li>
+                    <li>Why do you think this isotope is used for medical imaging instead of a stable isotope?</li>
+                    <li>If technetium-98 also exists, how would it differ from Tc-99m?</li>
+                </ol>
+            </div>
+
+            <!-- Problem 2 -->
+            <div class="practice-problem">
+                <h4>🏥 Problem 2: The Nutritional Chemistry Challenge</h4>
+                <p><strong>Story:</strong> You're analyzing a multivitamin that contains iron (Fe), zinc (Zn), and magnesium (Mg). The label shows: Iron-56, Zinc-64, and Magnesium-24.</p>
+                <p><strong>Your Challenge:</strong></p>
+                <ol>
+                    <li>Use the periodic table to find the atomic numbers of Fe, Zn, and Mg</li>
+                    <li>Calculate the number of protons, neutrons, and electrons for each isotope</li>
+                    <li>Which element is in Group 2, and what does this tell you about its bonding behavior?</li>
+                    <li>Explain why your body needs these specific elements (research their biological functions)</li>
+                </ol>
+            </div>
+
+            <!-- Problem 3 -->
+            <div class="practice-problem">
+                <h4>🌱 Problem 3: The Agricultural Chemistry Analysis</h4>
+                <p><strong>Real-Life Situation:</strong> A farmer's fertilizer contains potassium-39 (K-39), phosphorus-31 (P-31), and nitrogen-14 (N-14). The farmer wants to understand what each element contributes to plant growth.</p>
+                <p><strong>Your Task:</strong></p>
+                <ol>
+                    <li>Find each element's position on the periodic table and determine their atomic structure</li>
+                    <li>Explain why potassium (Group 1) is especially reactive and useful for plants</li>
+                    <li>Calculate the percentage of the atomic mass that comes from protons vs. neutrons for each element</li>
+                    <li>Predict which elements would be most likely to form ionic bonds with each other</li>
+                </ol>
+            </div>
+
+            <!-- Problem 4 -->
+            <div class="practice-problem">
+                <h4>🔋 Problem 4: The Battery Technology Investigation</h4>
+                <p><strong>Technology Scenario:</strong> Modern lithium-ion batteries contain lithium-7 (Li-7), cobalt-59 (Co-59), and oxygen-16 (O-16). An engineering student wants to understand how atomic structure relates to battery performance.</p>
+                <p><strong>Your Analysis:</strong></p>
+                <ol>
+                    <li>Determine the complete atomic structure (p⁺, n⁰, e⁻) for each isotope</li>
+                    <li>Explain why lithium (Group 1) is ideal for batteries (hint: think about its electrons!)</li>
+                    <li>Calculate the neutron-to-proton ratio for each isotope</li>
+                    <li>Which of these elements would you predict to be most stable, and why?</li>
+                    <li>Research why lithium-7 is preferred over lithium-6 for batteries</li>
+                </ol>
+            </div>
+
+            <!-- Problem 5 -->
+            <div class="practice-problem">
+                <h4>🎢 Problem 5: The Forensic Science Challenge</h4>
+                <p><strong>Crime Scene Scenario:</strong> A forensic scientist finds traces of three isotopes at a crime scene: carbon-12, carbon-13, and carbon-14. They need to determine which evidence came from recently living material versus ancient artifacts.</p>
+                <p><strong>Detective Work:</strong></p>
+                <ol>
+                    <li>Calculate the atomic structure of each carbon isotope</li>
+                    <li>Which isotopes are stable, and which is radioactive?</li>
+                    <li>If carbon-14 has a half-life of 5,730 years, explain how this helps with dating</li>
+                    <li>Why do all three isotopes have identical chemical properties?</li>
+                    <li>A sample shows the normal ratio of C-12:C-13 but very little C-14. What does this suggest?</li>
+                </ol>
+            </div>
+
+            <!-- Problem 6 -->
+            <div class="practice-problem">
+                <h4>✈️ Problem 6: The Materials Engineering Puzzle</h4>
+                <p><strong>Aviation Challenge:</strong> Aircraft manufacturers use titanium-48 (Ti-48) for jet engines because it's strong and lightweight. They need to understand why titanium has these properties.</p>
+                <p><strong>Engineering Analysis:</strong></p>
+                <ol>
+                    <li>Find titanium's position on the periodic table and determine its atomic structure</li>
+                    <li>Titanium is a transition metal - explain what this means for its bonding</li>
+                    <li>Calculate the mass contribution of protons vs. neutrons in Ti-48</li>
+                    <li>Compare titanium's atomic mass to iron (Fe-56) - which is "lighter" and why does this matter for aircraft?</li>
+                    <li>Predict three other elements that might have similar properties to titanium based on periodic table position</li>
+                </ol>
+            </div>
+
+            <!-- Challenge Section -->
+            <div style="background: #e8f4fd; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #2196f3;">
+                <h4>🎯 Challenge Yourself Further:</h4>
+                <p><strong>After solving these problems, try this:</strong></p>
+                <ul>
+                    <li>Look up the isotopes in your smoke detector (americium-241) and research why it's radioactive</li>
+                    <li>Check the ingredients in your toothpaste and identify all the elements using the periodic table</li>
+                    <li>Research why different elements create different colors in fireworks</li>
+                    <li>Find out which isotopes are used in medical treatments for cancer</li>
+                    <li>Calculate the atomic structure of your favorite element and explain its properties</li>
+                </ul>
+                <p><em>Remember: Every material around you - from your smartphone to your lunch - is made of these same atomic building blocks arranged in different ways!</em></p>
+            </div>
+        </section>
+
+        <!-- QUICK QUIZ SECTION -->
+        <section class="quiz-section">
+            <h2>⚡ Quick Quiz (10 min)</h2>
+            <p><strong>Instructions:</strong> Answer all 5 questions. +1 point for correct answers, -0.25 for incorrect, 0 for blank.</p>
+            
+            <!-- Quiz Question 1 -->
+            <div class="quiz-question" id="q1">
+                <h4>Question 1: An atom has 17 protons, 18 neutrons, and 17 electrons. What element is this?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(1, 'A')">A) Sulfur</li>
+                    <li onclick="selectAnswer(1, 'B')">B) Chlorine</li>
+                    <li onclick="selectAnswer(1, 'C')">C) Argon</li>
+                    <li onclick="selectAnswer(1, 'D')">D) Potassium</li>
+                    <li onclick="selectAnswer(1, 'E')">E) Calcium</li>
+                </ul>
+                <div class="feedback" id="feedback1"></div>
+            </div>
+
+            <!-- Quiz Question 2 -->
+            <div class="quiz-question" id="q2">
+                <h4>Question 2: What is the mass number of an atom with 6 protons and 8 neutrons?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(2, 'A')">A) 6</li>
+                    <li onclick="selectAnswer(2, 'B')">B) 8</li>
+                    <li onclick="selectAnswer(2, 'C')">C) 14</li>
+                    <li onclick="selectAnswer(2, 'D')">D) 2</li>
+                    <li onclick="selectAnswer(2, 'E')">E) 12</li>
+                </ul>
+                <div class="feedback" id="feedback2"></div>
+            </div>
+
+            <!-- Quiz Question 3 -->
+            <div class="quiz-question" id="q3">
+                <h4>Question 3: Which elements are in the same group (column) as sodium (Na)?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(3, 'A')">A) Magnesium and calcium</li>
+                    <li onclick="selectAnswer(3, 'B')">B) Lithium and potassium</li>
+                    <li onclick="selectAnswer(3, 'C')">C) Chlorine and fluorine</li>
+                    <li onclick="selectAnswer(3, 'D')">D) Neon and argon</li>
+                    <li onclick="selectAnswer(3, 'E')">E) Carbon and silicon</li>
+                </ul>
+                <div class="feedback" id="feedback3"></div>
+            </div>
+
+            <!-- Quiz Question 4 -->
+            <div class="quiz-question" id="q4">
+                <h4>Question 4: Carbon-12 and carbon-14 are isotopes. What do they have in common?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(4, 'A')">A) Same number of neutrons</li>
+                    <li onclick="selectAnswer(4, 'B')">B) Same mass number</li>
+                    <li onclick="selectAnswer(4, 'C')">C) Same number of protons</li>
+                    <li onclick="selectAnswer(4, 'D')">D) Same stability</li>
+                    <li onclick="selectAnswer(4, 'E')">E) Same number of electrons plus neutrons</li>
+                </ul>
+                <div class="feedback" id="feedback4"></div>
+            </div>
+
+            <!-- Quiz Question 5 -->
+            <div class="quiz-question" id="q5">
+                <h4>Question 5: Why are noble gases (Group 18) generally unreactive?</h4>
+                <ul class="options">
+                    <li onclick="selectAnswer(5, 'A')">A) They have too many protons</li>
+                    <li onclick="selectAnswer(5, 'B')">B) They have complete outer electron shells</li>
+                    <li onclick="selectAnswer(5, 'C')">C) They have no neutrons</li>
+                    <li onclick="selectAnswer(5, 'D')">D) They are too small</li>
+                    <li onclick="selectAnswer(5, 'E')">E) They have negative charges</li>
+                </ul>
+                <div class="feedback" id="feedback5"></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <button class="btn-primary" onclick="calculateScore()">Submit Quiz</button>
+                <div id="quiz-results" style="margin-top: 1rem; font-size: 1.2rem;"></div>
+            </div>
+        </section>
+
+        <!-- SELF-ASSESSMENT SECTION -->
+        <section class="learning-section">
+            <div class="progress-tracker">
+                <h2>📊 Self-Assessment Checklist</h2>
+                <p><em>Check off each item as you master it:</em></p>
+                <ul class="checklist" id="checklist">
+                    <li onclick="toggleCheck(this)">✓ I can identify the number of protons, neutrons, and electrons in any atom or isotope</li>
+                    <li onclick="toggleCheck(this)">✓ I understand the difference between atomic number and mass number</li>
+                    <li onclick="toggleCheck(this)">✓ I can explain what isotopes are and why they have different properties</li>
+                    <li onclick="toggleCheck(this)">✓ I can navigate the periodic table to predict element properties and behaviors</li>
+                    <li onclick="toggleCheck(this)">✓ I understand why elements in the same group have similar chemical properties</li>
+                    <li onclick="toggleCheck(this)">✓ I can explain real-world applications of atomic structure in medicine, technology, and daily life</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- TOMORROW'S PREVIEW -->
+        <section class="learning-section">
+            <h2>🔗 Tomorrow's Preview: Day 4 Earth Science</h2>
+            <div style="background: #f1f8e9; padding: 1rem; border-radius: 6px;">
+                <h3>🚀 Atmosphere & Weather Systems</h3>
+                <p><strong>What you'll learn:</strong></p>
+                <ul>
+                    <li>Discover the invisible ocean of air above your head and its amazing layers!</li>
+                    <li>Learn why weather happens and how to predict it like a meteorologist</li>
+                    <li>Understand how the atmosphere protects you from deadly space radiation</li>
+                </ul>
+                <p><em>💡 Quick prep: Look at the sky tonight and try to identify different cloud types. Tomorrow you'll learn what each one means for weather prediction!</em></p>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="../index.html" class="btn-secondary">← Back to Dashboard</a>
+            <a href="day_04.html" class="btn-primary">Continue to Day 4 →</a>
+        </nav>
+    </div>
+
+    <!-- QUIZ JAVASCRIPT -->
+    <script>
+        // Quiz functionality
+        const answers = ['B', 'C', 'B', 'C', 'B']; // CORRECT ANSWERS
+        const explanations = [
+            "The number of protons determines the element! Chlorine has atomic number 17 (17 protons). The number of neutrons tells us it's chlorine-35, and equal protons and electrons means it's a neutral atom.",
+            "Mass number = protons + neutrons. So 6 protons + 8 neutrons = 14. This would be carbon-14, the isotope used for dating ancient artifacts!",
+            "Elements in the same group (column) have the same number of outer electrons! Sodium, lithium, and potassium are all in Group 1 with 1 outer electron, making them equally reactive.",
+            "Isotopes are atoms with the same element (same protons) but different mass numbers (different neutrons). Carbon-12 and carbon-14 both have 6 protons - that's what makes them carbon!",
+            "Noble gases have complete outer electron shells, making them stable and 'happy.' They don't need to gain or lose electrons, so they rarely react with other elements. They're the introverts of chemistry!"
+        ];
+        
+        let userAnswers = {};
+        
+        function selectAnswer(questionNum, answer) {
+            userAnswers[questionNum] = answer;
+            
+            // Clear previous selections
+            const options = document.querySelectorAll(`#q${questionNum} .options li`);
+            options.forEach(li => {
+                li.classList.remove('selected');
+            });
+            
+            // Mark current selection
+            event.target.classList.add('selected');
+        }
+        
+        function calculateScore() {
+            let correct = 0;
+            let incorrect = 0;
+            let blank = 0;
+            
+            for (let i = 1; i <= 5; i++) {
+                const feedback = document.getElementById(`feedback${i}`);
+                const options = document.querySelectorAll(`#q${i} .options li`);
+                
+                if (userAnswers[i]) {
+                    if (userAnswers[i] === answers[i-1]) {
+                        correct++;
+                        feedback.className = 'feedback correct';
+                        feedback.innerHTML = `✅ ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    } else {
+                        incorrect++;
+                        feedback.className = 'feedback incorrect';
+                        feedback.innerHTML = `❌ Incorrect. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                        options.forEach(li => {
+                            if (li.textContent.startsWith(userAnswers[i])) {
+                                li.classList.add('incorrect');
+                            }
+                            if (li.textContent.startsWith(answers[i-1])) {
+                                li.classList.add('correct');
+                            }
+                        });
+                    }
+                } else {
+                    blank++;
+                    feedback.className = 'feedback incorrect';
+                    feedback.innerHTML = `⚠️ No answer selected. The correct answer is ${answers[i-1]}. ${explanations[i-1]}`;
+                }
+                
+                feedback.style.display = 'block';
+            }
+            
+            const score = correct - (incorrect * 0.25);
+            const percentage = ((correct / 5) * 100).toFixed(1);
+            
+            const results = document.getElementById('quiz-results');
+            results.innerHTML = `
+                <strong>Quiz Results:</strong><br>
+                Correct: ${correct} | Incorrect: ${incorrect} | Blank: ${blank}<br>
+                Score: ${score.toFixed(2)}/5.00 (${percentage}%)
+            `;
+            
+            // Save progress to localStorage
+            const today = new Date().toDateString();
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '3';
+            progress[`day${dayNum}`] = {
+                completed: true,
+                score: score,
+                percentage: percentage,
+                date: today
+            };
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        function toggleCheck(item) {
+            item.classList.toggle('completed');
+            
+            // Save checklist progress
+            const checklistItems = document.querySelectorAll('.checklist li');
+            const completed = document.querySelectorAll('.checklist li.completed').length;
+            const total = checklistItems.length;
+            
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '3';
+            if (!progress[`day${dayNum}`]) progress[`day${dayNum}`] = {};
+            progress[`day${dayNum}`].checklist = completed;
+            progress[`day${dayNum}`].checklistTotal = total;
+            localStorage.setItem('husoProgress', JSON.stringify(progress));
+        }
+        
+        // Load saved progress on page load
+        window.onload = function() {
+            const progress = JSON.parse(localStorage.getItem('husoProgress') || '{}');
+            const dayNum = '3';
+            if (progress[`day${dayNum}`] && progress[`day${dayNum}`].checklist) {
+                const checklistItems = document.querySelectorAll('.checklist li');
+                for (let i = 0; i < progress[`day${dayNum}`].checklist && i < checklistItems.length; i++) {
+                    checklistItems[i].classList.add('completed');
+                }
+            }
+        };
+    </script>
+</body>
+</html>
