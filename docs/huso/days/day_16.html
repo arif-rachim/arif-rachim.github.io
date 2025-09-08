@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 16: Physics - Energy & Conservation Laws | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - PHYSICS THEME */
+        .day-header {
+            background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .concept-box {
+            background: #f0f8ff;
+            border: 1px solid #bbdefb;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .fact-box {
+            background: #e3f2fd;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .importance-box {
+            background: #e3f2fd;
+            border: 2px solid #2196f3;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .worked-example {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .practice-problem {
+            background: #f3e5f5;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .quiz-section {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #e3f2fd;
+        }
+        
+        .options li.selected {
+            background: #2196f3;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checklist li.completed {
+            background: #e3f2fd;
+            border-color: #2196f3;
+        }
+        
+        .btn-primary {
+            background: #2196f3;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #1976d2;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>⚡ Day 16: Physics - Energy & Conservation Laws</h1>
+            <p><strong>Learning Goal:</strong> Master the fundamental laws that govern all energy in the universe</p>
+            <div class="timer">⏱️ Estimated Time: 60-75 minutes</div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Learning Objectives</h2>
+                <ul>
+                    <li>Master different forms of energy and energy transformations</li>
+                    <li>Understand and apply conservation of energy and momentum</li>
+                    <li>Solve problems involving work, power, and energy calculations</li>
+                    <li>Explore real-world applications of energy conservation principles</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CORE CONCEPTS SECTION -->
+        <section class="learning-section">
+            <h2>📚 Core Concepts (25-30 min read)</h2>
+            
+            <!-- Discovery Story Box -->
+            <div class="story-box">
+                <h3>🌟 The Genius Who Counted Heat as Motion</h3>
+                <p>Picture this: It's 1798, and American-born physicist Benjamin Thompson (Count Rumford) is supervising the boring of cannon barrels in a Munich weapons factory. While everyone else sees routine metalwork, Rumford notices something extraordinary - the metal gets incredibly hot during boring, hot enough to boil water!</p>
+                
+                <p>The established scientific wisdom of the time claimed that heat was a invisible fluid called "caloric" that flowed from hot objects to cold ones. But Rumford had a revolutionary idea: "What if heat isn't a thing at all, but rather the motion of tiny particles?" People thought he was crazy!</p>
+                
+                <p>Rumford designed brilliant experiments. He showed that you could generate unlimited heat by continuous boring - if caloric was a fluid, it should eventually run out! His work proved that heat was actually a form of energy - the kinetic energy of moving atoms and molecules.</p>
+                
+                <p>About 50 years later, a young German doctor named Julius Mayer was serving as a ship's physician in the Dutch East Indies. He noticed that patients' blood was brighter red in the tropics and made an incredible leap: the body needs less internal combustion in hot climates! He calculated the exact relationship between heat and mechanical work, discovering what we now call the mechanical equivalent of heat.</p>
+                
+                <p>Around the same time, James Joule in England was precisely measuring how mechanical work converts to heat. His experiments were so accurate that we measure energy in "joules" today. These pioneers discovered the most fundamental law in all of physics: energy cannot be created or destroyed, only transformed from one form to another. This Law of Conservation of Energy governs everything from nuclear reactions in stars to the metabolism in your cells!</p>
+            </div>
+
+            <!-- CONCEPT BOX 1 - Forms of Energy -->
+            <div class="concept-box">
+                <h3>1. Energy - The Ultimate Currency of the Universe!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>💰 Think of energy like the ultimate universal currency!</strong> Just like you can exchange dollars for euros for yen, you can convert kinetic energy to potential energy to heat energy. But unlike money, the cosmic bank never creates or destroys energy - the total amount in the universe has been constant since the Big Bang!</p>
+                </div>
+
+                <!-- Types of Energy -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🔄 The Energy Family Tree</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #fff8e1; border-left: 4px solid #ffb300; padding: 1rem;">
+                            <h5>🏃 Kinetic Energy - Energy of Motion</h5>
+                            <p><strong>Formula:</strong> KE = ½mv²</p>
+                            <p><strong>What it is:</strong> The energy something has because it's moving</p>
+                            <p><strong>Examples:</strong> Running car, flying bullet, spinning Earth, moving electrons</p>
+                            <p><strong>Key insight:</strong> Doubling speed quadruples kinetic energy!</p>
+                            <p><strong>Real-life analogy:</strong> Like money in your wallet - ready to be spent</p>
+                        </div>
+                        
+                        <div style="background: #e8f5e8; border-left: 4px solid #4caf50; padding: 1rem;">
+                            <h5>⛰️ Potential Energy - Stored Energy</h5>
+                            <p><strong>Gravitational:</strong> PE = mgh (height-dependent)</p>
+                            <p><strong>Elastic:</strong> PE = ½kx² (spring-dependent)</p>
+                            <p><strong>What it is:</strong> Energy stored due to position or configuration</p>
+                            <p><strong>Examples:</strong> Water behind dam, compressed spring, lifted weight</p>
+                            <p><strong>Key insight:</strong> Ready to be released and do work!</p>
+                            <p><strong>Real-life analogy:</strong> Like money in the bank - saved for later</p>
+                        </div>
+                        
+                        <div style="background: #ffebee; border-left: 4px solid #f44336; padding: 1rem;">
+                            <h5>🔥 Thermal Energy - Heat and Temperature</h5>
+                            <p><strong>What it is:</strong> Random kinetic energy of atoms/molecules</p>
+                            <p><strong>Examples:</strong> Hot stove, friction heating, body heat, geothermal</p>
+                            <p><strong>Key insight:</strong> Heat flows from high to low temperature</p>
+                            <p><strong>Connection:</strong> Temperature = average kinetic energy of particles</p>
+                            <p><strong>Real-life analogy:</strong> Like a crowded dance floor - lots of random motion</p>
+                        </div>
+                        
+                        <div style="background: #e3f2fd; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>⚡ Electrical Energy - Moving Charges</h5>
+                            <p><strong>What it is:</strong> Energy from moving electric charges</p>
+                            <p><strong>Examples:</strong> Lightning, household current, nerve impulses</p>
+                            <p><strong>Power:</strong> P = IV (current × voltage)</p>
+                            <p><strong>Key insight:</strong> Easily converted to other forms of energy</p>
+                            <p><strong>Real-life analogy:</strong> Like water flowing through pipes</p>
+                        </div>
+                        
+                        <div style="background: #f0f4ff; border-left: 4px solid #6366f1; padding: 1rem;">
+                            <h5>☀️ Radiant Energy - Electromagnetic Waves</h5>
+                            <p><strong>What it is:</strong> Energy carried by electromagnetic radiation</p>
+                            <p><strong>Examples:</strong> Sunlight, radio waves, X-rays, microwaves</p>
+                            <p><strong>Special property:</strong> Travels at speed of light through vacuum</p>
+                            <p><strong>Key insight:</strong> Can travel through empty space!</p>
+                            <p><strong>Real-life analogy:</strong> Like wireless messages carrying energy</p>
+                        </div>
+                    </div>
+
+                    <div class="fact-box">
+                        <p><strong>🤯 Energy Amazing Facts:</strong></p>
+                        <ul>
+                            <li>A single glucose molecule contains 686 kcal - enough to power a 100W light bulb for 8 hours!</li>
+                            <li>Your body converts chemical energy with 25% efficiency - better than most car engines!</li>
+                            <li>The Sun converts 4 million tons of matter to pure energy every second via E=mc²!</li>
+                            <li>A lightning bolt contains 5 billion joules - enough to power a house for a month!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 2 - Conservation of Energy -->
+            <div class="concept-box">
+                <h3>2. Conservation of Energy - The Universal Accounting Law!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>💼 Think of energy conservation like a perfect cosmic accountant!</strong> Imagine a bank where no money can ever be created or destroyed - it can only be moved between accounts. That's exactly how energy works in the universe. Every joule is tracked with perfect precision from the Big Bang until today!</p>
+                </div>
+
+                <!-- The Law of Conservation of Energy -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>⚖️ The First Law of Thermodynamics</h4>
+                    <div style="background: #fff3e0; border: 2px solid #ff9800; padding: 2rem; text-align: center; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: #ef6c00;">Energy cannot be CREATED or DESTROYED</h3>
+                        <h3 style="color: #ef6c00;">Only TRANSFORMED from one form to another</h3>
+                        <p><strong>Mathematical form:</strong> E_initial = E_final (in isolated systems)</p>
+                    </div>
+                </div>
+
+                <!-- Energy Transformations -->
+                <div style="margin: 2rem 0;">
+                    <h4>🔄 Energy Transformation Examples</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>🎢 Roller Coaster Physics</h5>
+                            <p><strong>At the top:</strong> Maximum potential energy, minimum kinetic energy</p>
+                            <p><strong>At the bottom:</strong> Maximum kinetic energy, minimum potential energy</p>
+                            <p><strong>Energy equation:</strong> PE_top + KE_top = PE_bottom + KE_bottom</p>
+                            <p><strong>Real insight:</strong> Energy constantly switches between stored and active!</p>
+                        </div>
+                        
+                        <div style="background: #e8f5e8; border-left: 4px solid #4caf50; padding: 1rem;">
+                            <h5>🌱 Photosynthesis Energy Chain</h5>
+                            <p><strong>Solar energy</strong> → <strong>Chemical energy (glucose)</strong> → <strong>Kinetic energy (your muscles)</strong> → <strong>Heat energy</strong></p>
+                            <p><strong>Amazing fact:</strong> The energy moving your hand right now was sunlight 6 months ago!</p>
+                        </div>
+                        
+                        <div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 1rem;">
+                            <h5>⚡ Electrical Power Plant</h5>
+                            <p><strong>Chemical energy (coal/gas)</strong> → <strong>Thermal energy (heat)</strong> → <strong>Kinetic energy (steam turbine)</strong> → <strong>Electrical energy</strong> → <strong>Light/heat in your home</strong></p>
+                            <p><strong>Efficiency challenge:</strong> Each conversion loses some energy to heat!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work-Energy Theorem -->
+                <div style="margin: 2rem 0;">
+                    <h4>💪 Work-Energy Theorem</h4>
+                    
+                    <div style="background: #f0f8ff; padding: 2rem; border-radius: 10px; border: 2px solid #2196f3; margin: 2rem 0;">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <h3 style="color: #1976d2;">Work = Change in Kinetic Energy</h3>
+                            <p><strong>W = ΔKE = KE_final - KE_initial</strong></p>
+                            <p><strong>Work = Force × Distance × cos(θ)</strong></p>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px;">
+                                <h5>🔨 Positive Work</h5>
+                                <p><strong>Force in same direction as motion</strong></p>
+                                <p><strong>Result:</strong> Increases kinetic energy</p>
+                                <p><strong>Examples:</strong> Pushing a cart forward, gravity pulling down</p>
+                            </div>
+                            
+                            <div style="background: #ffebee; padding: 1rem; border-radius: 8px;">
+                                <h5>🛑 Negative Work</h5>
+                                <p><strong>Force opposite to direction of motion</strong></p>
+                                <p><strong>Result:</strong> Decreases kinetic energy</p>
+                                <p><strong>Examples:</strong> Friction slowing down, brakes stopping car</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 3 - Conservation of Momentum -->
+            <div class="concept-box">
+                <h3>3. Conservation of Momentum - Newton's Billiard Ball Universe!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🎱 Think of momentum conservation like a cosmic billiard game!</strong> When balls collide on a pool table, they might change speed and direction, but the total momentum of all balls stays exactly the same. This law governs everything from atomic particles to entire galaxies!</p>
+                </div>
+
+                <!-- Momentum Basics -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🚀 Momentum - The "Oomph" of Moving Objects</h4>
+                    <div style="background: #f0f8ff; border: 2px solid #2196f3; padding: 2rem; text-align: center; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: #1976d2;">Momentum = Mass × Velocity</h3>
+                        <p><strong>p = mv</strong></p>
+                        <p><strong>Units:</strong> kg⋅m/s</p>
+                        <p><strong>Key point:</strong> Momentum is a VECTOR (has direction)</p>
+                    </div>
+                    
+                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5>🤔 Why Momentum Matters</h5>
+                        <p><strong>Heavy + slow = lots of momentum:</strong> Freight train at 50 mph</p>
+                        <p><strong>Light + fast = lots of momentum:</strong> Bullet at 800 mph</p>
+                        <p><strong>Both are equally hard to stop!</strong> That's momentum at work.</p>
+                        <p><strong>Sports insight:</strong> A bowling ball and ping-pong ball at same speed have very different stopping power!</p>
+                    </div>
+                </div>
+
+                <!-- Conservation Law -->
+                <div style="margin: 2rem 0;">
+                    <h4>⚖️ The Law of Conservation of Momentum</h4>
+                    
+                    <div style="background: #fff3e0; border: 2px solid #ff9800; padding: 2rem; text-align: center; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: #ef6c00;">Total momentum BEFORE = Total momentum AFTER</h3>
+                        <p><strong>p₁_initial + p₂_initial = p₁_final + p₂_final</strong></p>
+                        <p><strong>This works for:</strong> Collisions, explosions, rocket launches!</p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; border: 2px solid #4caf50;">
+                            <h6>💥 Collision Example</h6>
+                            <p><strong>Before:</strong> Car A (1000 kg, 20 m/s) + Car B (1500 kg, 0 m/s)</p>
+                            <p><strong>Total momentum before:</strong> 20,000 kg⋅m/s</p>
+                            <p><strong>After collision:</strong> Both cars stick together</p>
+                            <p><strong>Combined mass:</strong> 2500 kg</p>
+                            <p><strong>Final velocity:</strong> 20,000 ÷ 2500 = 8 m/s</p>
+                        </div>
+                        
+                        <div style="background: #fff8e1; padding: 1rem; border-radius: 8px; border: 2px solid #ffb300;">
+                            <h6>🚀 Rocket Launch Example</h6>
+                            <p><strong>Before:</strong> Rocket + fuel at rest (momentum = 0)</p>
+                            <p><strong>During launch:</strong> Hot gas shoots down at high speed</p>
+                            <p><strong>Result:</strong> Rocket must go up with equal momentum</p>
+                            <p><strong>Key insight:</strong> No external force needed - momentum conserved!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Impulse-Momentum Theorem -->
+                <div style="margin: 2rem 0;">
+                    <h4>⚡ Impulse-Momentum Theorem</h4>
+                    
+                    <div style="background: #f0f8ff; padding: 2rem; border-radius: 10px; border: 2px solid #2196f3; margin: 2rem 0;">
+                        <div style="text-align: center;">
+                            <h3 style="color: #1976d2;">Impulse = Change in Momentum</h3>
+                            <p><strong>J = Δp = F × Δt</strong></p>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <h5>🥊 Real-World Applications</h5>
+                            <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                                <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px;">
+                                    <p><strong>🚗 Car Safety:</strong> Crumple zones increase crash time, reducing force on passengers</p>
+                                    <p><strong>🥊 Boxing Gloves:</strong> Padding increases contact time, reducing impact force</p>
+                                    <p><strong>🏏 Cricket/Baseball:</strong> Follow through increases contact time, giving ball more momentum</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Should You Care Section -->
+            <div class="importance-box">
+                <h3>🤔 But Why Should You Care About Energy & Conservation Laws?</h3>
+                
+                <div style="margin: 1rem 0;">
+                    <h4>🏠 For Your Daily Life:</h4>
+                    <p>Understanding energy and conservation helps you understand:</p>
+                    <ul>
+                        <li>Why hybrid cars get better gas mileage (energy recovery during braking)</li>
+                        <li>How your body converts food to motion (chemical → kinetic energy)</li>
+                        <li>Why you feel warm after exercise (kinetic → thermal energy conversion)</li>
+                        <li>How solar panels work (radiant → electrical energy)</li>
+                        <li>Why perpetual motion machines are impossible (energy conservation)</li>
+                        <li>How to improve your athletic performance (understanding momentum and energy transfer)</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🔬 For Your Future Career:</h4>
+                    <p>Energy and conservation knowledge is essential for:</p>
+                    <ul>
+                        <li><strong>Engineering:</strong> Designing efficient machines, renewable energy systems</li>
+                        <li><strong>Medicine:</strong> Understanding metabolism, biomechanics, medical imaging</li>
+                        <li><strong>Environmental Science:</strong> Energy efficiency, climate change, sustainability</li>
+                        <li><strong>Sports Science:</strong> Optimizing athletic performance, injury prevention</li>
+                        <li><strong>Space Technology:</strong> Rocket propulsion, orbital mechanics, satellite design</li>
+                        <li><strong>Economics:</strong> Energy markets, resource allocation, efficiency optimization</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🌟 For Your Wonder & Understanding:</h4>
+                    <p>You are literally a walking energy transformer! Every heartbeat, every thought, every step you take involves the conversion of energy from one form to another. The Law of Conservation of Energy means that some of the energy in your body right now has been cycling through the universe for 13.8 billion years - from the first stars, through countless generations of life, and now temporarily residing in you before continuing its eternal cosmic journey. You're not just learning physics - you're discovering the fundamental operating system of reality itself!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES SECTION -->
+        <section class="learning-section">
+            <h2>🔍 Worked Examples (15-20 min practice)</h2>
+            
+            <div class="worked-example">
+                <h3>⚡ Energy Detective Case 1: Roller Coaster Physics</h3>
+                <p><strong>A 500 kg roller coaster car starts from rest at height 50 m. Find its speed at height 20 m.</strong></p>
+                <p><strong>Given:</strong> m = 500 kg, h₁ = 50 m, h₂ = 20 m, v₁ = 0 m/s</p>
+                <p><strong>Find:</strong> v₂ = ?</p>
+                <p><strong>Solution using Conservation of Energy:</strong></p>
+                <p>Total energy at top = Total energy at lower height</p>
+                <p>PE₁ + KE₁ = PE₂ + KE₂</p>
+                <p>mgh₁ + ½mv₁² = mgh₂ + ½mv₂²</p>
+                <p>(500)(9.8)(50) + 0 = (500)(9.8)(20) + ½(500)v₂²</p>
+                <p>245,000 = 98,000 + 250v₂²</p>
+                <p>147,000 = 250v₂²</p>
+                <p>v₂² = 588</p>
+                <p><strong>Answer:</strong> v₂ = 24.2 m/s</p>
+            </div>
+
+            <div class="worked-example">
+                <h3>💥 Energy Detective Case 2: Collision Physics</h3>
+                <p><strong>A 2 kg ball moving at 10 m/s collides with a 3 kg ball at rest. They stick together. Find their final velocity.</strong></p>
+                <p><strong>Given:</strong> m₁ = 2 kg, v₁ = 10 m/s, m₂ = 3 kg, v₂ = 0 m/s</p>
+                <p><strong>Find:</strong> v_final = ?</p>
+                <p><strong>Solution using Conservation of Momentum:</strong></p>
+                <p>Total momentum before = Total momentum after</p>
+                <p>p₁ + p₂ = p_final</p>
+                <p>m₁v₁ + m₂v₂ = (m₁ + m₂)v_final</p>
+                <p>(2)(10) + (3)(0) = (2 + 3)v_final</p>
+                <p>20 = 5v_final</p>
+                <p><strong>Answer:</strong> v_final = 4 m/s</p>
+            </div>
+
+            <div class="worked-example">
+                <h3>🔨 Energy Detective Case 3: Work and Power</h3>
+                <p><strong>A 70 kg person climbs stairs 15 m high in 30 seconds. Find the work done and power output.</strong></p>
+                <p><strong>Given:</strong> m = 70 kg, h = 15 m, t = 30 s, g = 9.8 m/s²</p>
+                <p><strong>Find:</strong> Work = ?, Power = ?</p>
+                <p><strong>Solution:</strong></p>
+                <p>Work = Change in potential energy = mgh</p>
+                <p>W = (70)(9.8)(15) = 10,290 J</p>
+                <p>Power = Work ÷ Time</p>
+                <p>P = 10,290 ÷ 30 = 343 W</p>
+                <p><strong>Answer:</strong> Work = 10,290 J, Power = 343 W (about 0.46 horsepower!)</p>
+            </div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS SECTION -->
+        <section class="learning-section">
+            <h2>💪 Practice Problems (25-35 min)</h2>
+            
+            <div class="practice-problem">
+                <h4>Problem 1: Energy Transformation</h4>
+                <p>A pendulum swings from rest at angle 60°. If the string length is 2 m, find the speed at the bottom.</p>
+                <p>Use: h = L(1 - cos θ) where L = string length</p>
+                <p><strong>Your answer:</strong> ________________ m/s</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 2: Conservation of Momentum</h4>
+                <p>A 1200 kg car traveling at 25 m/s rear-ends a 900 kg car at rest. After collision, the second car moves at 20 m/s. Find the velocity of the first car after collision.</p>
+                <p><strong>Your answer:</strong> ________________ m/s</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 3: Work-Energy Theorem</h4>
+                <p>A 50 N force is applied to push a 10 kg box across a horizontal surface for 8 m. If the box starts from rest and reaches 6 m/s, how much work was done by friction?</p>
+                <p>Hint: Net work = Change in kinetic energy</p>
+                <p><strong>Your answer:</strong> ________________ J</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 4: Power Calculation</h4>
+                <p>A 1500 kg elevator rises 20 m in 25 seconds at constant velocity. Find:</p>
+                <p>a) Work done against gravity: ________________ J</p>
+                <p>b) Power required: ________________ W</p>
+                <p>c) Power in horsepower (1 hp = 746 W): ________________ hp</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 5: Real-World Energy</h4>
+                <p>A 60 kg skier starts from rest at the top of a 100 m high slope and reaches the bottom with speed 35 m/s.</p>
+                <p>a) Initial potential energy: ________________ J</p>
+                <p>b) Final kinetic energy: ________________ J</p>
+                <p>c) Energy lost to friction: ________________ J</p>
+                <p>d) Percentage of energy conserved: ________________ %</p>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section class="learning-section">
+            <div class="quiz-section">
+                <h2>🎯 Quick Knowledge Check (10 min)</h2>
+                <p><strong>Test your understanding with these 5 questions!</strong></p>
+
+                <div class="quiz-question">
+                    <h4>Question 1: What did Count Rumford's cannon boring experiments prove?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) Heat is a fluid called caloric</li>
+                        <li onclick="selectOption(this, true)">B) Heat is a form of energy from molecular motion</li>
+                        <li onclick="selectOption(this, false)">C) Energy can be created from nothing</li>
+                        <li onclick="selectOption(this, false)">D) Momentum is not conserved in collisions</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 2: A ball thrown upward has maximum potential energy at:</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) The moment it leaves your hand</li>
+                        <li onclick="selectOption(this, true)">B) The highest point of its trajectory</li>
+                        <li onclick="selectOption(this, false)">C) The moment it hits the ground</li>
+                        <li onclick="selectOption(this, false)">D) Halfway up its trajectory</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 3: If you double the speed of an object, its kinetic energy:</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) Doubles</li>
+                        <li onclick="selectOption(this, false)">B) Triples</li>
+                        <li onclick="selectOption(this, true)">C) Quadruples</li>
+                        <li onclick="selectOption(this, false)">D) Stays the same</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 4: In a collision between two objects, which quantity is always conserved?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) Kinetic energy</li>
+                        <li onclick="selectOption(this, true)">B) Total momentum</li>
+                        <li onclick="selectOption(this, false)">C) Individual velocities</li>
+                        <li onclick="selectOption(this, false)">D) Total mass</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 5: The work-energy theorem states that work equals:</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) Force times distance</li>
+                        <li onclick="selectOption(this, false)">B) Mass times acceleration</li>
+                        <li onclick="selectOption(this, true)">C) Change in kinetic energy</li>
+                        <li onclick="selectOption(this, false)">D) Power times time</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button onclick="calculateScore()" class="btn-primary">Calculate My Score</button>
+                    <div id="score-result" style="margin-top: 1rem; font-size: 1.2rem;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS TRACKING SECTION -->
+        <section class="learning-section">
+            <div class="progress-tracker">
+                <h3>📊 Today's Progress Tracker</h3>
+                <p>Check off each item as you complete it:</p>
+                <ul class="checklist">
+                    <li onclick="toggleComplete(this)">⚡ Learned different forms of energy and transformations</li>
+                    <li onclick="toggleComplete(this)">⚖️ Mastered Law of Conservation of Energy</li>
+                    <li onclick="toggleComplete(this)">💪 Understood work-energy theorem</li>
+                    <li onclick="toggleComplete(this)">🚀 Learned conservation of momentum principles</li>
+                    <li onclick="toggleComplete(this)">💥 Applied impulse-momentum theorem</li>
+                    <li onclick="toggleComplete(this)">🔍 Solved energy and momentum problems</li>
+                    <li onclick="toggleComplete(this)">💪 Completed all practice problems</li>
+                    <li onclick="toggleComplete(this)">🎯 Scored 80%+ on the knowledge check quiz</li>
+                </ul>
+                <div style="margin-top: 1rem;">
+                    <strong>Completion Status:</strong> <span id="completion-status">0/8 Complete</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="day_15.html" class="btn-secondary">← Back to Day 15</a>
+            <a href="../index.html" class="btn-secondary">Dashboard</a>
+            <a href="day_17.html" class="btn-primary">Continue to Day 17 →</a>
+        </nav>
+    </div>
+
+    <script>
+        // Quiz functionality
+        let quizScore = 0;
+        let questionsAnswered = 0;
+        const totalQuestions = 5;
+
+        function selectOption(option, isCorrect) {
+            const allOptions = option.parentNode.querySelectorAll('li');
+            const feedback = option.parentNode.parentNode.querySelector('.feedback');
+            
+            // Remove previous selections
+            allOptions.forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+            });
+            
+            // Mark the selected option
+            option.classList.add('selected');
+            
+            if (isCorrect) {
+                option.classList.add('correct');
+                feedback.textContent = '✅ Correct! Well done!';
+                feedback.className = 'feedback correct';
+                quizScore++;
+            } else {
+                option.classList.add('incorrect');
+                // Show the correct answer
+                allOptions.forEach(opt => {
+                    if (opt.onclick.toString().includes('true')) {
+                        opt.classList.add('correct');
+                    }
+                });
+                feedback.textContent = '❌ Not quite right. The correct answer is highlighted.';
+                feedback.className = 'feedback incorrect';
+            }
+            
+            feedback.style.display = 'block';
+            questionsAnswered++;
+        }
+
+        function calculateScore() {
+            if (questionsAnswered < totalQuestions) {
+                alert(`Please answer all ${totalQuestions} questions before calculating your score.`);
+                return;
+            }
+            
+            const percentage = Math.round((quizScore / totalQuestions) * 100);
+            const resultDiv = document.getElementById('score-result');
+            
+            let message = '';
+            let color = '';
+            
+            if (percentage >= 80) {
+                message = `🎉 Excellent! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#2196f3';
+            } else if (percentage >= 60) {
+                message = `👍 Good work! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#ff9800';
+            } else {
+                message = `📚 Keep studying! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#f44336';
+            }
+            
+            resultDiv.innerHTML = message;
+            resultDiv.style.color = color;
+            resultDiv.style.fontWeight = 'bold';
+            
+            // Save score to localStorage
+            localStorage.setItem('day16_quiz_score', percentage);
+        }
+
+        // Progress tracking functionality
+        function toggleComplete(item) {
+            item.classList.toggle('completed');
+            updateCompletionStatus();
+        }
+
+        function updateCompletionStatus() {
+            const items = document.querySelectorAll('.checklist li');
+            const completed = document.querySelectorAll('.checklist li.completed');
+            const status = document.getElementById('completion-status');
+            status.textContent = `${completed.length}/${items.length} Complete`;
+            
+            // Save progress to localStorage
+            const progress = Array.from(items).map(item => item.classList.contains('completed'));
+            localStorage.setItem('day16_progress', JSON.stringify(progress));
+        }
+
+        // Load saved progress
+        window.onload = function() {
+            const savedProgress = localStorage.getItem('day16_progress');
+            if (savedProgress) {
+                const progress = JSON.parse(savedProgress);
+                const items = document.querySelectorAll('.checklist li');
+                progress.forEach((completed, index) => {
+                    if (completed && items[index]) {
+                        items[index].classList.add('completed');
+                    }
+                });
+                updateCompletionStatus();
+            }
+
+            const savedScore = localStorage.getItem('day16_quiz_score');
+            if (savedScore) {
+                document.getElementById('score-result').innerHTML = 
+                    `Previous score: ${savedScore}%`;
+            }
+        };
+    </script>
+</body>
+</html>

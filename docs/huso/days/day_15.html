@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15: Biology - Genetics & DNA Structure | HUSO Prep</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* TEMPLATE STYLES - BIOLOGY THEME */
+        .day-header {
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .learning-section {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .objectives {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .story-box {
+            background: #e8f5e8;
+            border-left: 4px solid #4caf50;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        
+        .concept-box {
+            background: #f1f8e9;
+            border: 1px solid #c8e6c8;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 6px;
+        }
+        
+        .fact-box {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+        }
+        
+        .importance-box {
+            background: #e8f5e8;
+            border: 2px solid #4caf50;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .worked-example {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .practice-problem {
+            background: #f3e5f5;
+            border: 1px solid #e1bee7;
+            padding: 1rem;
+            margin: 0.5rem 0;
+            border-radius: 6px;
+        }
+        
+        .quiz-section {
+            background: #ffebee;
+            border: 2px solid #f44336;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+        
+        .quiz-question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 6px;
+        }
+        
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .options li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: #f5f5f5;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .options li:hover {
+            background: #e8f5e8;
+        }
+        
+        .options li.selected {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.correct {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .options li.incorrect {
+            background: #f44336;
+            color: white;
+        }
+        
+        .feedback {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+        
+        .feedback.correct {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            color: #2e7d32;
+        }
+        
+        .feedback.incorrect {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            color: #c62828;
+        }
+        
+        .timer {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #ff9800;
+            margin-bottom: 1rem;
+        }
+        
+        .progress-tracker {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .checklist li {
+            padding: 0.5rem;
+            margin: 0.3rem 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .checklist li.completed {
+            background: #e8f5e8;
+            border-color: #4caf50;
+        }
+        
+        .btn-primary {
+            background: #4caf50;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary:hover {
+            background: #2e7d32;
+        }
+        
+        .btn-secondary {
+            background: #757575;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- HEADER SECTION -->
+        <header class="day-header">
+            <h1>🧬 Day 15: Biology - Genetics & DNA Structure</h1>
+            <p><strong>Learning Goal:</strong> Decode the secret instruction manual that makes you uniquely YOU</p>
+            <div class="timer">⏱️ Estimated Time: 60-75 minutes</div>
+        </header>
+
+        <!-- LEARNING OBJECTIVES SECTION -->
+        <section class="learning-section">
+            <div class="objectives">
+                <h2>🎯 Today's Learning Objectives</h2>
+                <ul>
+                    <li>Master DNA structure, base pairing rules, and genetic code organization</li>
+                    <li>Understand DNA replication, transcription, and translation processes</li>
+                    <li>Analyze how genetic information flows from genes to traits</li>
+                    <li>Explore heredity patterns, mutations, and genetic technologies</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- CORE CONCEPTS SECTION -->
+        <section class="learning-section">
+            <h2>📚 Core Concepts (25-30 min read)</h2>
+            
+            <!-- Discovery Story Box -->
+            <div class="story-box">
+                <h3>🌟 The Greatest Mystery Solved by Photo 51</h3>
+                <p>Picture this: It's 1951, and 33-year-old Rosalind Franklin is alone in her X-ray crystallography lab at King's College London. She's been trying to crack what might be the most important code in the universe - the structure of DNA. For years, scientists knew that DNA carried genetic information, but nobody could figure out its shape.</p>
+                
+                <p>Franklin carefully prepares a pure DNA crystal and aims X-rays at it for over 100 hours straight. When she develops the photographic plate, she stares at what will become the most famous X-ray photograph in history: Photo 51. The image shows a distinctive X-pattern - a cosmic fingerprint that reveals DNA's helical structure!</p>
+                
+                <p>But here's where the story gets dramatic. Two young scientists at Cambridge, James Watson and Francis Crick, see Franklin's data and have their "eureka moment." In 1953, they publish the double helix model, describing DNA as a twisted ladder with complementary base pairs. Tragically, Franklin dies of cancer at 37, four years before Watson, Crick, and her colleague Maurice Wilkins win the Nobel Prize.</p>
+                
+                <p>Today, we know that every cell in your body contains about 3 billion base pairs of DNA - a molecular library that would fill 200,000 pages if printed! This miraculous molecule not only stores the instructions for building you, but it's been faithfully copying itself for 3.8 billion years, connecting you to the very first life on Earth. You literally carry the history of life itself in every cell!</p>
+            </div>
+
+            <!-- CONCEPT BOX 1 - DNA Structure -->
+            <div class="concept-box">
+                <h3>1. DNA - The Ultimate Instruction Manual!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🏗️ Think of DNA like the ultimate LEGO instruction manual!</strong> Just like LEGO instructions use simple symbols to build complex structures, DNA uses just 4 chemical letters (A, T, G, C) to build every living thing on Earth. But unlike LEGO manuals that make one model, your DNA manual contains instructions for building trillions of different proteins that make YOU!</p>
+                </div>
+
+                <!-- The Double Helix Structure -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>🌪️ The Twisted Ladder That Changed Everything</h4>
+                    <div style="background: #f0f8ff; border: 2px solid #4caf50; padding: 2rem; text-align: center; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: #2e7d32;">The Double Helix = Twisted Ladder</h3>
+                        <p><strong>Sides of ladder:</strong> Sugar-phosphate backbone (the rails)</p>
+                        <p><strong>Rungs of ladder:</strong> Base pairs held by hydrogen bonds</p>
+                        <p><strong>The twist:</strong> Makes a complete turn every 10 base pairs</p>
+                    </div>
+                    
+                    <div class="fact-box">
+                        <p><strong>🤯 DNA Structure Amazing Facts:</strong></p>
+                        <ul>
+                            <li>Your DNA strands are 2 nanometers wide - 25,000 times thinner than human hair!</li>
+                            <li>If you unraveled all DNA in your body, it would stretch 10 billion miles - to Pluto and back!</li>
+                            <li>DNA is so stable that we've extracted readable DNA from 400,000-year-old fossils!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- The Base Pairing Rules -->
+                <div style="margin: 2rem 0;">
+                    <h4>💕 The Ultimate Love Story - Base Pairing Rules</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #fff8e1; border-left: 4px solid #ffb300; padding: 1rem;">
+                            <h5>👫 The Perfect Couples</h5>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 1rem 0;">
+                                <div style="text-align: center; background: #e8f5e8; padding: 1rem; border-radius: 8px;">
+                                    <h6 style="color: #4caf50;">A (Adenine) ↔ T (Thymine)</h6>
+                                    <p><strong>2 hydrogen bonds</strong></p>
+                                    <p>"A" always partners with "T"</p>
+                                </div>
+                                <div style="text-align: center; background: #e8f5e8; padding: 1rem; border-radius: 8px;">
+                                    <h6 style="color: #4caf50;">G (Guanine) ↔ C (Cytosine)</h6>
+                                    <p><strong>3 hydrogen bonds</strong></p>
+                                    <p>"G" always partners with "C"</p>
+                                </div>
+                            </div>
+                            <p><strong>Key Rule:</strong> If one strand reads "ATGC", the other MUST read "TACG"</p>
+                            <p><strong>Real-life analogy:</strong> Like perfect dance partners - each knows exactly how to complement the other!</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e3f2fd; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <h5>🧮 Chargaff's Rules (The Discovery That Cracked DNA)</h5>
+                        <p><strong>Rule 1:</strong> Amount of A = Amount of T</p>
+                        <p><strong>Rule 2:</strong> Amount of G = Amount of C</p>
+                        <p><strong>Why this matters:</strong> This 1:1 ratio proved that bases pair specifically, leading to the double helix model!</p>
+                        <p><strong>Fun fact:</strong> Erwin Chargaff discovered this in 1950, three years before Watson & Crick!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 2 - Genetic Information Flow -->
+            <div class="concept-box">
+                <h3>2. From Genes to You - The Central Dogma of Life!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>📚 Think of genetic information flow like a library system!</strong> Your DNA is like a master reference book that never leaves the library (nucleus). When you need specific information, the librarian (RNA polymerase) makes a photocopy (mRNA) of just the pages you need. Then this copy goes to a translator (ribosome) who converts the information into action (proteins)!</p>
+                </div>
+
+                <!-- The Central Dogma -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>📖 The Information Highway: DNA → RNA → Protein</h4>
+                    <div style="background: #fff3e0; border: 2px solid #ff9800; padding: 2rem; text-align: center; border-radius: 10px; margin: 2rem 0;">
+                        <h3 style="color: #ef6c00;">DNA → RNA → PROTEIN</h3>
+                        <p><strong>Step 1: Transcription</strong> (DNA → RNA) - Making a copy</p>
+                        <p><strong>Step 2: Translation</strong> (RNA → Protein) - Building the product</p>
+                    </div>
+                </div>
+
+                <!-- The Three Steps Process -->
+                <div style="margin: 2rem 0;">
+                    <h4>🏭 The Three-Step Genetic Factory</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #f0f8ff; border-left: 4px solid #2196f3; padding: 1rem;">
+                            <h5>📋 Step 1: DNA Replication (Making Copies)</h5>
+                            <p><strong>Location:</strong> Nucleus (the master library)</p>
+                            <p><strong>What happens:</strong> DNA unzips, each strand serves as template for new strand</p>
+                            <p><strong>Enzyme hero:</strong> DNA polymerase (the copying machine)</p>
+                            <p><strong>Result:</strong> Two identical DNA molecules from one</p>
+                            <p><strong>Real-life analogy:</strong> Like a photocopier making perfect duplicates</p>
+                            <p><strong>Fun fact:</strong> Happens every time a cell divides - about 2 trillion times daily in your body!</p>
+                        </div>
+                        
+                        <div style="background: #fff3e0; border-left: 4px solid #ff9800; padding: 1rem;">
+                            <h5>✍️ Step 2: Transcription (DNA → mRNA)</h5>
+                            <p><strong>Location:</strong> Nucleus (where the master book lives)</p>
+                            <p><strong>What happens:</strong> RNA polymerase reads DNA gene and makes mRNA copy</p>
+                            <p><strong>Key difference:</strong> RNA uses U (uracil) instead of T (thymine)</p>
+                            <p><strong>Result:</strong> mRNA messenger carries gene instructions to ribosome</p>
+                            <p><strong>Real-life analogy:</strong> Like taking notes from a textbook - same info, different format</p>
+                            <p><strong>Fun fact:</strong> Only 2% of your DNA codes for proteins - the rest has regulatory functions!</p>
+                        </div>
+                        
+                        <div style="background: #e8f5e8; border-left: 4px solid #4caf50; padding: 1rem;">
+                            <h5>🏗️ Step 3: Translation (mRNA → Protein)</h5>
+                            <p><strong>Location:</strong> Ribosome (the construction site)</p>
+                            <p><strong>What happens:</strong> Ribosome reads mRNA codons and links amino acids</p>
+                            <p><strong>Translation key:</strong> Every 3 mRNA bases (codon) = 1 amino acid</p>
+                            <p><strong>Helper:</strong> tRNA brings correct amino acids like delivery trucks</p>
+                            <p><strong>Result:</strong> Functional protein that does actual work in your body</p>
+                            <p><strong>Real-life analogy:</strong> Like following a recipe - ingredients (amino acids) become cake (protein)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONCEPT BOX 3 - Heredity and Variation -->
+            <div class="concept-box">
+                <h3>3. You Are Unique - The Magic of Genetic Variation!</h3>
+                
+                <div style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 1rem; border-radius: 6px; margin: 1rem 0;">
+                    <p><strong>🎨 Think of genetic inheritance like a massive art palette mixing!</strong> You got 23 chromosomes from mom and 23 from dad, but it's not just simple addition. Sexual reproduction shuffles genes like an expert card dealer, creating combinations that have never existed before and will never exist again. You are literally a one-of-a-kind masterpiece!</p>
+                </div>
+
+                <!-- Mendel's Laws -->
+                <div style="margin: 1.5rem 0;">
+                    <h4>👨‍🌾 Gregor Mendel's Pea Plant Revolution</h4>
+                    
+                    <div style="background: #f0f8ff; padding: 2rem; border-radius: 10px; border: 2px solid #2196f3; margin: 2rem 0;">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                            <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px;">
+                                <h5>🟢 Dominant Alleles (Capital Letters)</h5>
+                                <p><strong>Examples:</strong> B = Brown eyes, T = Tall</p>
+                                <p><strong>Power:</strong> Always expressed when present</p>
+                                <p><strong>Think:</strong> The "bossy" gene that takes charge</p>
+                            </div>
+                            
+                            <div style="background: #fff3e0; padding: 1rem; border-radius: 8px;">
+                                <h5>🔸 Recessive Alleles (Lowercase Letters)</h5>
+                                <p><strong>Examples:</strong> b = blue eyes, t = short</p>
+                                <p><strong>Power:</strong> Only expressed when both copies present</p>
+                                <p><strong>Think:</strong> The "shy" gene that needs a partner</p>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 2rem; text-align: center;">
+                            <h5>🧮 The Math of Inheritance (Punnett Squares)</h5>
+                            <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                                <p><strong>Bb × Bb (Both parents have brown eyes but carry blue gene)</strong></p>
+                                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-width: 200px; margin: 0 auto;">
+                                    <div style="background: #f5f5f5; padding: 0.5rem; text-align: center;">×</div>
+                                    <div style="background: #e8f5e8; padding: 0.5rem; text-align: center;"><strong>B</strong></div>
+                                    <div style="background: #fff3e0; padding: 0.5rem; text-align: center;">b</div>
+                                    <div style="background: #e8f5e8; padding: 0.5rem; text-align: center;"><strong>B</strong></div>
+                                    <div style="background: #c8e6c8; padding: 0.5rem; text-align: center;"><strong>BB</strong></div>
+                                    <div style="background: #dcedc1; padding: 0.5rem; text-align: center;"><strong>Bb</strong></div>
+                                    <div style="background: #fff3e0; padding: 0.5rem; text-align: center;">b</div>
+                                    <div style="background: #dcedc1; padding: 0.5rem; text-align: center;"><strong>Bb</strong></div>
+                                    <div style="background: #ffeaa7; padding: 0.5rem; text-align: center;">bb</div>
+                                </div>
+                                <p style="margin-top: 1rem;"><strong>Result:</strong> 75% brown eyes, 25% blue eyes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mutations and Genetic Technology -->
+                <div style="margin: 2rem 0;">
+                    <h4>🧬 When DNA Changes - Mutations and Evolution</h4>
+                    
+                    <div style="display: grid; grid-gap: 1rem; margin: 1rem 0;">
+                        <div style="background: #fff8e1; padding: 1rem; border-radius: 8px; border: 2px solid #ffb300;">
+                            <h6>🔄 Types of Mutations</h6>
+                            <p><strong>Point mutations:</strong> One letter changes (A→T)</p>
+                            <p><strong>Insertions:</strong> Extra letters added</p>
+                            <p><strong>Deletions:</strong> Letters removed</p>
+                            <p><strong>Most mutations:</strong> Neutral or harmful</p>
+                            <p><strong>Rare beneficial mutations:</strong> Drive evolution and adaptation!</p>
+                        </div>
+                        
+                        <div style="background: #e8f5e8; padding: 1rem; border-radius: 8px; border: 2px solid #4caf50;">
+                            <h6>🔬 Modern Genetic Technologies</h6>
+                            <p><strong>PCR:</strong> DNA copying machine (billions of copies in hours)</p>
+                            <p><strong>DNA sequencing:</strong> Reading the exact genetic code</p>
+                            <p><strong>CRISPR:</strong> Precise gene editing tool</p>
+                            <p><strong>Gene therapy:</strong> Fixing genetic diseases</p>
+                            <p><strong>Personalized medicine:</strong> Treatments based on your unique DNA!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Why Should You Care Section -->
+            <div class="importance-box">
+                <h3>🤔 But Why Should You Care About Genetics?</h3>
+                
+                <div style="margin: 1rem 0;">
+                    <h4>🏥 For Your Personal Health & Family:</h4>
+                    <p>Understanding genetics helps you understand:</p>
+                    <ul>
+                        <li>Why you look like your parents but are still unique</li>
+                        <li>How genetic diseases like sickle cell anemia or Huntington's are inherited</li>
+                        <li>Why some people are lactose intolerant while others can drink milk</li>
+                        <li>How cancer develops from accumulated DNA mutations</li>
+                        <li>Why genetic counseling is important for family planning</li>
+                        <li>How personalized medicine can tailor treatments to your DNA</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🔬 For Your Future Career:</h4>
+                    <p>Genetics knowledge is essential for:</p>
+                    <ul>
+                        <li><strong>Medicine:</strong> Genetic counseling, gene therapy, personalized treatments</li>
+                        <li><strong>Forensics:</strong> DNA fingerprinting, solving crimes, paternity testing</li>
+                        <li><strong>Agriculture:</strong> Developing disease-resistant crops, improving yields</li>
+                        <li><strong>Conservation:</strong> Preserving endangered species, understanding biodiversity</li>
+                        <li><strong>Biotechnology:</strong> Producing medicines using genetically modified organisms</li>
+                        <li><strong>Anthropology:</strong> Tracing human migration patterns and evolution</li>
+                    </ul>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <h4>🌟 For Your Wonder & Understanding:</h4>
+                    <p>You are carrying a 3.8-billion-year-old success story in every cell! Your DNA connects you to every living thing on Earth - you share 99.9% of your DNA with other humans, 96% with chimpanzees, 85% with mice, and even 50% with bananas! Yet that tiny 0.1% difference makes you absolutely unique among the 100+ billion humans who have ever lived. You're not just learning genetics - you're learning your own cosmic origin story!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORKED EXAMPLES SECTION -->
+        <section class="learning-section">
+            <h2>🔍 Worked Examples (15-20 min practice)</h2>
+            
+            <div class="worked-example">
+                <h3>🧩 DNA Detective Case 1: Complete the Complementary Strand</h3>
+                <p><strong>Given DNA strand:</strong> 5'-ATGCGATCGAAC-3'</p>
+                <p><strong>Find:</strong> The complementary strand sequence</p>
+                <p><strong>Solution:</strong></p>
+                <p>Remember: A pairs with T, G pairs with C</p>
+                <p>Original:     5'-A T G C G A T C G A A C-3'</p>
+                <p>Complement:   3'-T A C G C T A G C T T G-5'</p>
+                <p><strong>Answer:</strong> 3'-TACGCTAGCTTG-5' (or written 5' to 3': 5'-GTTCGATCGCAT-3')</p>
+            </div>
+
+            <div class="worked-example">
+                <h3>🧬 DNA Detective Case 2: Transcription Challenge</h3>
+                <p><strong>Given DNA template strand:</strong> 3'-TACGCATGGTCA-5'</p>
+                <p><strong>Find:</strong> The mRNA sequence produced</p>
+                <p><strong>Solution:</strong></p>
+                <p>Remember: RNA uses U instead of T, and mRNA is complementary to DNA template</p>
+                <p>DNA template:  3'-T A C G C A T G G T C A-5'</p>
+                <p>mRNA:          5'-A U G C G U A C C A G U-3'</p>
+                <p><strong>Answer:</strong> 5'-AUGCGUACCAGU-3'</p>
+            </div>
+
+            <div class="worked-example">
+                <h3>🧮 Genetics Detective Case 3: Punnett Square Mastery</h3>
+                <p><strong>Cross:</strong> A heterozygous tall plant (Tt) with a homozygous short plant (tt)</p>
+                <p><strong>Find:</strong> Probability of offspring being tall</p>
+                <p><strong>Solution:</strong></p>
+                <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; max-width: 200px;">
+                        <div style="background: #f5f5f5; padding: 0.5rem; text-align: center;">×</div>
+                        <div style="background: #e8f5e8; padding: 0.5rem; text-align: center;"><strong>T</strong></div>
+                        <div style="background: #fff3e0; padding: 0.5rem; text-align: center;">t</div>
+                        <div style="background: #fff3e0; padding: 0.5rem; text-align: center;">t</div>
+                        <div style="background: #dcedc1; padding: 0.5rem; text-align: center;">Tt</div>
+                        <div style="background: #ffeaa7; padding: 0.5rem; text-align: center;">tt</div>
+                        <div style="background: #fff3e0; padding: 0.5rem; text-align: center;">t</div>
+                        <div style="background: #dcedc1; padding: 0.5rem; text-align: center;">Tt</div>
+                        <div style="background: #ffeaa7; padding: 0.5rem; text-align: center;">tt</div>
+                    </div>
+                </div>
+                <p><strong>Answer:</strong> 50% chance of tall offspring (2 Tt out of 4 total)</p>
+            </div>
+        </section>
+
+        <!-- PRACTICE PROBLEMS SECTION -->
+        <section class="learning-section">
+            <h2>💪 Practice Problems (25-35 min)</h2>
+            
+            <div class="practice-problem">
+                <h4>Problem 1: Base Pairing Rules</h4>
+                <p>Complete the complementary DNA strand: 5'-GATTACAGGCTC-3'</p>
+                <p><strong>Your answer:</strong> ________________</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 2: Central Dogma</h4>
+                <p>Given the DNA coding strand: 5'-ATGCCATAGCTG-3'</p>
+                <p>a) What is the mRNA sequence? ________________</p>
+                <p>b) How many codons does this mRNA contain? ________________</p>
+                <p>c) How many amino acids will the resulting protein have? ________________</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 3: Genetics Cross</h4>
+                <p>In fruit flies, red eyes (R) are dominant to white eyes (r). Cross two heterozygous red-eyed flies (Rr × Rr).</p>
+                <p>a) Draw the Punnett square</p>
+                <p>b) What percentage of offspring will have red eyes? ________________</p>
+                <p>c) What percentage will be homozygous recessive? ________________</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 4: Mutation Analysis</h4>
+                <p>Original DNA: 5'-ATGAAATTTGGG-3'</p>
+                <p>Mutated DNA: 5'-ATGAAATTGGG-3'</p>
+                <p>a) What type of mutation occurred? ________________</p>
+                <p>b) Which nucleotide was affected? ________________</p>
+                <p>c) How might this affect the protein? ________________</p>
+            </div>
+
+            <div class="practice-problem">
+                <h4>Problem 5: Real-World Application</h4>
+                <p>Sickle cell anemia is caused by a single nucleotide change (A→T) in the β-globin gene.</p>
+                <p>a) If both parents are carriers (heterozygous), what's the probability their child will have sickle cell disease?</p>
+                <p>b) Why might the sickle cell allele persist in populations where malaria is common?</p>
+            </div>
+        </section>
+
+        <!-- QUIZ SECTION -->
+        <section class="learning-section">
+            <div class="quiz-section">
+                <h2>🎯 Quick Knowledge Check (10 min)</h2>
+                <p><strong>Test your understanding with these 5 questions!</strong></p>
+
+                <div class="quiz-question">
+                    <h4>Question 1: What did Rosalind Franklin's "Photo 51" reveal?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) The genetic code sequence</li>
+                        <li onclick="selectOption(this, true)">B) The helical structure of DNA</li>
+                        <li onclick="selectOption(this, false)">C) The location of genes on chromosomes</li>
+                        <li onclick="selectOption(this, false)">D) The process of DNA replication</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 2: If a DNA strand reads 5'-ATGC-3', what does the complementary strand read?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) 5'-TACG-3'</li>
+                        <li onclick="selectOption(this, false)">B) 3'-ATGC-5'</li>
+                        <li onclick="selectOption(this, true)">C) 3'-TACG-5'</li>
+                        <li onclick="selectOption(this, false)">D) 5'-GCAT-3'</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 3: In the Central Dogma, what is the correct sequence of information flow?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) Protein → RNA → DNA</li>
+                        <li onclick="selectOption(this, true)">B) DNA → RNA → Protein</li>
+                        <li onclick="selectOption(this, false)">C) RNA → DNA → Protein</li>
+                        <li onclick="selectOption(this, false)">D) DNA → Protein → RNA</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 4: In a Punnett square for Bb × bb, what percentage of offspring will show the dominant trait?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, false)">A) 25%</li>
+                        <li onclick="selectOption(this, true)">B) 50%</li>
+                        <li onclick="selectOption(this, false)">C) 75%</li>
+                        <li onclick="selectOption(this, false)">D) 100%</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <h4>Question 5: Which enzyme is responsible for DNA replication?</h4>
+                    <ul class="options">
+                        <li onclick="selectOption(this, true)">A) DNA polymerase</li>
+                        <li onclick="selectOption(this, false)">B) RNA polymerase</li>
+                        <li onclick="selectOption(this, false)">C) DNA helicase only</li>
+                        <li onclick="selectOption(this, false)">D) Ligase only</li>
+                    </ul>
+                    <div class="feedback"></div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <button onclick="calculateScore()" class="btn-primary">Calculate My Score</button>
+                    <div id="score-result" style="margin-top: 1rem; font-size: 1.2rem;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRESS TRACKING SECTION -->
+        <section class="learning-section">
+            <div class="progress-tracker">
+                <h3>📊 Today's Progress Tracker</h3>
+                <p>Check off each item as you complete it:</p>
+                <ul class="checklist">
+                    <li onclick="toggleComplete(this)">📖 Read and understood DNA double helix structure</li>
+                    <li onclick="toggleComplete(this)">🧬 Mastered base pairing rules (A-T, G-C)</li>
+                    <li onclick="toggleComplete(this)">🔄 Learned Central Dogma (DNA → RNA → Protein)</li>
+                    <li onclick="toggleComplete(this)">👨‍🌾 Understood Mendelian inheritance patterns</li>
+                    <li onclick="toggleComplete(this)">🧮 Solved Punnett square problems</li>
+                    <li onclick="toggleComplete(this)">🔬 Explored mutations and genetic technologies</li>
+                    <li onclick="toggleComplete(this)">💪 Completed all practice problems</li>
+                    <li onclick="toggleComplete(this)">🎯 Scored 80%+ on the knowledge check quiz</li>
+                </ul>
+                <div style="margin-top: 1rem;">
+                    <strong>Completion Status:</strong> <span id="completion-status">0/8 Complete</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <nav style="text-align: center; margin: 2rem 0;">
+            <a href="day_14.html" class="btn-secondary">← Back to Day 14</a>
+            <a href="../index.html" class="btn-secondary">Dashboard</a>
+            <a href="day_16.html" class="btn-primary">Continue to Day 16 →</a>
+        </nav>
+    </div>
+
+    <script>
+        // Quiz functionality
+        let quizScore = 0;
+        let questionsAnswered = 0;
+        const totalQuestions = 5;
+
+        function selectOption(option, isCorrect) {
+            const allOptions = option.parentNode.querySelectorAll('li');
+            const feedback = option.parentNode.parentNode.querySelector('.feedback');
+            
+            // Remove previous selections
+            allOptions.forEach(opt => {
+                opt.classList.remove('selected', 'correct', 'incorrect');
+            });
+            
+            // Mark the selected option
+            option.classList.add('selected');
+            
+            if (isCorrect) {
+                option.classList.add('correct');
+                feedback.textContent = '✅ Correct! Well done!';
+                feedback.className = 'feedback correct';
+                quizScore++;
+            } else {
+                option.classList.add('incorrect');
+                // Show the correct answer
+                allOptions.forEach(opt => {
+                    if (opt.onclick.toString().includes('true')) {
+                        opt.classList.add('correct');
+                    }
+                });
+                feedback.textContent = '❌ Not quite right. The correct answer is highlighted.';
+                feedback.className = 'feedback incorrect';
+            }
+            
+            feedback.style.display = 'block';
+            questionsAnswered++;
+        }
+
+        function calculateScore() {
+            if (questionsAnswered < totalQuestions) {
+                alert(`Please answer all ${totalQuestions} questions before calculating your score.`);
+                return;
+            }
+            
+            const percentage = Math.round((quizScore / totalQuestions) * 100);
+            const resultDiv = document.getElementById('score-result');
+            
+            let message = '';
+            let color = '';
+            
+            if (percentage >= 80) {
+                message = `🎉 Excellent! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#4caf50';
+            } else if (percentage >= 60) {
+                message = `👍 Good work! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#ff9800';
+            } else {
+                message = `📚 Keep studying! You scored ${percentage}% (${quizScore}/${totalQuestions})`;
+                color = '#f44336';
+            }
+            
+            resultDiv.innerHTML = message;
+            resultDiv.style.color = color;
+            resultDiv.style.fontWeight = 'bold';
+            
+            // Save score to localStorage
+            localStorage.setItem('day15_quiz_score', percentage);
+        }
+
+        // Progress tracking functionality
+        function toggleComplete(item) {
+            item.classList.toggle('completed');
+            updateCompletionStatus();
+        }
+
+        function updateCompletionStatus() {
+            const items = document.querySelectorAll('.checklist li');
+            const completed = document.querySelectorAll('.checklist li.completed');
+            const status = document.getElementById('completion-status');
+            status.textContent = `${completed.length}/${items.length} Complete`;
+            
+            // Save progress to localStorage
+            const progress = Array.from(items).map(item => item.classList.contains('completed'));
+            localStorage.setItem('day15_progress', JSON.stringify(progress));
+        }
+
+        // Load saved progress
+        window.onload = function() {
+            const savedProgress = localStorage.getItem('day15_progress');
+            if (savedProgress) {
+                const progress = JSON.parse(savedProgress);
+                const items = document.querySelectorAll('.checklist li');
+                progress.forEach((completed, index) => {
+                    if (completed && items[index]) {
+                        items[index].classList.add('completed');
+                    }
+                });
+                updateCompletionStatus();
+            }
+
+            const savedScore = localStorage.getItem('day15_quiz_score');
+            if (savedScore) {
+                document.getElementById('score-result').innerHTML = 
+                    `Previous score: ${savedScore}%`;
+            }
+        };
+    </script>
+</body>
+</html>
