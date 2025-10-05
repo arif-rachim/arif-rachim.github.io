@@ -4,7 +4,113 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository." />
+    <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="Configure IntelliJ IDEA project files for arif-rachim.github.io">
+      <change afterPath="$PROJECT_DIR$/docs/husi/dashboard.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/dashboard.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/data/lessons/day-01.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-01.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-01.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-01.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-02.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-02.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-02.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-03.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-03.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-03.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-04.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-04.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-04.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-05.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-05.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-05.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-06.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-06.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-06.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-07.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-07.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-07.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-08.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-08.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-08.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-09.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-09.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-09.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-10.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-10.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-10.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-11.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-11.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-11.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-12.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-12.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-12.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-13.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-13.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-13.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-14.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-14.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-14.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-15.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-15.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-15.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-16.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-16.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-16.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-17.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-17.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-17.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-18.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-18.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-18.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-19.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-19.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-19.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-20.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-20.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-20.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-21.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-21.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lessons/day-21.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/progress.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/progress.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/renderer.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/renderer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/lib/renderer.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/main.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/main.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/types/lesson.types.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/types/lesson.types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/husi/types/lesson.types.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_01.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_02.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_03.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_04.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_05.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_06.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_07.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_08.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_09.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_16.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_17.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/days/day_57.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/huso/templates/daily_template.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,24 +149,24 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/arif/WebstormProjects/arif-rachim.github.io&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/arif/WebstormProjects/arif-rachim.github.io/docs&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.build.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/arif/workspace/arif-rachim.github.io/node_modules/typescript/lib&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\arif\\WebstormProjects\\arif-rachim.github.io\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\docs" />
+      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\docs\huso\days" />
       <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\public" />
       <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\assets" />
-      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\docs" />
       <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\docs\tc39-signal-proposal-react" />
-      <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\public\tc39-signal-proposal-react" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\arif\WebstormProjects\arif-rachim.github.io\assets" />
@@ -86,7 +192,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-WS-251.26094.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -106,6 +212,7 @@
       <workItem from="1716727949161" duration="7000" />
       <workItem from="1732031392818" duration="1162000" />
       <workItem from="1757302130348" duration="21000" />
+      <workItem from="1759633537598" duration="79000" />
     </task>
     <task id="LOCAL-00001" summary="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository.">
       <option name="closed" value="true" />
@@ -123,7 +230,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732031629943</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Day 17 HTML documentation for Chemistry in HUSO Prep">
+      <option name="closed" value="true" />
+      <created>1757339943886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1757339943886</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Configure IntelliJ IDEA project files for arif-rachim.github.io">
+      <option name="closed" value="true" />
+      <created>1757339963993</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1757339963993</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +255,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update changes" />
     <MESSAGE value="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository." />
+    <MESSAGE value="Add Day 17 HTML documentation for Chemistry in HUSO Prep" />
+    <MESSAGE value="Configure IntelliJ IDEA project files for arif-rachim.github.io" />
+    <option name="LAST_COMMIT_MESSAGE" value="Configure IntelliJ IDEA project files for arif-rachim.github.io" />
   </component>
 </project>

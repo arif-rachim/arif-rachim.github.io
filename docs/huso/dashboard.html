@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Dashboard - HUSO Prep</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <h1>🎓 HUSO Prep Platform</h1>
+            <div class="nav-controls">
+                <button id="home-btn" class="nav-btn">🏠 Home</button>
+                <button id="lessons-btn" class="nav-btn">📚 Lessons</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <h1 class="dashboard-title">📊 Your Progress Dashboard</h1>
+
+        <!-- Overall Progress -->
+        <div class="progress-overview">
+            <div class="stat-card primary">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-content">
+                    <h3>Days Completed</h3>
+                    <div class="stat-value" id="days-completed">0/40</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-content">
+                    <h3>Average Score</h3>
+                    <div class="stat-value" id="average-score">0%</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                    <h3>Current Streak</h3>
+                    <div class="stat-value" id="streak">0 days</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-content">
+                    <h3>Best Score</h3>
+                    <div class="stat-value" id="best-score">-</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Overall Progress Bar -->
+        <div class="progress-section">
+            <h2>Overall Progress</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overall-progress"></div>
+            </div>
+            <p class="progress-text" id="overall-text">0% complete</p>
+        </div>
+
+        <!-- Subject Breakdown -->
+        <div class="subject-section">
+            <h2>Progress by Subject</h2>
+            <div class="subject-grid">
+                <div class="subject-card biology">
+                    <h3>🔬 Biology</h3>
+                    <div class="subject-stats">
+                        <div class="subject-days" id="bio-days">0/10 days</div>
+                        <div class="subject-score" id="bio-score">Avg: 0%</div>
+                    </div>
+                    <div class="progress-bar-container small">
+                        <div class="progress-bar" id="bio-progress"></div>
+                    </div>
+                </div>
+
+                <div class="subject-card chemistry">
+                    <h3>🧪 Chemistry</h3>
+                    <div class="subject-stats">
+                        <div class="subject-days" id="chem-days">0/10 days</div>
+                        <div class="subject-score" id="chem-score">Avg: 0%</div>
+                    </div>
+                    <div class="progress-bar-container small">
+                        <div class="progress-bar" id="chem-progress"></div>
+                    </div>
+                </div>
+
+                <div class="subject-card earth-science">
+                    <h3>🌍 Earth Science</h3>
+                    <div class="subject-stats">
+                        <div class="subject-days" id="earth-days">0/10 days</div>
+                        <div class="subject-score" id="earth-score">Avg: 0%</div>
+                    </div>
+                    <div class="progress-bar-container small">
+                        <div class="progress-bar" id="earth-progress"></div>
+                    </div>
+                </div>
+
+                <div class="subject-card math">
+                    <h3>🔢 Mathematics</h3>
+                    <div class="subject-stats">
+                        <div class="subject-days" id="math-days">0/10 days</div>
+                        <div class="subject-score" id="math-score">Avg: 0%</div>
+                    </div>
+                    <div class="progress-bar-container small">
+                        <div class="progress-bar" id="math-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz History -->
+        <div class="quiz-history-section">
+            <h2>Quiz History</h2>
+            <div id="quiz-history">
+                <p class="no-data">No quiz attempts yet. Start learning to see your progress!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer">
+        <p>HUSO Middle East 2025-26 Preparation | Designed for Raoul Ardy</p>
+    </footer>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>
