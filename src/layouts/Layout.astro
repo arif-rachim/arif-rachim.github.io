@@ -1,65 +1,252 @@
 ---
 interface Props {
     title: string;
+    description?: string;
 }
 
-const {title} = Astro.props;
+const {
+    title,
+    description = "Arif Rachim — Principal Application Developer leading AI, data, and platform engineering. I design end-to-end RAG pipelines, LLM tool orchestration, and graph-based logistics inside regulated, air-gapped environments. 22+ years of production software. Based in Dubai, UAE.",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const ogImage = new URL("/arif-og.jpg", Astro.site).href;
+
+const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${Astro.site}#person`,
+    "name": "Arif Rachim",
+    "alternateName": "Achmad Arif Rachim",
+    "jobTitle": "Principal Application Developer",
+    "description":
+        "Principal Application Developer leading AI, data, and platform engineering — end-to-end RAG pipelines, LLM tool orchestration, and graph-based logistics in regulated, air-gapped environments.",
+    "url": String(Astro.site),
+    "image": ogImage,
+    "email": "mailto:a.arif.r@gmail.com",
+    "telephone": "+971-50-901-8075",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE",
+    },
+    "worksFor": {
+        "@type": "Organization",
+        "name": "Global Aerospace Logistics",
+    },
+    "alumniOf": [
+        {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Indonesia",
+        },
+    ],
+    "knowsAbout": [
+        "AI Engineering",
+        "Retrieval-Augmented Generation (RAG)",
+        "Large Language Models (LLMs)",
+        "Model Context Protocol (MCP)",
+        "Vector Databases",
+        "Neo4j",
+        "Graph Databases",
+        "Python",
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Design Systems",
+        "Software Architecture",
+    ],
+    "hasCredential": [
+        {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Neo4j Certified Professional",
+            "credentialCategory": "certification",
+            "recognizedBy": {"@type": "Organization", "name": "Neo4j"},
+        },
+        {
+            "@type": "EducationalOccupationalCredential",
+            "name": "AI TensorFlow Developer Specialization",
+            "credentialCategory": "certification",
+            "recognizedBy": {"@type": "Organization", "name": "DeepLearning.AI"},
+        },
+        {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Google Mobile Web Specialist",
+            "credentialCategory": "certification",
+            "recognizedBy": {"@type": "Organization", "name": "Google"},
+        },
+    ],
+    "sameAs": [
+        "https://ae.linkedin.com/in/arifrachim",
+        "https://github.com/arif-rachim",
+    ],
+};
 ---
 
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>{title}</title>
-    <meta
-            name="description"
-            content="Achmad Arif Rachim, full stack developer, google mobile web specialist, blockchain, deep learning, java, html5, react developer."
-    />
-    <meta
-            name="keywords"
-            content="HTML, HTML5, CSS, JavaScript, React, Google, Software Architect, Blockchain"
-    />
-    <link rel="icon" href="./favicon.ico"/>
-    <meta property="og:title" content="Arif Rachim"/>
-    <meta property="og:site_name" content="www.rach.im"/>
-    <meta property="og:url" content="https://www.rach.im"/>
-    <meta
-            property="og:description"
-            content="Arif Rachim is Google Certified Mobile Web Specialist, Front End Architect, Certified Blockchain Developer, Certified AI TensorFlow Developer, and Certified IoT Arduino Developer."
-    />
-    <meta property="og:type" content="profile"/>
-    <meta property="og:image" content="https://www.rach.im/arif-og.jpg"/>
+    <meta name="description" content={description}/>
     <meta name="author" content="Arif Rachim"/>
-    <meta name="theme-color" content="#F4F1EB"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="theme-color" content="#0B0B0C"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+    <link rel="canonical" href={canonicalURL}/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="sitemap" href="/sitemap-index.xml"/>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile"/>
+    <meta property="og:title" content={title}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:url" content={canonicalURL}/>
+    <meta property="og:site_name" content="Arif Rachim"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:image" content={ogImage}/>
+    <meta property="og:image:secure_url" content={ogImage}/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta property="og:image:alt" content="Arif Rachim — Principal Application Developer, AI & Platform"/>
+    <meta property="profile:first_name" content="Arif"/>
+    <meta property="profile:last_name" content="Rachim"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content={title}/>
+    <meta name="twitter:description" content={description}/>
+    <meta name="twitter:image" content={ogImage}/>
+    <meta name="twitter:image:alt" content="Arif Rachim — Principal Application Developer, AI & Platform"/>
+
+    <!-- JSON-LD Person schema -->
+    <script type="application/ld+json" set:html={JSON.stringify(personSchema)}/>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
             rel="stylesheet"
     />
 </head>
 <body>
-<slot/>
+<div class="grain" aria-hidden="true"></div>
+<header class="site-nav">
+    <div class="nav-inner">
+        <a href="#top" class="brand">
+            <span class="brand-dot"></span>
+            <span>Arif Rachim</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="#projects">Work</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+            <a href="https://github.com/arif-rachim" target="_blank" rel="me noopener noreferrer" class="nav-icon" aria-label="GitHub">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.93c.57.1.78-.25.78-.55v-1.94c-3.2.7-3.87-1.54-3.87-1.54-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.72-1.53-2.55-.29-5.24-1.28-5.24-5.68 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.17a10.93 10.93 0 0 1 5.74 0c2.18-1.48 3.14-1.17 3.14-1.17.63 1.59.24 2.77.12 3.06.73.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.39-5.25 5.67.41.35.78 1.05.78 2.11v3.13c0 .3.21.66.79.55A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/>
+                </svg>
+            </a>
+            <a href="mailto:a.arif.r@gmail.com" class="nav-cta">Get in touch</a>
+        </div>
+    </div>
+</header>
+<main id="top">
+    <slot/>
+</main>
+<footer class="site-footer">
+    <div class="footer-inner">
+        <span>© {new Date().getFullYear()} Arif Rachim</span>
+        <span>Built with Astro</span>
+    </div>
+</footer>
+<script>
+    // Reveal sections on scroll — lightweight IntersectionObserver
+    const reveal = (el: Element) => el.classList.add("in-view");
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (prefersReduced) {
+        document.querySelectorAll("[data-reveal]").forEach(reveal);
+    } else {
+        const io = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        reveal(e.target);
+                        io.unobserve(e.target);
+                    }
+                });
+            },
+            { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+        );
+        document.querySelectorAll("[data-reveal]").forEach((el) => io.observe(el));
+    }
+</script>
 </body>
 </html>
 <style is:global>
     :root {
-        line-height: 1.5;
-        font-weight: 400;
+        /* palette */
+        --bg: #FAFAF7;
+        --bg-elev: #FFFFFF;
+        --surface: #F3F1EC;
+        --ink: #0B0B0C;
+        --ink-2: #1F1F22;
+        --muted: #6B6B72;
+        --muted-2: #9A9AA2;
+        --border: rgba(11, 11, 12, 0.08);
+        --border-strong: rgba(11, 11, 12, 0.16);
+        --accent: #FF5B2E;
+        --accent-ink: #FFFFFF;
 
+        /* radius & shadow */
+        --radius-sm: 8px;
+        --radius: 14px;
+        --radius-lg: 22px;
+        --shadow-sm: 0 1px 2px rgba(11, 11, 12, 0.04), 0 1px 1px rgba(11, 11, 12, 0.03);
+        --shadow: 0 8px 24px rgba(11, 11, 12, 0.06), 0 2px 6px rgba(11, 11, 12, 0.04);
+        --shadow-lg: 0 24px 60px rgba(11, 11, 12, 0.10), 0 8px 24px rgba(11, 11, 12, 0.06);
+
+        /* fluid type */
+        --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.82rem);
+        --fs-sm: clamp(0.85rem, 0.82rem + 0.2vw, 0.95rem);
+        --fs-base: clamp(0.98rem, 0.94rem + 0.25vw, 1.08rem);
+        --fs-md: clamp(1.05rem, 1rem + 0.35vw, 1.2rem);
+        --fs-lg: clamp(1.25rem, 1.1rem + 0.75vw, 1.6rem);
+        --fs-xl: clamp(1.6rem, 1.3rem + 1.5vw, 2.4rem);
+        --fs-2xl: clamp(1.8rem, 3.5vw, 3.25rem);
+        --fs-hero: clamp(2.5rem, 7vw, 5.75rem);
+
+        /* spacing */
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.5rem;
+        --space-6: 2rem;
+        --space-7: 3rem;
+        --space-8: 4rem;
+        --space-9: 6rem;
+
+        line-height: 1.55;
+        font-weight: 400;
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-text-size-adjust: 100%;
-        background-color: #f4f1eb;
-        color: #010101;
+        background-color: var(--bg);
+        color: var(--ink);
+        scroll-behavior: smooth;
     }
 
     * {
-        font-family: "Hanken Grotesk", Inter, system-ui, Avenir, Helvetica,
-        Arial, sans-serif;
+        font-family: "Hanken Grotesk", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
         box-sizing: border-box;
         padding: 0;
         margin: 0;
@@ -69,5 +256,186 @@ const {title} = Astro.props;
     body {
         display: flex;
         flex-direction: column;
+        min-height: 100vh;
+        background:
+                radial-gradient(1200px 600px at 85% -10%, rgba(255, 91, 46, 0.08), transparent 60%),
+                radial-gradient(900px 500px at -10% 20%, rgba(11, 11, 12, 0.04), transparent 60%),
+                var(--bg);
+    }
+
+    main {
+        flex: 1;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
+    }
+
+    ::selection {
+        background: var(--ink);
+        color: var(--bg);
+    }
+
+    /* --- grain texture overlay --- */
+    .grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0.05;
+        mix-blend-mode: multiply;
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+        background-size: 240px 240px;
+    }
+
+    /* --- scroll reveal --- */
+    [data-reveal] {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+        will-change: opacity, transform;
+    }
+
+    [data-reveal].in-view {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+        [data-reveal] {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+    }
+
+    /* --- site nav --- */
+    .site-nav {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: saturate(180%) blur(12px);
+        -webkit-backdrop-filter: saturate(180%) blur(12px);
+        background: rgba(250, 250, 247, 0.75);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+        width: min(1280px, 100%);
+        margin: 0 auto;
+        padding: 0.9rem max(1rem, 5vw);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+    }
+
+    .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-weight: 700;
+        font-size: var(--fs-sm);
+        letter-spacing: -0.01em;
+        text-decoration: none;
+    }
+
+    .brand-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+        box-shadow: 0 0 0 4px rgba(255, 91, 46, 0.18);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: clamp(0.8rem, 2vw, 1.8rem);
+        font-size: var(--fs-sm);
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--muted);
+        font-weight: 500;
+        transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--ink);
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .nav-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        color: var(--muted);
+        transition: color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-icon:hover {
+        color: var(--ink);
+        background: var(--bg-elev);
+    }
+
+    .nav-cta {
+        text-decoration: none;
+        background: var(--ink);
+        color: var(--bg);
+        font-weight: 600;
+        font-size: var(--fs-sm);
+        padding: 0.55rem 1rem;
+        border-radius: 999px;
+        transition: transform 0.2s ease, background 0.2s ease;
+        white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+        background: var(--accent);
+        color: var(--accent-ink);
+        transform: translateY(-1px);
+    }
+
+    @media (max-width: 720px) {
+        .nav-links {
+            display: none;
+        }
+    }
+
+    /* --- footer --- */
+    .site-footer {
+        border-top: 1px solid var(--border);
+        margin-top: var(--space-9);
+    }
+
+    .footer-inner {
+        width: min(1280px, 100%);
+        margin: 0 auto;
+        padding: 1.5rem max(1rem, 5vw);
+        display: flex;
+        justify-content: space-between;
+        gap: var(--space-4);
+        font-size: var(--fs-xs);
+        color: var(--muted);
     }
 </style>
+</html>

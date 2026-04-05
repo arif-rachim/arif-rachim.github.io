@@ -1,0 +1,463 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Arif Rachim" [ref=e4] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=e6]: Arif Rachim
+      - navigation "Primary" [ref=e7]:
+        - link "About" [ref=e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "Work" [ref=e9] [cursor=pointer]:
+          - /url: "#projects"
+        - link "Experience" [ref=e10] [cursor=pointer]:
+          - /url: "#experience"
+        - link "Education" [ref=e11] [cursor=pointer]:
+          - /url: "#education"
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e13]:
+        - link "GitHub" [ref=e14] [cursor=pointer]:
+          - /url: https://github.com/arif-rachim
+          - img [ref=e15]
+        - link "Get in touch" [ref=e17] [cursor=pointer]:
+          - /url: mailto:a.arif.r@gmail.com
+  - main [ref=e18]:
+    - generic [ref=e21]:
+      - generic [ref=e22]:
+        - generic [ref=e23]: Available for new opportunities
+        - heading "Building AI where the internet doesn't reach." [level=1] [ref=e25]
+        - paragraph [ref=e26]: Fullstack & AI Engineer · 22+ years of production software · Dubai
+        - paragraph [ref=e27]: I design end-to-end RAG pipelines, LLM tool orchestration, and graph-based logistics — deployed inside air-gapped, mission-critical intranets where off-the-shelf AI tutorials don't apply.
+        - generic [ref=e28]:
+          - link "Reach out" [ref=e29] [cursor=pointer]:
+            - /url: mailto:a.arif.r@gmail.com
+            - text: Reach out
+            - generic [ref=e30]: →
+          - link "See my work" [ref=e31] [cursor=pointer]:
+            - /url: "#projects"
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - generic [ref=e34]: 22+
+            - generic [ref=e35]: Years in production
+          - generic [ref=e37]:
+            - generic [ref=e38]: 500GB+
+            - generic [ref=e39]: RAG corpus shipped
+          - generic [ref=e41]:
+            - generic [ref=e42]: "11"
+            - generic [ref=e43]: Certifications
+      - generic [ref=e44]:
+        - img "Arif Rachim" [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]: Based in
+          - generic [ref=e49]: Dubai, UAE
+        - generic [ref=e50]:
+          - generic [ref=e51]: Stack
+          - generic [ref=e52]: React · TS · Python · LLMs
+    - generic [ref=e54]:
+      - generic [ref=e57]: About
+      - generic [ref=e58]:
+        - heading "22 years of production software. Now shipping AI where off-the-shelf tutorials don't apply." [level=2] [ref=e60]
+        - generic [ref=e61]:
+          - paragraph [ref=e62]: I spent two decades building web platforms, design systems, and mobile apps. Since late 2025 I've been leading AI engineering — end-to-end RAG, Model Context Protocol tools, and graph-based logistics — inside air-gapped, regulated networks where most AI tooling isn't designed to run.
+          - paragraph [ref=e63]: Research-first, prototype fast, iterate with the team. I enjoy mentoring colleagues on SQL, RAG, and tool design — while staying hands-on with the code that matters.
+          - generic [ref=e64]:
+            - generic [ref=e65]: RAG
+            - generic [ref=e66]: LLMs
+            - generic [ref=e67]: MCP
+            - generic [ref=e68]: Vector DBs
+            - generic [ref=e69]: Neo4j
+            - generic [ref=e70]: ChromaDB
+            - generic [ref=e71]: Python
+            - generic [ref=e72]: Prompt Engineering
+            - generic [ref=e73]: React
+            - generic [ref=e74]: TypeScript
+            - generic [ref=e75]: Node.js
+            - generic [ref=e76]: Design Systems
+            - generic [ref=e77]: Astro
+            - generic [ref=e78]: Next.js
+            - generic [ref=e79]: Java
+            - generic [ref=e80]: TensorFlow
+            - generic [ref=e81]: Docker
+            - generic [ref=e82]: PWA
+    - generic [ref=e84]:
+      - generic [ref=e87]: Selected work
+      - generic [ref=e88]:
+        - heading "Things I've shipped." [level=2] [ref=e89]
+        - paragraph [ref=e90]: A mix of AI systems deployed in regulated environments and public web apps you can try right now.
+      - generic [ref=e91]:
+        - link "Product · Web Live Wezo.ae A production web application I designed and built end-to-end, live in the UAE market. Full product engineering from frontend to backend. React TypeScript Node.js Visit" [ref=e92] [cursor=pointer]:
+          - /url: https://www.wezo.ae
+          - generic [ref=e93]:
+            - generic [ref=e94]: Product · Web
+            - generic [ref=e95]: Live
+          - heading "Wezo.ae" [level=3] [ref=e96]
+          - paragraph [ref=e97]: A production web application I designed and built end-to-end, live in the UAE market. Full product engineering from frontend to backend.
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e100]: React
+              - generic [ref=e101]: TypeScript
+              - generic [ref=e102]: Node.js
+            - generic [ref=e103]:
+              - text: Visit
+              - generic [ref=e104]: ↗
+        - article [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]: AI · Production
+            - generic [ref=e108]: In production
+          - heading "Multilingual RAG over Technical Documentation" [level=3] [ref=e109]
+          - paragraph [ref=e110]: End-to-end Retrieval-Augmented Generation pipeline over a 500GB+ bilingual (Arabic / English) technical documentation corpus. Docling ingestion, ChromaDB vector storage, multilingual sentence-transformer embeddings, deployed on a fully air-gapped intranet.
+          - generic [ref=e112]:
+            - generic [ref=e113]: Python
+            - generic [ref=e114]: ChromaDB
+            - generic [ref=e115]: Docling
+            - generic [ref=e116]: Sentence Transformers
+            - generic [ref=e117]: MCP
+        - article [ref=e118]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: AI · LLM Tools
+            - generic [ref=e121]: In production
+          - heading "MCP Tool Suite for Crew & Fleet Operations" [level=3] [ref=e122]
+          - paragraph [ref=e123]: Model Context Protocol tools that let an internal LLM platform reason over crew readiness, aircraft configuration, and safety documentation. Refactored multi-query joins into optimized database views for step-change latency improvements.
+          - generic [ref=e125]:
+            - generic [ref=e126]: Python
+            - generic [ref=e127]: FastMCP
+            - generic [ref=e128]: SQL
+            - generic [ref=e129]: Pydantic
+        - article [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: AI · Research
+            - generic [ref=e133]: Case study
+          - heading "Graph-Based Logistics Modeling" [level=3] [ref=e134]
+          - paragraph [ref=e135]: Neo4j-based proof-of-concept applying graph data modeling to predictive logistics problems — part-cycle tracking, aircraft serviceability, and relationship-driven analytics. Earned Neo4j Professional Certification along the way.
+          - generic [ref=e137]:
+            - generic [ref=e138]: Neo4j
+            - generic [ref=e139]: Cypher
+            - generic [ref=e140]: Python
+        - link "EdTech · Web Live HUSO Prep Platform A 40-day study program platform for the Homeschoolers United Science Olympiad — lesson player, dashboard, progress tracking, and daily HTML-based study materials across Chemistry, Physics, Biology, and Earth Science. TypeScript HTML CSS Open" [ref=e141] [cursor=pointer]:
+          - /url: ./huso/
+          - generic [ref=e142]:
+            - generic [ref=e143]: EdTech · Web
+            - generic [ref=e144]: Live
+          - heading "HUSO Prep Platform" [level=3] [ref=e145]
+          - paragraph [ref=e146]: A 40-day study program platform for the Homeschoolers United Science Olympiad — lesson player, dashboard, progress tracking, and daily HTML-based study materials across Chemistry, Physics, Biology, and Earth Science.
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - generic [ref=e149]: TypeScript
+              - generic [ref=e150]: HTML
+              - generic [ref=e151]: CSS
+            - generic [ref=e152]:
+              - text: Open
+              - generic [ref=e153]: ↗
+        - link "Fintech · Web Live Stock Watch A sample stock tracking application built on the TC39 Signal Proposal and React — exploring fine-grained reactivity patterns at the language level. React TC39 Signals TypeScript Open" [ref=e154] [cursor=pointer]:
+          - /url: ./stock-watch/
+          - generic [ref=e155]:
+            - generic [ref=e156]: Fintech · Web
+            - generic [ref=e157]: Live
+          - heading "Stock Watch" [level=3] [ref=e158]
+          - paragraph [ref=e159]: A sample stock tracking application built on the TC39 Signal Proposal and React — exploring fine-grained reactivity patterns at the language level.
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - generic [ref=e162]: React
+              - generic [ref=e163]: TC39 Signals
+              - generic [ref=e164]: TypeScript
+            - generic [ref=e165]:
+              - text: Open
+              - generic [ref=e166]: ↗
+        - link "Utility · Web Live Todo List Minimal todo list demo — a sandbox for experimenting with modern state management, persistence, and UI primitives. TypeScript HTML CSS Open" [ref=e167] [cursor=pointer]:
+          - /url: ./todo-list/
+          - generic [ref=e168]:
+            - generic [ref=e169]: Utility · Web
+            - generic [ref=e170]: Live
+          - heading "Todo List" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Minimal todo list demo — a sandbox for experimenting with modern state management, persistence, and UI primitives.
+          - generic [ref=e173]:
+            - generic [ref=e174]:
+              - generic [ref=e175]: TypeScript
+              - generic [ref=e176]: HTML
+              - generic [ref=e177]: CSS
+            - generic [ref=e178]:
+              - text: Open
+              - generic [ref=e179]: ↗
+    - generic [ref=e181]:
+      - generic [ref=e184]: Experience
+      - generic [ref=e185]:
+        - heading "Relevant experience" [level=2] [ref=e186]
+        - paragraph [ref=e187]: Two decades of shipping software — from design systems and fullstack platforms to modern AI engineering.
+      - generic [ref=e188]:
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - generic [ref=e192]: Nov 2025 — Present
+            - generic [ref=e193]:
+              - heading "AI Engineer" [level=3] [ref=e194]
+              - generic [ref=e195]: AI Department
+              - paragraph [ref=e196]: Leading LLM-powered tooling, Retrieval-Augmented Generation, and graph-based solutions in a security-restricted aerospace environment.
+          - list [ref=e197]:
+            - listitem [ref=e198]:
+              - generic [ref=e202]:
+                - generic [ref=e203]: "01"
+                - paragraph [ref=e204]: Designed and shipped end-to-end Retrieval-Augmented Generation (RAG) pipelines over a 500GB+ multilingual technical documentation corpus — Arabic/English ingestion, ChromaDB vector storage, and Sentence Transformer embeddings.
+            - listitem [ref=e205]:
+              - generic [ref=e209]:
+                - generic [ref=e210]: "02"
+                - paragraph [ref=e211]: Built and deployed Model Context Protocol (MCP) tools that let an internal LLM platform reason over crew readiness, aircraft configuration, and safety documentation — refactoring multi-query joins into optimized database views and significantly reducing latency.
+            - listitem [ref=e212]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: "03"
+                - paragraph [ref=e218]: Led a proof-of-concept custom chat UI to unlock MCP server elicitation (interactive user feedback during tool execution) where off-the-shelf OpenWebUI fell short.
+            - listitem [ref=e219]:
+              - generic [ref=e223]:
+                - generic [ref=e224]: "04"
+                - paragraph [ref=e225]: Tuned LLM parameters (temperature, context window) and iterated on system prompts with stakeholders — measurably improving response consistency and tool-chaining accuracy.
+            - listitem [ref=e226]:
+              - generic [ref=e230]:
+                - generic [ref=e231]: "05"
+                - paragraph [ref=e232]: Researched and piloted next-generation RAG techniques including RAPTOR (recursive tree-organized retrieval) and Knowledge-Graph RAG, proposing an incremental roadmap that preserves existing investment.
+            - listitem [ref=e233]:
+              - generic [ref=e237]:
+                - generic [ref=e238]: "06"
+                - paragraph [ref=e239]: Debugged and resolved a token-starvation issue that degraded Arabic document retrieval — tracing the root cause across embeddings, context window, and tool-call loops.
+            - listitem [ref=e240]:
+              - generic [ref=e244]:
+                - generic [ref=e245]: "07"
+                - paragraph [ref=e246]: Mentored junior engineers on MCP tool design, SQL query optimization, and RAG fundamentals.
+            - listitem [ref=e247]:
+              - generic [ref=e251]:
+                - generic [ref=e252]: "08"
+                - paragraph [ref=e253]: Deployed AI systems inside an air-gapped, security-restricted intranet — coordinating with infrastructure, database, and integration teams across UAT and production environments.
+            - listitem [ref=e254]:
+              - generic [ref=e257]:
+                - generic [ref=e258]: "09"
+                - paragraph [ref=e259]: Earned the Neo4j Professional Certification and began applying graph modeling to predictive logistics scenarios such as part-cycle tracking and aircraft serviceability.
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - generic [ref=e263]: 2009 — 2025
+            - generic [ref=e264]:
+              - heading "Front End Architect / Fullstack Engineer" [level=3] [ref=e265]
+              - generic [ref=e266]: Global Aerospace Logistics, LLC
+              - paragraph [ref=e267]: Component design systems, dashboards, offline-first mobile apps, and backend file-view services for enterprise aerospace operations.
+          - list [ref=e268]:
+            - listitem [ref=e269]:
+              - generic [ref=e273]:
+                - generic [ref=e274]: "01"
+                - paragraph [ref=e275]: Utilized the React framework to methodically plan, design, and construct design system components for an enterprise resource planning (ERP) application — a suite of 50+ precisely built components including DataGrid, DataLookup, DropDown, Slide Panel, and the application Shell.
+            - listitem [ref=e276]:
+              - generic [ref=e280]:
+                - generic [ref=e281]: "02"
+                - paragraph [ref=e282]: Crafted UI components for dynamic dashboards (e.g. Operation Dashboard) — integrating interactive charts and tabular data, enhanced with fluid animations and a polished interface.
+            - listitem [ref=e283]:
+              - generic [ref=e287]:
+                - generic [ref=e288]: "03"
+                - paragraph [ref=e289]: Designed, developed, and deployed a mobile application with seamless offline functionality for aircraft pilots and technicians to record mission info, flight hours, faults, and scheduled inspections — syncing with the central ERP using advanced encryption.
+            - listitem [ref=e290]:
+              - generic [ref=e294]:
+                - generic [ref=e295]: "04"
+                - paragraph [ref=e296]: Built a Geographical Information System using open-source Apache Flex (Adobe Flex) to mark the location of aircraft as they are deployed — known internally as Fleet Location.
+            - listitem [ref=e297]:
+              - generic [ref=e301]:
+                - generic [ref=e302]: "05"
+                - paragraph [ref=e303]: Created a server health check monitoring system using socket technology for continuous real-time data updates — disk consumption, CPU utilization, and memory usage with 24/7 availability.
+            - listitem [ref=e304]:
+              - generic [ref=e308]:
+                - generic [ref=e309]: "06"
+                - paragraph [ref=e310]: Developed robust "File View" backend systems converting Excel, Word, and PowerPoint to PDF then SWF — enabling viewing without direct file downloads and protecting system security.
+            - listitem [ref=e311]:
+              - generic [ref=e315]:
+                - generic [ref=e316]: "07"
+                - paragraph [ref=e317]: Built a client-centric reporting mechanism with React, encapsulated as a reusable component — expediting report development and freeing it from legacy Reporting Engine Server dependencies.
+            - listitem [ref=e318]:
+              - generic [ref=e322]:
+                - generic [ref=e323]: "08"
+                - paragraph [ref=e324]: Developed a complex Scheduler component to render aircraft mission schedules (Weekly Mission) — drawing schedule blocks accurately in a columnar structure with high-performance rendering.
+            - listitem [ref=e325]:
+              - generic [ref=e328]:
+                - generic [ref=e329]: "09"
+                - paragraph [ref=e330]: Actively assisted colleagues in implementing attractive UIs and recommended the right approaches for optimal front-end performance.
+    - generic [ref=e332]:
+      - generic [ref=e335]: Education & Certifications
+      - generic [ref=e336]:
+        - heading "Learning never stops." [level=2] [ref=e337]
+        - paragraph [ref=e338]: Formal education and a continuous stream of industry certifications.
+      - generic [ref=e339]:
+        - article [ref=e340]:
+          - generic [ref=e341]: 2000 — 2004
+          - heading "Bachelor of Electrical Engineering" [level=3] [ref=e342]
+          - generic [ref=e343]: University of Indonesia
+          - paragraph [ref=e344]: "Major in Computer Engineering. Final Project: Distance Learning System with J2EE."
+        - article [ref=e345]:
+          - generic [ref=e346]: 1997 — 2000
+          - heading "High School Diploma" [level=3] [ref=e347]
+          - generic [ref=e348]: SMA Negeri 8, Jakarta
+      - generic [ref=e349]:
+        - heading "Certifications" [level=3] [ref=e350]
+        - generic [ref=e351]: 12 credentials
+      - generic [ref=e352]:
+        - link "Neo4j Certified Professional" [ref=e353] [cursor=pointer]:
+          - /url: https://graphacademy.neo4j.com/
+          - generic [ref=e354]:
+            - generic [ref=e355]: Neo4j
+            - generic [ref=e356]: April 2026
+          - heading "Neo4j Certified Professional" [level=4] [ref=e357]
+          - paragraph [ref=e358]: Completed the Neo4j GraphAcademy professional track covering graph data modeling, Cypher query optimization, and applied graph solutions for complex relationship and logistics problems.
+          - generic [ref=e359]:
+            - text: View credential
+            - generic [ref=e360]: ↗
+        - link "AI TensorFlow Developer Specialization" [ref=e361] [cursor=pointer]:
+          - /url: https://www.coursera.org/account/accomplishments/professional-cert/K7MXS6ZDJF55
+          - generic [ref=e362]:
+            - generic [ref=e363]: DeepLearning.AI
+            - generic [ref=e364]: October 2020
+          - heading "AI TensorFlow Developer Specialization" [level=4] [ref=e365]
+          - paragraph [ref=e366]: "Completed all four courses in the DeepLearning.AI TensorFlow Developer Professional Certificate: building & training neural networks, CNNs for image recognition, NLP systems, and other essential TensorFlow concepts."
+          - generic [ref=e367]:
+            - text: View credential
+            - generic [ref=e368]: ↗
+        - link "Certified Arduino Fundamental" [ref=e369] [cursor=pointer]:
+          - /url: https://drive.google.com/file/d/12bJu4pl11P2YkUq3itGHuhMncNZZg8J2/view
+          - generic [ref=e370]:
+            - generic [ref=e371]: Arduino
+            - generic [ref=e372]: February 2020
+          - heading "Certified Arduino Fundamental" [level=4] [ref=e373]
+          - paragraph [ref=e374]: Official Arduino certification covering electronics, programming and physical computing fundamentals.
+          - generic [ref=e375]:
+            - text: View credential
+            - generic [ref=e376]: ↗
+        - link "API Management Concepts" [ref=e377] [cursor=pointer]:
+          - /url: https://www.credly.com/badges/1fc4b1dd-4498-4b20-a814-a94892b7955e/linked_in_profile
+          - generic [ref=e378]:
+            - generic [ref=e379]: IBM
+            - generic [ref=e380]: March 2018
+          - heading "API Management Concepts" [level=4] [ref=e381]
+          - paragraph [ref=e382]: Demonstrates an understanding of business and architectural concepts of API development.
+          - generic [ref=e383]:
+            - text: View credential
+            - generic [ref=e384]: ↗
+        - link "Architecting Google Compute Engine" [ref=e385] [cursor=pointer]:
+          - /url: https://www.coursera.org/account/accomplishments/specialization/H8B9NDMLL94X
+          - generic [ref=e386]:
+            - generic [ref=e387]: Coursera
+            - generic [ref=e388]: March 2018
+          - heading "Architecting Google Compute Engine" [level=4] [ref=e389]
+          - paragraph [ref=e390]: Specialization covering the design and deployment of solutions on Google Cloud Platform — networks, systems, and application services.
+          - generic [ref=e391]:
+            - text: View credential
+            - generic [ref=e392]: ↗
+        - link "Google Mobile Web Specialist" [ref=e393] [cursor=pointer]:
+          - /url: https://www.credential.net/9c990a3b-d9ea-4cfb-87f0-adedc97d366d?key=4bc0067199009ca60752c325bf03930e21091bcfeb38d4994e0fb68b57fe0066
+          - generic [ref=e394]:
+            - generic [ref=e395]: Google
+            - generic [ref=e396]: March 2018
+          - heading "Google Mobile Web Specialist" [level=4] [ref=e397]
+          - paragraph [ref=e398]: "Performance-based certification evaluating expertise in developing superior mobile web experiences: layout, networking, accessibility, PWAs, performance, caching, security, testing & JS design principles."
+          - generic [ref=e399]:
+            - text: View credential
+            - generic [ref=e400]: ↗
+        - link "Advanced CSS Concepts" [ref=e401] [cursor=pointer]:
+          - /url: https://courses.edx.org/certificates/43312906e0fa4d10ba53a03cba5d9aa3
+          - generic [ref=e402]:
+            - generic [ref=e403]: Microsoft
+            - generic [ref=e404]: February 2018
+          - heading "Advanced CSS Concepts" [level=4] [ref=e405]
+          - paragraph [ref=e406]: "DEV218x on edX: Flexbox, CSS Grid, responsive design, Sass/SCSS, SVG, and web development tooling."
+          - generic [ref=e407]:
+            - text: View credential
+            - generic [ref=e408]: ↗
+        - link "Microservices Practitioner Essentials" [ref=e409] [cursor=pointer]:
+          - /url: https://www.credly.com/badges/118f3f5a-9ed3-4d6b-b900-78489df6c14b/linked_in_profile
+          - generic [ref=e410]:
+            - generic [ref=e411]: IBM
+            - generic [ref=e412]: March 2018
+          - heading "Microservices Practitioner Essentials" [level=4] [ref=e413]
+          - paragraph [ref=e414]: Knowledge of microservices architecture, refactoring, and developing applications with microservices frameworks.
+          - generic [ref=e415]:
+            - text: View credential
+            - generic [ref=e416]: ↗
+        - link "Docker Essentials" [ref=e417] [cursor=pointer]:
+          - /url: https://www.credly.com/badges/641bc0e2-4b27-4473-854b-ba35026f9e4f/linked_in_profile
+          - generic [ref=e418]:
+            - generic [ref=e419]: IBM
+            - generic [ref=e420]: February 2018
+          - heading "Docker Essentials" [level=4] [ref=e421]
+          - paragraph [ref=e422]: Running containers from Docker Hub, creating containers, orchestration (scaling, HA, service discovery), and Dockerfile best practices.
+          - generic [ref=e423]:
+            - text: View credential
+            - generic [ref=e424]: ↗
+        - link "IBM Blockchain Foundation Developer" [ref=e425] [cursor=pointer]:
+          - /url: https://www.credly.com/badges/da52b331-f6df-4407-8a9a-91e6bfe98d74/linked_in_profile
+          - generic [ref=e426]:
+            - generic [ref=e427]: IBM
+            - generic [ref=e428]: January 2018
+          - heading "IBM Blockchain Foundation Developer" [level=4] [ref=e429]
+          - paragraph [ref=e430]: "Blockchain concepts: smart contracts, ledgers, business networks, participants, and Hyperledger Composer."
+          - generic [ref=e431]:
+            - text: View credential
+            - generic [ref=e432]: ↗
+        - link "Python for Data Science" [ref=e433] [cursor=pointer]:
+          - /url: https://www.credly.com/badges/0199436b-5cbb-4550-8638-e4d600ea7aaa/linked_in_profile
+          - generic [ref=e434]:
+            - generic [ref=e435]: IBM
+            - generic [ref=e436]: January 2018
+          - heading "Python for Data Science" [level=4] [ref=e437]
+          - paragraph [ref=e438]: Creating Python scripts and conducting fundamental hands-on data analysis within IBM's Jupyter-based lab environment.
+          - generic [ref=e439]:
+            - text: View credential
+            - generic [ref=e440]: ↗
+        - link "Sun Certified Programmer for Java 2 Platform" [ref=e441] [cursor=pointer]:
+          - /url: https://drive.google.com/file/d/1o57qOczdp90yW9C6bkmomSGCnQUXMZX9/view
+          - generic [ref=e442]:
+            - generic [ref=e443]: Sun Microsystems
+            - generic [ref=e444]: September 2007
+          - heading "Sun Certified Programmer for Java 2 Platform" [level=4] [ref=e445]
+          - paragraph [ref=e446]: "SCJP — proficiency in Java: writing, compiling, debugging and troubleshooting programs, covering OOP, collections, exceptions, I/O, multithreading, and more."
+          - generic [ref=e447]:
+            - text: View credential
+            - generic [ref=e448]: ↗
+    - generic [ref=e450]:
+      - generic [ref=e453]: Contact
+      - generic [ref=e454]:
+        - generic [ref=e455]:
+          - heading "Let's build something great together." [level=2] [ref=e456]
+          - paragraph [ref=e457]: I'm open to interesting opportunities, collaborations, and conversations. Drop a line — I reply to every message.
+        - generic [ref=e458]:
+          - link "a.arif.r@gmail.com" [ref=e459] [cursor=pointer]:
+            - /url: mailto:a.arif.r@gmail.com
+            - text: a.arif.r@gmail.com
+            - generic [ref=e460]: →
+          - link "Download CV as PDF" [ref=e461] [cursor=pointer]:
+            - /url: arif-rachim-cv.pdf
+            - text: Download CV
+            - generic [ref=e462]: ↓
+        - generic [ref=e463]:
+          - generic [ref=e464]:
+            - generic [ref=e465]: Email
+            - generic [ref=e466]: a.arif.r@gmail.com
+          - generic [ref=e467]:
+            - generic [ref=e468]: Phone
+            - generic [ref=e469]: +971 50 901 8075
+          - generic [ref=e470]:
+            - generic [ref=e471]: Location
+            - generic [ref=e472]: Dubai, UAE
+          - generic [ref=e473]:
+            - generic [ref=e474]: LinkedIn
+            - link "/in/arifrachim ↗" [ref=e475] [cursor=pointer]:
+              - /url: https://ae.linkedin.com/in/arifrachim
+          - generic [ref=e476]:
+            - generic [ref=e477]: GitHub
+            - link "/arif-rachim ↗" [ref=e478] [cursor=pointer]:
+              - /url: https://github.com/arif-rachim
+  - contentinfo [ref=e479]:
+    - generic [ref=e480]:
+      - generic [ref=e481]: © 2026 Arif Rachim
+      - generic [ref=e482]: Built with Astro
+  - generic [ref=e485]:
+    - button "Menu" [ref=e486]:
+      - img [ref=e488]
+      - generic: Menu
+    - button "Inspect" [ref=e492]:
+      - img [ref=e494]
+      - generic: Inspect
+    - button "Audit" [ref=e496]:
+      - img [ref=e498]
+      - generic: Audit
+    - button "Settings" [ref=e502]:
+      - img [ref=e504]
+      - generic: Settings

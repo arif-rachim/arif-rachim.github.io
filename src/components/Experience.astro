@@ -1,129 +1,261 @@
 ---
 import Page from "./Page.astro";
 
-const experience: string[] = [
-    "Utilizing the React framework in order to methodically plan out, design, and construct design system components for an enterprise resource planning (ERP) application. This all-inclusive suite is comprised of more than 50 precisely built components, such as a DataGrid, DataLookup, DropDown, Slide Panel, and the program's Shell, which together provide a solid and adaptable basis for the application.",
-    "Crafting user interface components for dynamic dashboards, exemplified by the Operation Dashboard. This entails skillfully integrating an array of features, including interactive charts and tabular data, all while enhancing the user experience with fluid animations and an aesthetically pleasing interface.",
-    "Innovative development, design, and deployment of a mobile application with seamless offline functionality for aircraft pilots and technicians. This intuitive application enables users to efficiently record mission information, flight hours, faults, and scheduled inspections. Additionally, it synchronizes this vital information with the central ERP application using advanced encryption techniques for increased security.",
-    "Building a Geographical Information System through the use of open-source technology called Apache Flex (formerly known as Adobe Flex), with the goal of enabling users to mark the location of aircraft as they are deployed and giving the system the name Fleet Location.",
-    "Creating an innovative server health check monitoring system, harnessing socket technology to provide continuous, real-time data updates to clients, facilitating seamless server condition monitoring encompassing disk consumption, CPU utilization, and memory usage. This cutting-edge system operates tirelessly, ensuring 24/7 availability without interruption.",
-    `Innovating the development of strong "File View" backend systems with the capability to convert many file formats, such as Microsoft Excel, Microsoft Word, and PowerPoint, into PDF files, and then transforming them further into SWF format. This protected method ensures that users are able to view the content without jeopardizing the system's security in any way by barring direct file downloads.`,
-    "Utilizing the capabilities of the React Framework and JavaScript to construct a reporting mechanism that is centered on the client and encapsulating it as a component that can be reused. This strategic step not only expedites report development but also frees it from dependence on legacy technologies like as Reporting Engine Server, which helps to streamline the process. Moreover, it speeds up report development.",
-    "Developed a complex Scheduler component in order to provide the aircraft mission schedules in a manner known as Weekly Mission. Displayed great ability in drawing schedule blocks correctly and aligning them in a columnar structure, ensuring accurate portrayal of start and end timings of a schedule while maintaining high-performance rendering.",
-    "Actively assisting colleagues in need of support when they encounter issues in implementing an attractive user interface, while also providing recommendations on the right approach to achieve optimal performance in front-end development.",
+type Role = {
+    title: string;
+    company: string;
+    period: string;
+    summary?: string;
+    bullets: string[];
+};
+
+const roles: Role[] = [
+    {
+        title: "Principal Application Developer · AI & Platform",
+        company: "AI Department",
+        period: "Nov 2025 — Present",
+        summary:
+            "Leading AI systems, data engineering, and platform work across the AI department — from end-to-end RAG and LLM tooling to SQL optimization, custom frontends, cross-team integration, and mentoring.",
+        bullets: [
+            "Designed and shipped end-to-end Retrieval-Augmented Generation (RAG) pipelines over a 500GB+ multilingual technical documentation corpus — Arabic/English ingestion, ChromaDB vector storage, and Sentence Transformer embeddings.",
+            "Built and deployed Model Context Protocol (MCP) tools that let an internal LLM platform reason over crew readiness, aircraft configuration, and safety documentation — refactoring multi-query joins into optimized database views and significantly reducing latency.",
+            "Led a proof-of-concept custom chat UI to unlock MCP server elicitation (interactive user feedback during tool execution) where off-the-shelf OpenWebUI fell short.",
+            "Tuned LLM parameters (temperature, context window) and iterated on system prompts with stakeholders — measurably improving response consistency and tool-chaining accuracy.",
+            "Researched and piloted next-generation RAG techniques including RAPTOR (recursive tree-organized retrieval) and Knowledge-Graph RAG, proposing an incremental roadmap that preserves existing investment.",
+            "Debugged and resolved a token-starvation issue that degraded Arabic document retrieval — tracing the root cause across embeddings, context window, and tool-call loops.",
+            "Mentored junior engineers on MCP tool design, SQL query optimization, and RAG fundamentals.",
+            "Deployed AI systems inside an air-gapped, security-restricted intranet — coordinating with infrastructure, database, and integration teams across UAT and production environments.",
+            "Earned the Neo4j Professional Certification and began applying graph modeling to predictive logistics scenarios such as part-cycle tracking and aircraft serviceability.",
+        ],
+    },
+    {
+        title: "Front End Architect / Fullstack Engineer",
+        company: "Global Aerospace Logistics, LLC",
+        period: "2009 — 2025",
+        summary:
+            "Component design systems, dashboards, offline-first mobile apps, and backend file-view services for enterprise aerospace operations.",
+        bullets: [
+            "Utilized the React framework to methodically plan, design, and construct design system components for an enterprise resource planning (ERP) application — a suite of 50+ precisely built components including DataGrid, DataLookup, DropDown, Slide Panel, and the application Shell.",
+            "Crafted UI components for dynamic dashboards (e.g. Operation Dashboard) — integrating interactive charts and tabular data, enhanced with fluid animations and a polished interface.",
+            "Designed, developed, and deployed a mobile application with seamless offline functionality for aircraft pilots and technicians to record mission info, flight hours, faults, and scheduled inspections — syncing with the central ERP using advanced encryption.",
+            "Built a Geographical Information System using open-source Apache Flex (Adobe Flex) to mark the location of aircraft as they are deployed — known internally as Fleet Location.",
+            "Created a server health check monitoring system using socket technology for continuous real-time data updates — disk consumption, CPU utilization, and memory usage with 24/7 availability.",
+            `Developed robust "File View" backend systems converting Excel, Word, and PowerPoint to PDF then SWF — enabling viewing without direct file downloads and protecting system security.`,
+            "Built a client-centric reporting mechanism with React, encapsulated as a reusable component — expediting report development and freeing it from legacy Reporting Engine Server dependencies.",
+            "Developed a complex Scheduler component to render aircraft mission schedules (Weekly Mission) — drawing schedule blocks accurately in a columnar structure with high-performance rendering.",
+            "Actively assisted colleagues in implementing attractive UIs and recommended the right approaches for optimal front-end performance.",
+        ],
+    },
 ];
 ---
 
-<Page>
-    <div class="container">
-        <div>
-            <div class="title">
-                <div>Relevant</div>
-                <div>Experience</div>
-            </div>
-        </div>
-        <div>
-            <div class="sub-title">2009 - current</div>
-        </div>
-        <div class="vertical">
-            <div class="heading">Front End Architect / Fullstack Engineer</div>
-            <div class="company">
-                Global Aerospace Logistic, LLC
-            </div>
-            {
-                experience.map((e) => {
-                    return (
-                            <div class="experience-item">
-                                {e}
+<Page id="experience" eyebrow="Experience">
+    <div class="header-row">
+        <h2 class="title">Relevant experience</h2>
+        <p class="subtitle">
+            Two decades of shipping software — from design systems and fullstack
+            platforms to modern AI engineering.
+        </p>
+    </div>
+
+    <div class="roles">
+        {roles.map((role) => (
+            <section class="role">
+                <header class="role-head">
+                    <div class="role-meta">
+                        <span class="role-period">{role.period}</span>
+                    </div>
+                    <div class="role-title-wrap">
+                        <h3 class="role-title">{role.title}</h3>
+                        <div class="role-company">{role.company}</div>
+                        {role.summary && <p class="role-summary">{role.summary}</p>}
+                    </div>
+                </header>
+                <ol class="timeline">
+                    {role.bullets.map((b, i) => (
+                        <li class="item">
+                            <div class="marker">
+                                <span class="marker-dot"></span>
+                                <span class="marker-line"></span>
                             </div>
-                    );
-                })
-            }
-        </div>
+                            <div class="card">
+                                <div class="index">0{i + 1}</div>
+                                <p class="text">{b}</p>
+                            </div>
+                        </li>
+                    ))}
+                </ol>
+            </section>
+        ))}
     </div>
 </Page>
-<style>
-    .container {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5rem;
-    }
 
-    .vertical {
+<style>
+    .header-row {
         display: flex;
         flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: clamp(2rem, 4vw, 3.5rem);
     }
 
     .title {
+        font-size: var(--fs-2xl);
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        line-height: 1.1;
+    }
+
+    .subtitle {
+        font-size: var(--fs-base);
+        color: var(--muted);
+        max-width: 60ch;
+    }
+
+    .roles {
         display: flex;
         flex-direction: column;
-        font-weight: 600;
-        font-size: 2rem;
-        line-height: 3rem;
-        position: sticky;
-        top: 5rem;
-        min-width: 25rem;
+        gap: clamp(3rem, 5vw, 4.5rem);
     }
 
-    .sub-title {
-        white-space: nowrap;
-        font-weight: 700;
-        position: sticky;
-        top: 5rem;
-        min-width: 10rem;
+    .role-head {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 1.5rem;
+        align-items: start;
+        margin-bottom: 1.75rem;
+        padding-bottom: 1.25rem;
+        border-bottom: 1px solid var(--border);
     }
 
-    .heading {
-        font-size: 1.1rem;
-        font-weight: 600;
+    .role-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
-    .company {
+    .role-period {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 0.7rem;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.7rem;
+        color: var(--ink-2);
         font-weight: 500;
-        font-style: italic;
+        width: fit-content;
     }
 
-    .experience-item {
-        margin-top: 2rem;
-        color: #555;
+    .role-title {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        letter-spacing: -0.015em;
+        line-height: 1.2;
     }
 
-    @media screen and (max-width: 1028px) {
-        .title {
-            min-width: 15rem;
-            font-size: 1.8rem;
-            line-height: 2.1rem;
+    .role-company {
+        font-size: var(--fs-sm);
+        color: var(--muted);
+        font-weight: 500;
+        margin-top: 0.2rem;
+    }
+
+    .role-summary {
+        margin-top: 0.75rem;
+        font-size: var(--fs-base);
+        color: var(--muted);
+        line-height: 1.6;
+        max-width: 62ch;
+    }
+
+    .timeline {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        display: grid;
+        grid-template-columns: 32px 1fr;
+        gap: 1rem;
+    }
+
+    .marker {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 1.5rem;
+    }
+
+    .marker-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--bg);
+        border: 2px solid var(--accent);
+        box-shadow: 0 0 0 4px rgba(255, 91, 46, 0.12);
+        flex-shrink: 0;
+    }
+
+    .marker-line {
+        flex: 1;
+        width: 2px;
+        background: linear-gradient(to bottom, var(--border-strong), var(--border) 60%, transparent);
+        margin-top: 0.5rem;
+    }
+
+    .item:last-child .marker-line {
+        display: none;
+    }
+
+    .card {
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 1rem;
+        box-shadow: var(--shadow-sm);
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        position: relative;
+    }
+
+    .card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+        border-color: var(--border-strong);
+    }
+
+    .index {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.7rem;
+        color: var(--accent);
+        letter-spacing: 0.08em;
+        font-weight: 500;
+        margin-bottom: 0.4rem;
+    }
+
+    .text {
+        color: var(--muted);
+        font-size: var(--fs-base);
+        line-height: 1.65;
+    }
+
+    @media (max-width: 700px) {
+        .role-head {
+            grid-template-columns: 1fr;
+            gap: 0.75rem;
         }
     }
 
-    @media screen and (max-width: 900px) {
-        .title {
-            min-width: 9rem;
-            font-size: 1.5rem;
-            line-height: 2rem;
+    @media (max-width: 560px) {
+        .item {
+            grid-template-columns: 24px 1fr;
+            gap: 0.75rem;
         }
 
-        .subTitle {
-            min-width: 8rem;
-        }
-    }
-
-    @media screen and (max-width: 750px) {
-        .container {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .title {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5rem;
-        }
-    }
-
-    @media screen and (max-width: 420px) {
-        .heading {
-            font-size: 1rem;
+        .card {
+            padding: 1rem 1.1rem;
         }
     }
 </style>

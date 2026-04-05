@@ -1,45 +1,186 @@
 ---
-import {Image} from "astro:assets"
 import Page from "./Page.astro";
-import IoLogoLinkedin from "../assets/photos/linkedin.svg";
 ---
-<Page>
-    <div class="vertical">
-        <div class="connect">Connect with me</div>
-        <div class="name">Achmad Arif Rachim</div>
-        <div class="info">
-            <div>a.arif.r@gmail.com</div>
-            <div>+971-50-901-8075</div>
-            <div>Dubai, United Arab Emirates</div>
+
+<Page id="contact" eyebrow="Contact">
+    <div class="cta">
+        <div class="cta-head">
+            <h2 class="title">Let's build something great together.</h2>
+            <p class="subtitle">
+                I'm open to interesting opportunities, collaborations, and
+                conversations. Drop a line — I reply to every message.
+            </p>
         </div>
-        <div class="margin-top-2rem">Find my resume <a href={'arif-rachim-cv.pdf'} aria-label={"Download arif rachim resume pdf"}>and download as pdf</a></div>
-        <div class="margin-top-2rem"><a  href={'https://ae.linkedin.com/in/arifrachim'} aria-label={'LinkedIn'}><Image class="logo" src={IoLogoLinkedin} alt="linked in icon"/> </a></div>
+
+        <div class="actions">
+            <a href="mailto:a.arif.r@gmail.com" class="btn btn-primary">
+                a.arif.r@gmail.com
+                <span aria-hidden="true">→</span>
+            </a>
+            <a href="arif-rachim-cv.pdf" class="btn btn-ghost" aria-label="Download CV as PDF">
+                Download CV
+                <span aria-hidden="true">↓</span>
+            </a>
+        </div>
+
+        <div class="info-grid">
+            <div class="info">
+                <span class="label">Email</span>
+                <span class="value">a.arif.r@gmail.com</span>
+            </div>
+            <div class="info">
+                <span class="label">Phone</span>
+                <span class="value">+971 50 901 8075</span>
+            </div>
+            <div class="info">
+                <span class="label">Location</span>
+                <span class="value">Dubai, UAE</span>
+            </div>
+            <div class="info">
+                <span class="label">LinkedIn</span>
+                <a class="value link" href="https://ae.linkedin.com/in/arifrachim" target="_blank" rel="me noopener noreferrer">
+                    /in/arifrachim ↗
+                </a>
+            </div>
+            <div class="info">
+                <span class="label">GitHub</span>
+                <a class="value link" href="https://github.com/arif-rachim" target="_blank" rel="me noopener noreferrer">
+                    /arif-rachim ↗
+                </a>
+            </div>
+        </div>
     </div>
 </Page>
+
 <style>
-    .logo{
-        width : 40px;
-        height : 40px;
+    .cta {
+        background: var(--ink);
+        color: var(--bg);
+        border-radius: var(--radius-lg);
+        padding: clamp(2rem, 5vw, 4rem);
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow-lg);
     }
-    .margin-top-2rem{
-        margin-top : 2rem
+
+    .cta::before {
+        content: "";
+        position: absolute;
+        top: -40%;
+        right: -20%;
+        width: 560px;
+        height: 560px;
+        background: radial-gradient(circle, rgba(255, 91, 46, 0.35), transparent 60%);
+        pointer-events: none;
     }
-    .info{
-        margin-top: 1.5rem;
-        color: #555;
+
+    .cta::after {
+        content: "";
+        position: absolute;
+        bottom: -40%;
+        left: -20%;
+        width: 440px;
+        height: 440px;
+        background: radial-gradient(circle, rgba(255, 91, 46, 0.12), transparent 60%);
+        pointer-events: none;
     }
-    .name{
-        font-weight: 700;
-        margin-top: 5rem;
+
+    .cta-head {
+        position: relative;
+        max-width: 640px;
+        margin-bottom: 2rem;
     }
-    .connect{
-        font-weight: 500;
-        font-size: 2.5rem;
-        line-height: 3rem;
+
+    .title {
+        font-size: var(--fs-2xl);
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75rem;
     }
-    .vertical{
+
+    .subtitle {
+        font-size: var(--fs-base);
+        color: rgba(255, 255, 255, 0.65);
+        line-height: 1.6;
+    }
+
+    .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2.5rem;
+        position: relative;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.9rem 1.5rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: var(--fs-sm);
+        text-decoration: none;
+        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary {
+        background: var(--accent);
+        color: var(--accent-ink);
+    }
+
+    .btn-primary:hover {
+        transform: translateY(-2px);
+        background: #ff6f46;
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: var(--bg);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-ghost:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    .info-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1.25rem 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .info {
         display: flex;
         flex-direction: column;
-        margin-bottom:35vh;
+        gap: 0.25rem;
+    }
+
+    .label {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .value {
+        font-size: var(--fs-sm);
+        font-weight: 500;
+        color: var(--bg);
+    }
+
+    .link {
+        text-decoration: none;
+        color: var(--accent);
+    }
+
+    .link:hover {
+        color: #ff8a5c;
     }
 </style>

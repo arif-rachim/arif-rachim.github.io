@@ -1,21 +1,28 @@
 ---
 import Page from "./Page.astro";
+
 const certifications: {
     name: string;
     organization: string;
     issued: string;
     url: string;
     description: string;
-    className: string;
 }[] = [
+    {
+        name: "Neo4j Certified Professional",
+        organization: "Neo4j",
+        issued: "April 2026",
+        url: "https://graphacademy.neo4j.com/c/9dcbd270-8acb-4c18-a1e2-00ac43632afb/",
+        description:
+            "Completed the Neo4j GraphAcademy professional track covering graph data modeling, Cypher query optimization, and applied graph solutions for complex relationship and logistics problems.",
+    },
     {
         name: "AI TensorFlow Developer Specialization",
         organization: "DeepLearning.AI",
         issued: "October 2020",
         url: "https://www.coursera.org/account/accomplishments/professional-cert/K7MXS6ZDJF55",
         description:
-            "Successfully completed all four courses within the DeepLearning.AI TensorFlow Developer Professional Certificate program. These include constructing and training neural networks using TensorFlow, enhancing network performance through convolutional techniques for real-world image recognition, instructing machines to comprehend, analyze, and interact with human speech using natural language processing systems, and acquiring knowledge in other essential TensorFlow concepts.",
-        className: "full-width",
+            "Completed all four courses in the DeepLearning.AI TensorFlow Developer Professional Certificate: building & training neural networks, CNNs for image recognition, NLP systems, and other essential TensorFlow concepts.",
     },
     {
         name: "Certified Arduino Fundamental",
@@ -23,17 +30,15 @@ const certifications: {
         url: "https://drive.google.com/file/d/12bJu4pl11P2YkUq3itGHuhMncNZZg8J2/view",
         organization: "Arduino",
         description:
-            "Arduino Certification is an online exam that provides official certification on the knowledge of Arduino related electronics, programming and physical computing.",
-        className: "half-width",
+            "Official Arduino certification covering electronics, programming and physical computing fundamentals.",
     },
     {
-        name: "API Management Concept",
+        name: "API Management Concepts",
         issued: "March 2018",
         url: "https://www.credly.com/badges/1fc4b1dd-4498-4b20-a814-a94892b7955e/linked_in_profile",
         organization: "IBM",
         description:
-            "Successfully completed the API Management Concepts certification issued by IBM, this badge holder demonstrates an understanding of the business and architectural concepts of API development.",
-        className: "half-width",
+            "Demonstrates an understanding of business and architectural concepts of API development.",
     },
     {
         name: "Architecting Google Compute Engine",
@@ -41,8 +46,7 @@ const certifications: {
         url: "https://www.coursera.org/account/accomplishments/specialization/H8B9NDMLL94X",
         organization: "Coursera",
         description:
-            "Successfully completed the 'Architecting with Google Compute Engine' specialization and gained an in-depth understanding of designing and deploying solutions, encompassing infrastructure components such as networks, systems, and application services. This practical experience was acquired within the versatile environment of the Google Cloud Platform, contributing to the development of expertise in cloud-based architectural design.",
-        className: "full-width",
+            "Specialization covering the design and deployment of solutions on Google Cloud Platform — networks, systems, and application services.",
     },
     {
         name: "Google Mobile Web Specialist",
@@ -50,26 +54,23 @@ const certifications: {
         url: "https://www.credential.net/9c990a3b-d9ea-4cfb-87f0-adedc97d366d?key=4bc0067199009ca60752c325bf03930e21091bcfeb38d4994e0fb68b57fe0066",
         organization: "Google",
         description:
-            " Google Certified Mobile Web Specialist certification, a performance-based examination evaluating expertise in developing and delivering superior mobile web experiences. This comprehensive exam encompasses various essential topics, including fundamental website layout and styling, front-end networking, accessibility standards, progressive web application development, progressive enhancement strategies, performance optimization, caching techniques, security best practices, rigorous testing, debugging methodologies, and JavaScript design principles. Obtaining this certification demonstrates the ability to apply these skills to real-world challenges within a timed setting, necessitating strong critical thinking and problem-solving capabilities under pressure.",
-        className: "full-width",
+            "Performance-based certification evaluating expertise in developing superior mobile web experiences: layout, networking, accessibility, PWAs, performance, caching, security, testing & JS design principles.",
     },
     {
-        name: "Advance CSS Concept",
+        name: "Advanced CSS Concepts",
         issued: "February 2018",
         url: "https://courses.edx.org/certificates/43312906e0fa4d10ba53a03cba5d9aa3",
         organization: "Microsoft",
         description:
-            "DEV218x: Advanced CSS Concepts, an online course by Microsoft on edX, instructed by seasoned developer Josh Bezdek. This comprehensive course covers advanced CSS topics, including Flexbox, CSS Grid, responsive design, Sass, SCSS, SVG images, and web development tools. The course consists of seven modules with video lectures, quizzes, exercises, and a final exam. It equips learners with skills for creating sophisticated and responsive web pages, efficient layouts, maintainable CSS, and error-free coding. ",
-        className: "full-width",
+            "DEV218x on edX: Flexbox, CSS Grid, responsive design, Sass/SCSS, SVG, and web development tooling.",
     },
     {
-        name: "Microservices Practitioner Essential",
+        name: "Microservices Practitioner Essentials",
         issued: "March 2018",
         url: "https://www.credly.com/badges/118f3f5a-9ed3-4d6b-b900-78489df6c14b/linked_in_profile",
         organization: "IBM",
         description:
-            "The earner of this badge has demonstrated the knowledge of Microservices Foundation skills. The individual has an understanding of Microservices architecture, how to refactor, design and develop applications and use Microservices Frameworks.",
-        className: "half-width",
+            "Knowledge of microservices architecture, refactoring, and developing applications with microservices frameworks.",
     },
     {
         name: "Docker Essentials",
@@ -77,234 +78,261 @@ const certifications: {
         url: "https://www.credly.com/badges/641bc0e2-4b27-4473-854b-ba35026f9e4f/linked_in_profile",
         organization: "IBM",
         description:
-            "Earners of this badge know what Docker containers are and their benefits. The individual knows how to run containers from Docker Hub, create Docker containers, and how to solve problems of orchestration (reconciliation, scaling, high availability, service discovery). The badge earner also understands best practices for using DockerFiles and how to use tools such as the IBM Cloud Kubernetes Service.",
-        className: "half-width",
+            "Running containers from Docker Hub, creating containers, orchestration (scaling, HA, service discovery), and Dockerfile best practices.",
     },
     {
-        name: "IBM Blockchain foundation Developer",
+        name: "IBM Blockchain Foundation Developer",
         issued: "January 2018",
         url: "https://www.credly.com/badges/da52b331-f6df-4407-8a9a-91e6bfe98d74/linked_in_profile",
         organization: "IBM",
         description:
-            "Earners of this badge have deep knowledge of blockchain concepts, such as smart contracts, ledgers, business networks, participants, and Hyperledger Composer. Badge earners also know how to model and build a simple blockchain network and a JavaScript application that queries the ledger",
-        className: "half-width",
+            "Blockchain concepts: smart contracts, ledgers, business networks, participants, and Hyperledger Composer.",
     },
     {
-        name: "Python for DataScience",
+        name: "Python for Data Science",
         issued: "January 2018",
         url: "https://www.credly.com/badges/0199436b-5cbb-4550-8638-e4d600ea7aaa/linked_in_profile",
         organization: "IBM",
         description:
-            "The individual holding this badge possesses the capability to independently create Python scripts and conduct fundamental hands-on data analysis within IBM's Jupyter-based laboratory environment.",
-        className: "half-width",
+            "Creating Python scripts and conducting fundamental hands-on data analysis within IBM's Jupyter-based lab environment.",
     },
     {
         name: "Sun Certified Programmer for Java 2 Platform",
         issued: "September 2007",
         url: "https://drive.google.com/file/d/1o57qOczdp90yW9C6bkmomSGCnQUXMZX9/view",
-        organization: "Sun Microsystem",
+        organization: "Sun Microsystems",
         description:
-            "Sun Certified Programmer for Java 2 Platform (SCJP) was a certification examination assessing proficiency in the Java programming language, evaluating the ability to write, compile, debug, and troubleshoot Java programs. Notably, the SCJP exam was officially retired in 2018, but it remains a valuable certification for Java developers seeking to showcase their expertise. The examination encompassed a wide range of topics, including Java language fundamentals, object-oriented programming, control flow, data structures, exception handling, I/O operations, multithreading, generics, annotations, JavaBeans, Servlets, JSP, and Enterprise JavaBeans.",
-        className: "full-width",
+            "SCJP — proficiency in Java: writing, compiling, debugging and troubleshooting programs, covering OOP, collections, exceptions, I/O, multithreading, and more.",
     },
 ];
 ---
 
-<Page>
-    <div class="container">
-        <div>
-            <div class="title">
-                <div>Education</div>
-                <div>& Certifications</div>
-            </div>
-        </div>
-        <div class="content">
-            <div class="vertical">
-                <div class="font-weight-600">
-                    BACHELOR OF ELECTRICAL ENGINEERING
+<Page id="education" eyebrow="Education & Certifications">
+    <div class="header-row">
+        <h2 class="title">Learning never stops.</h2>
+        <p class="subtitle">
+            Formal education and a continuous stream of industry certifications.
+        </p>
+    </div>
+
+    <div class="edu-grid">
+        <article class="edu-card">
+            <div class="edu-year">2000 — 2004</div>
+            <h3 class="edu-name">Bachelor of Electrical Engineering</h3>
+            <div class="edu-org">University of Indonesia</div>
+            <p class="edu-desc">
+                Major in Computer Engineering. Final Project: Distance Learning
+                System with J2EE.
+            </p>
+        </article>
+        <article class="edu-card">
+            <div class="edu-year">1997 — 2000</div>
+            <h3 class="edu-name">High School Diploma</h3>
+            <div class="edu-org">SMA Negeri 8, Jakarta</div>
+        </article>
+    </div>
+
+    <div class="sub-head">
+        <h3 class="sub-title">Certifications</h3>
+        <span class="count">{certifications.length} credentials</span>
+    </div>
+
+    <div class="cert-grid">
+        {certifications.map((c) => (
+            <a href={c.url} target="_blank" rel="noopener noreferrer" class="cert-card" aria-label={c.name}>
+                <div class="cert-top">
+                    <span class="cert-org">{c.organization}</span>
+                    <span class="cert-date">{c.issued}</span>
                 </div>
-                <div class="font-weight-300">Major in Computer Engineering</div>
-                <div class="university-title">
-                    UNIVERSITY OF INDONESIA (2000-2004)
-                </div>
-                <div class="final-project">
-                    Final Project : Distance Learning System With J2EE
-                </div>
-            </div>
-            <div class="vertical">
-                <div class="font-weight-600">HIGH SCHOOL DIPLOMA</div>
-                <div class="font-weight-700">
-                    SMA NEGERI 8, JAKARTA (1997-2000)
-                </div>
-            </div>
-            <div class="horizontal">
-                {
-                    certifications.map((c) => {
-                        return (
-                                <div class={c.className}>
-                                    <div class="certification-name">{c.name}</div>
-                                    <div class="certification-organization">
-                                        {c.organization}
-                                    </div>
-                                    <div class="certification-issued">
-                                        {c.issued}
-                                    </div>
-                                    <div class="certification-description">
-                                        {c.description}
-                                    </div>
-                                    <a
-                                        href={c.url}
-                                        class="certification-link"
-                                        aria-label={c.name}>
-                                        Show Credentials
-                                    </a>
-                                </div>
-                        );
-                    })
-                }
-            </div>
-        </div>
+                <h4 class="cert-name">{c.name}</h4>
+                <p class="cert-desc">{c.description}</p>
+                <span class="cert-link">
+                    View credential
+                    <span aria-hidden="true">↗</span>
+                </span>
+            </a>
+        ))}
     </div>
 </Page>
+
 <style>
-    .container {
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 5rem;
-    }
-
-    .university-title {
-        font-weight: 700;
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-    }
-
-    .final-project {
-        font-weight: 400;
-        font-size: 0.9rem;
-    }
-
-    .vertical {
+    .header-row {
         display: flex;
         flex-direction: column;
-    }
-
-    .horizontal {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: clamp(2rem, 4vw, 3rem);
     }
 
     .title {
-        display: flex;
-        flex-direction: column;
+        font-size: var(--fs-2xl);
         font-weight: 600;
-        font-size: 2rem;
-        line-height: 3rem;
-        position: sticky;
-        top: 5rem;
-        min-width: 25rem;
-        margin-bottom: 2rem;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
     }
 
-    .full-width {
-        width: 100%;
+    .subtitle {
+        font-size: var(--fs-base);
+        color: var(--muted);
+    }
+
+    .edu-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+
+    .edu-card {
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        padding-bottom: 5rem;
+        gap: 0.4rem;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .half-width {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        padding-bottom: 5rem;
-        padding-right: 2rem;
+    .edu-card:hover {
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
     }
 
-    .content {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        gap: 5rem;
+    .edu-year {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        font-weight: 500;
     }
 
-    .font-weight-600 {
+    .edu-name {
+        font-size: var(--fs-md);
         font-weight: 600;
+        line-height: 1.3;
     }
 
-    .certification-name {
+    .edu-org {
+        font-size: var(--fs-sm);
+        color: var(--muted);
+        font-weight: 500;
+    }
+
+    .edu-desc {
+        font-size: var(--fs-sm);
+        color: var(--muted);
+        margin-top: 0.3rem;
+    }
+
+    .sub-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sub-title {
+        font-size: var(--fs-lg);
+        font-weight: 600;
+        letter-spacing: -0.015em;
+    }
+
+    .count {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.75rem;
+        color: var(--muted);
+    }
+
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1rem;
+    }
+
+    .cert-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0.55rem;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.25rem 1.35rem;
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cert-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 91, 46, 0.06), transparent 50%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .cert-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+        border-color: var(--border-strong);
+    }
+
+    .cert-card:hover::before {
+        opacity: 1;
+    }
+
+    .cert-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .cert-org {
+        font-size: var(--fs-xs);
         font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ink-2);
     }
 
-    .certification-organization {
-        margin-top: 0.5rem;
+    .cert-date {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.7rem;
+        color: var(--muted);
+    }
+
+    .cert-name {
+        font-size: var(--fs-md);
         font-weight: 600;
-        font-size: 0.8rem;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
     }
 
-    .certification-description {
-        color: #555;
-        margin-top: 1rem;
+    .cert-desc {
+        font-size: var(--fs-sm);
+        color: var(--muted);
+        line-height: 1.55;
+        flex: 1;
     }
 
-    .certification-issued {
-        font-size: 0.8rem;
-        font-style: italic;
+    .cert-link {
+        font-size: var(--fs-xs);
+        font-weight: 600;
+        color: var(--accent);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 0.25rem;
     }
 
-    .certification-link {
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-    }
-
-    .font-weight-300 {
-        font-style: italic;
-        font-weight: 300;
-        font-size: 0.9rem;
-    }
-
-    .font-weight-700 {
-        font-weight: 700;
-        font-size: 0.8rem;
-        margin-top: 0.5rem;
-    }
-
-    @media screen and (max-width: 650px) {
-        .half-width {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            padding-right: 0;
-        }
-    }
-
-    @media screen and (max-width: 1028px) {
-        .title {
-            min-width: 15rem;
-            font-size: 1.8rem;
-            line-height: 2.1rem;
-        }
-    }
-
-    @media screen and (max-width: 900px) {
-        .title {
-            min-width: 9rem;
-            font-size: 1.5rem;
-            line-height: 2rem;
-        }
-    }
-
-    @media screen and (max-width: 900px) {
-        .container {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .title {
-            display: flex;
-            flex-direction: row;
-            gap: 0.5rem;
+    @media (max-width: 620px) {
+        .edu-grid {
+            grid-template-columns: 1fr;
         }
     }
 </style>

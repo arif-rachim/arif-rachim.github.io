@@ -1,42 +1,56 @@
 ---
+interface Props {
+    id?: string;
+    eyebrow?: string;
+    size?: "default" | "wide";
+    reveal?: boolean;
+}
 
+const {id, eyebrow, size = "default", reveal = true} = Astro.props;
 ---
-<div class="container">
-    <div class="content">
+
+<section id={id} class:list={["section", size]} data-reveal={reveal ? "" : undefined}>
+    <div class="section-inner">
+        {eyebrow && (
+            <div class="eyebrow">
+                <span class="eyebrow-dash"></span>
+                <span>{eyebrow}</span>
+            </div>
+        )}
         <slot/>
     </div>
-</div>
+</section>
+
 <style>
-    .container {
-        display: flex;
-        flex-direction: column;
-        padding: 0 5rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        max-width: 1024px;
+    .section {
         width: 100%;
+        padding: clamp(3rem, 6vw, 6rem) max(1rem, 5vw);
     }
 
-    @media screen and (max-width: 600px) {
-        .container {
-            padding: 0 4rem;
-        }
+    .section-inner {
+        width: min(1280px, 100%);
+        margin: 0 auto;
     }
 
-    @media screen and (max-width: 500px) {
-        .container {
-            padding: 0 3rem;
-        }
+    .section.wide .section-inner {
+        width: min(1440px, 100%);
     }
 
-    @media screen and (max-width: 400px) {
-        .container {
-            padding: 0 2rem;
-        }
+    .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-dash {
+        width: 28px;
+        height: 1px;
+        background: var(--accent);
     }
 </style>

@@ -1,0 +1,160 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - heading "Arif Rachim" [level=1] [ref=e4]
+    - heading "Fullstack Software Architect" [level=2] [ref=e5]
+    - link "reach out link" [ref=e7] [cursor=pointer]:
+      - /url: mailto:a.arif.r@gmail.com
+      - text: REACH OUT
+  - generic [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Seasoned Engineer" [level=1] [ref=e12]
+      - heading "More than 22 Years software development" [level=1] [ref=e13]
+      - generic [ref=e14]: I'm a software engineer with a focus on web-based systems and mobile apps, currently working on a component design system for an ERP solution with a web-based interface. I've had the privilege of collaborating with my team, contributing to component development, and going through several iterations to improve our implementation continually. Additionally, I've had the opportunity to share my knowledge and offer support to my colleagues, contributing to the growth of our team's skills in designing user-centric applications. I remain actively engaged in application development, committed to adapting to evolving user requirements for more effective solutions.
+    - img "Arif photo" [ref=e15]
+  - generic [ref=e18]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: Relevant
+      - generic [ref=e22]: Experience
+    - generic [ref=e24]: 2009 - current
+    - generic [ref=e25]:
+      - generic [ref=e26]: Front End Architect / Fullstack Engineer
+      - generic [ref=e27]: Global Aerospace Logistic, LLC
+      - generic [ref=e28]: Utilizing the React framework in order to methodically plan out, design, and construct design system components for an enterprise resource planning (ERP) application. This all-inclusive suite is comprised of more than 50 precisely built components, such as a DataGrid, DataLookup, DropDown, Slide Panel, and the program's Shell, which together provide a solid and adaptable basis for the application.
+      - generic [ref=e29]: Crafting user interface components for dynamic dashboards, exemplified by the Operation Dashboard. This entails skillfully integrating an array of features, including interactive charts and tabular data, all while enhancing the user experience with fluid animations and an aesthetically pleasing interface.
+      - generic [ref=e30]: Innovative development, design, and deployment of a mobile application with seamless offline functionality for aircraft pilots and technicians. This intuitive application enables users to efficiently record mission information, flight hours, faults, and scheduled inspections. Additionally, it synchronizes this vital information with the central ERP application using advanced encryption techniques for increased security.
+      - generic [ref=e31]: Building a Geographical Information System through the use of open-source technology called Apache Flex (formerly known as Adobe Flex), with the goal of enabling users to mark the location of aircraft as they are deployed and giving the system the name Fleet Location.
+      - generic [ref=e32]: Creating an innovative server health check monitoring system, harnessing socket technology to provide continuous, real-time data updates to clients, facilitating seamless server condition monitoring encompassing disk consumption, CPU utilization, and memory usage. This cutting-edge system operates tirelessly, ensuring 24/7 availability without interruption.
+      - generic [ref=e33]: Innovating the development of strong "File View" backend systems with the capability to convert many file formats, such as Microsoft Excel, Microsoft Word, and PowerPoint, into PDF files, and then transforming them further into SWF format. This protected method ensures that users are able to view the content without jeopardizing the system's security in any way by barring direct file downloads.
+      - generic [ref=e34]: Utilizing the capabilities of the React Framework and JavaScript to construct a reporting mechanism that is centered on the client and encapsulating it as a component that can be reused. This strategic step not only expedites report development but also frees it from dependence on legacy technologies like as Reporting Engine Server, which helps to streamline the process. Moreover, it speeds up report development.
+      - generic [ref=e35]: Developed a complex Scheduler component in order to provide the aircraft mission schedules in a manner known as Weekly Mission. Displayed great ability in drawing schedule blocks correctly and aligning them in a columnar structure, ensuring accurate portrayal of start and end timings of a schedule while maintaining high-performance rendering.
+      - generic [ref=e36]: Actively assisting colleagues in need of support when they encounter issues in implementing an attractive user interface, while also providing recommendations on the right approach to achieve optimal performance in front-end development.
+  - generic [ref=e39]:
+    - generic [ref=e41]:
+      - generic [ref=e42]: Education
+      - generic [ref=e43]: "& Certifications"
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: BACHELOR OF ELECTRICAL ENGINEERING
+        - generic [ref=e47]: Major in Computer Engineering
+        - generic [ref=e48]: UNIVERSITY OF INDONESIA (2000-2004)
+        - generic [ref=e49]: "Final Project : Distance Learning System With J2EE"
+      - generic [ref=e50]:
+        - generic [ref=e51]: HIGH SCHOOL DIPLOMA
+        - generic [ref=e52]: SMA NEGERI 8, JAKARTA (1997-2000)
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]: AI TensorFlow Developer Specialization
+          - generic [ref=e56]: DeepLearning.AI
+          - generic [ref=e57]: October 2020
+          - generic [ref=e58]: Successfully completed all four courses within the DeepLearning.AI TensorFlow Developer Professional Certificate program. These include constructing and training neural networks using TensorFlow, enhancing network performance through convolutional techniques for real-world image recognition, instructing machines to comprehend, analyze, and interact with human speech using natural language processing systems, and acquiring knowledge in other essential TensorFlow concepts.
+          - link "AI TensorFlow Developer Specialization" [ref=e59] [cursor=pointer]:
+            - /url: https://www.coursera.org/account/accomplishments/professional-cert/K7MXS6ZDJF55
+            - text: Show Credentials
+        - generic [ref=e60]:
+          - generic [ref=e61]: Certified Arduino Fundamental
+          - generic [ref=e62]: Arduino
+          - generic [ref=e63]: February 2020
+          - generic [ref=e64]: Arduino Certification is an online exam that provides official certification on the knowledge of Arduino related electronics, programming and physical computing.
+          - link "Certified Arduino Fundamental" [ref=e65] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/12bJu4pl11P2YkUq3itGHuhMncNZZg8J2/view
+            - text: Show Credentials
+        - generic [ref=e66]:
+          - generic [ref=e67]: API Management Concept
+          - generic [ref=e68]: IBM
+          - generic [ref=e69]: March 2018
+          - generic [ref=e70]: Successfully completed the API Management Concepts certification issued by IBM, this badge holder demonstrates an understanding of the business and architectural concepts of API development.
+          - link "API Management Concept" [ref=e71] [cursor=pointer]:
+            - /url: https://www.credly.com/badges/1fc4b1dd-4498-4b20-a814-a94892b7955e/linked_in_profile
+            - text: Show Credentials
+        - generic [ref=e72]:
+          - generic [ref=e73]: Architecting Google Compute Engine
+          - generic [ref=e74]: Coursera
+          - generic [ref=e75]: March 2018
+          - generic [ref=e76]: Successfully completed the 'Architecting with Google Compute Engine' specialization and gained an in-depth understanding of designing and deploying solutions, encompassing infrastructure components such as networks, systems, and application services. This practical experience was acquired within the versatile environment of the Google Cloud Platform, contributing to the development of expertise in cloud-based architectural design.
+          - link "Architecting Google Compute Engine" [ref=e77] [cursor=pointer]:
+            - /url: https://www.coursera.org/account/accomplishments/specialization/H8B9NDMLL94X
+            - text: Show Credentials
+        - generic [ref=e78]:
+          - generic [ref=e79]: Google Mobile Web Specialist
+          - generic [ref=e80]: Google
+          - generic [ref=e81]: March 2018
+          - generic [ref=e82]: Google Certified Mobile Web Specialist certification, a performance-based examination evaluating expertise in developing and delivering superior mobile web experiences. This comprehensive exam encompasses various essential topics, including fundamental website layout and styling, front-end networking, accessibility standards, progressive web application development, progressive enhancement strategies, performance optimization, caching techniques, security best practices, rigorous testing, debugging methodologies, and JavaScript design principles. Obtaining this certification demonstrates the ability to apply these skills to real-world challenges within a timed setting, necessitating strong critical thinking and problem-solving capabilities under pressure.
+          - link "Google Mobile Web Specialist" [ref=e83] [cursor=pointer]:
+            - /url: https://www.credential.net/9c990a3b-d9ea-4cfb-87f0-adedc97d366d?key=4bc0067199009ca60752c325bf03930e21091bcfeb38d4994e0fb68b57fe0066
+            - text: Show Credentials
+        - generic [ref=e84]:
+          - generic [ref=e85]: Advance CSS Concept
+          - generic [ref=e86]: Microsoft
+          - generic [ref=e87]: February 2018
+          - generic [ref=e88]: "DEV218x: Advanced CSS Concepts, an online course by Microsoft on edX, instructed by seasoned developer Josh Bezdek. This comprehensive course covers advanced CSS topics, including Flexbox, CSS Grid, responsive design, Sass, SCSS, SVG images, and web development tools. The course consists of seven modules with video lectures, quizzes, exercises, and a final exam. It equips learners with skills for creating sophisticated and responsive web pages, efficient layouts, maintainable CSS, and error-free coding."
+          - link "Advance CSS Concept" [ref=e89] [cursor=pointer]:
+            - /url: https://courses.edx.org/certificates/43312906e0fa4d10ba53a03cba5d9aa3
+            - text: Show Credentials
+        - generic [ref=e90]:
+          - generic [ref=e91]: Microservices Practitioner Essential
+          - generic [ref=e92]: IBM
+          - generic [ref=e93]: March 2018
+          - generic [ref=e94]: The earner of this badge has demonstrated the knowledge of Microservices Foundation skills. The individual has an understanding of Microservices architecture, how to refactor, design and develop applications and use Microservices Frameworks.
+          - link "Microservices Practitioner Essential" [ref=e95] [cursor=pointer]:
+            - /url: https://www.credly.com/badges/118f3f5a-9ed3-4d6b-b900-78489df6c14b/linked_in_profile
+            - text: Show Credentials
+        - generic [ref=e96]:
+          - generic [ref=e97]: Docker Essentials
+          - generic [ref=e98]: IBM
+          - generic [ref=e99]: February 2018
+          - generic [ref=e100]: Earners of this badge know what Docker containers are and their benefits. The individual knows how to run containers from Docker Hub, create Docker containers, and how to solve problems of orchestration (reconciliation, scaling, high availability, service discovery). The badge earner also understands best practices for using DockerFiles and how to use tools such as the IBM Cloud Kubernetes Service.
+          - link "Docker Essentials" [ref=e101] [cursor=pointer]:
+            - /url: https://www.credly.com/badges/641bc0e2-4b27-4473-854b-ba35026f9e4f/linked_in_profile
+            - text: Show Credentials
+        - generic [ref=e102]:
+          - generic [ref=e103]: IBM Blockchain foundation Developer
+          - generic [ref=e104]: IBM
+          - generic [ref=e105]: January 2018
+          - generic [ref=e106]: Earners of this badge have deep knowledge of blockchain concepts, such as smart contracts, ledgers, business networks, participants, and Hyperledger Composer. Badge earners also know how to model and build a simple blockchain network and a JavaScript application that queries the ledger
+          - link "IBM Blockchain foundation Developer" [ref=e107] [cursor=pointer]:
+            - /url: https://www.credly.com/badges/da52b331-f6df-4407-8a9a-91e6bfe98d74/linked_in_profile
+            - text: Show Credentials
+        - generic [ref=e108]:
+          - generic [ref=e109]: Python for DataScience
+          - generic [ref=e110]: IBM
+          - generic [ref=e111]: January 2018
+          - generic [ref=e112]: The individual holding this badge possesses the capability to independently create Python scripts and conduct fundamental hands-on data analysis within IBM's Jupyter-based laboratory environment.
+          - link "Python for DataScience" [ref=e113] [cursor=pointer]:
+            - /url: https://www.credly.com/badges/0199436b-5cbb-4550-8638-e4d600ea7aaa/linked_in_profile
+            - text: Show Credentials
+        - generic [ref=e114]:
+          - generic [ref=e115]: Sun Certified Programmer for Java 2 Platform
+          - generic [ref=e116]: Sun Microsystem
+          - generic [ref=e117]: September 2007
+          - generic [ref=e118]: Sun Certified Programmer for Java 2 Platform (SCJP) was a certification examination assessing proficiency in the Java programming language, evaluating the ability to write, compile, debug, and troubleshoot Java programs. Notably, the SCJP exam was officially retired in 2018, but it remains a valuable certification for Java developers seeking to showcase their expertise. The examination encompassed a wide range of topics, including Java language fundamentals, object-oriented programming, control flow, data structures, exception handling, I/O operations, multithreading, generics, annotations, JavaBeans, Servlets, JSP, and Enterprise JavaBeans.
+          - link "Sun Certified Programmer for Java 2 Platform" [ref=e119] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1o57qOczdp90yW9C6bkmomSGCnQUXMZX9/view
+            - text: Show Credentials
+  - generic [ref=e122]:
+    - generic [ref=e123]: Connect with me
+    - generic [ref=e124]: Achmad Arif Rachim
+    - generic [ref=e125]:
+      - generic [ref=e126]: a.arif.r@gmail.com
+      - generic [ref=e127]: +971-50-901-8075
+      - generic [ref=e128]: Dubai, United Arab Emirates
+    - generic [ref=e129]:
+      - text: Find my resume
+      - link "Download arif rachim resume pdf" [ref=e130] [cursor=pointer]:
+        - /url: arif-rachim-cv.pdf
+        - text: and download as pdf
+    - link "LinkedIn" [ref=e132] [cursor=pointer]:
+      - /url: https://ae.linkedin.com/in/arifrachim
+      - img "linked in icon" [ref=e133]
+  - generic [ref=e136]:
+    - button "Menu" [ref=e137]:
+      - img [ref=e139]
+      - generic: Menu
+    - button "Inspect" [ref=e143]:
+      - img [ref=e145]
+      - generic: Inspect
+    - button "Audit" [ref=e147]:
+      - img [ref=e149]
+      - generic: Audit
+    - button "Settings" [ref=e153]:
+      - img [ref=e155]
+      - generic: Settings

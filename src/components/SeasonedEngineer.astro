@@ -1,86 +1,104 @@
 ---
 import Page from "./Page.astro";
-import {Image} from "astro:assets";
-import arif from "../assets/photos/arif-photo.jpg";
 const years = new Date().getFullYear() - 2004;
+
+const skills = [
+    "RAG", "LLMs", "MCP", "Vector DBs",
+    "Neo4j", "ChromaDB", "Python", "Prompt Engineering",
+    "React", "TypeScript", "Node.js", "Design Systems",
+    "Astro", "Next.js", "Java", "TensorFlow",
+    "Docker", "PWA",
+];
 ---
 
-<Page>
-    <div class="container">
-        <div class="vertical">
-            <h1 class="title">Seasoned Engineer</h1>
-            <h1 class="sub-title">
-                More than {years} Years software development
-            </h1>
-            <div class="description">
-                I'm a software engineer with a focus on web-based systems and
-                mobile apps, currently working on a component design system for
-                an ERP solution with a web-based interface. I've had the
-                privilege of collaborating with my team, contributing to
-                component development, and going through several iterations to
-                improve our implementation continually. Additionally, I've had
-                the opportunity to share my knowledge and offer support to my
-                colleagues, contributing to the growth of our team's skills in
-                designing user-centric applications. I remain actively engaged
-                in application development, committed to adapting to evolving
-                user requirements for more effective solutions.
+<Page id="about" eyebrow="About">
+    <div class="about">
+        <div class="headline">
+            <h2 class="title">
+                <span class="accent">{years} years</span> of production software.
+                Now leading AI, data, and platform work where off-the-shelf tutorials don't apply.
+            </h2>
+        </div>
+        <div class="body">
+            <p class="description">
+                I spent two decades building web platforms, design systems,
+                and mobile apps. As Principal Application Developer I now lead
+                AI, data, and platform work — end-to-end RAG, LLM tool
+                orchestration, SQL and database optimization, custom
+                frontends, and cross-team integration — inside air-gapped,
+                regulated networks where most AI tooling isn't designed to
+                run.
+            </p>
+            <p class="description">
+                Research-first, prototype fast, iterate with the team. I drive
+                architectural decisions end-to-end and mentor engineers on
+                SQL, RAG, graph modeling, and tool design — while staying
+                hands-on with the code that matters.
+            </p>
+            <div class="skills">
+                {skills.map((s) => <span class="chip">{s}</span>)}
             </div>
         </div>
-        <Image src={arif} class="photo" alt={"Arif photo"}/>
     </div>
 </Page>
+
 <style>
-    .container {
-        display: flex;
-        flex-direction: row;
-        gap: 5rem;
-        align-items: center;
-        margin-bottom: 5rem;
-    }
-
-    .vertical {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .photo {
-        width: 375px;
-        height: 375px;
-        border-radius: 50rem;
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr;
+        gap: clamp(2rem, 5vw, 4.5rem);
+        align-items: start;
     }
 
     .title {
+        font-size: var(--fs-2xl);
         font-weight: 600;
-        font-size: 2rem;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
     }
 
-    .sub-title {
-        font-weight: 600;
-        font-size: 1rem;
+    .accent {
+        color: var(--accent);
+    }
+
+    .body {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
     }
 
     .description {
-        margin-top: 2rem;
+        font-size: var(--fs-base);
+        color: var(--muted);
+        line-height: 1.7;
     }
 
-    @media only screen and (max-width: 850px) {
-        .container {
-            flex-direction: column;
-            gap: 3rem;
-        }
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
     }
 
-    @media only screen and (max-width: 1000px) {
-        .photo {
-            width: 300px;
-            height: 300px;
-        }
+    .chip {
+        padding: 0.4rem 0.9rem;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: var(--fs-xs);
+        font-weight: 500;
+        color: var(--ink-2);
+        transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    @media only screen and (max-width: 450px) {
-        .photo {
-            width: 250px;
-            height: 250px;
+    .chip:hover {
+        border-color: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 820px) {
+        .about {
+            grid-template-columns: 1fr;
         }
     }
 </style>

@@ -1,48 +1,339 @@
 ---
 import Page from "./Page.astro";
+import {Image} from "astro:assets";
+import arif from "../assets/photos/arif-photo.jpg";
+const years = new Date().getFullYear() - 2004;
 ---
 
-<Page>
-    <h1 class="title">Arif Rachim</h1>
-    <h2 class="sub-title">Fullstack Software Architect</h2>
-    <div class="mail-to">
-        <a
-                href={"mailto:a.arif.r@gmail.com"}
-                aria-label={"reach out link"}>REACH OUT</a>
+<Page reveal={false}>
+    <div class="hero">
+        <div class="hero-text">
+            <div class="status">
+                <span class="status-dot"></span>
+                Available for new opportunities
+            </div>
+            <h1 class="title">
+                Building AI where
+                <span class="title-accent">the internet</span>
+                doesn't reach.
+            </h1>
+            <p class="kicker">
+                Principal Application Developer · AI &amp; Platform · {years}+ years of production software · Dubai
+            </p>
+            <p class="lede">
+                I design end-to-end RAG pipelines, LLM tool orchestration, and
+                graph-based logistics — deployed inside air-gapped,
+                mission-critical intranets where off-the-shelf AI tutorials
+                don't apply.
+            </p>
+            <div class="cta-row">
+                <a href="mailto:a.arif.r@gmail.com" class="btn btn-primary">
+                    Reach out
+                    <span aria-hidden="true">→</span>
+                </a>
+                <a href="#projects" class="btn btn-ghost">See my work</a>
+            </div>
+            <div class="meta">
+                <div class="meta-item">
+                    <div class="meta-num">{years}+</div>
+                    <div class="meta-label">Years in production</div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <div class="meta-num">500GB+</div>
+                    <div class="meta-label">RAG corpus shipped</div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <div class="meta-num">11</div>
+                    <div class="meta-label">Certifications</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-media" aria-hidden="false">
+            <div class="photo-ring">
+                <Image src={arif} class="photo" alt="Arif Rachim — Principal Application Developer based in Dubai, UAE"/>
+            </div>
+            <svg class="ring-labels" viewBox="0 0 500 500" aria-hidden="true">
+                <defs>
+                    <path id="arcTop" d="M 35 250 A 215 215 0 0 1 465 250" fill="none"/>
+                    <path id="arcBottom" d="M 35 250 A 215 215 0 0 0 465 250" fill="none"/>
+                </defs>
+                <text>
+                    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">
+                        · BASED IN DUBAI, UAE ·
+                    </textPath>
+                </text>
+                <text>
+                    <textPath href="#arcBottom" side="right" startOffset="50%" text-anchor="middle">
+                        NEXT · REACT · PYTHON · LLMs
+                    </textPath>
+                </text>
+            </svg>
+        </div>
     </div>
 </Page>
+
 <style>
-    .title {
-        margin-top: 30vh;
-        font-weight: 600;
-        font-size: 5rem;
-        text-align: center;
-        line-height: 4rem;
+    .hero {
+        display: grid;
+        grid-template-columns: 1.25fr 1fr;
+        gap: clamp(2rem, 5vw, 4.5rem);
+        align-items: center;
+        padding-top: clamp(1rem, 4vw, 3rem);
     }
 
-    .sub-title {
-        font-weight: 400;
-        font-size: 2.1rem;
-        text-align: center;
-        line-height: 2rem;
-        margin-top: 1.2rem;
-    }
-
-    .mail-to {
+    .hero-text {
         display: flex;
-        justify-content: center;
-        margin-bottom: 20vh;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    a {
-        margin-top: 2.5rem;
-        background-color: #010101;
-        color: #fff;
-        font-size: 1rem;
+    /* --- staggered entrance on load --- */
+    @keyframes rise {
+        from {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .hero-text > * {
+        opacity: 0;
+        animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    .hero-text > :nth-child(1) { animation-delay: 0.05s; }
+    .hero-text > :nth-child(2) { animation-delay: 0.15s; }
+    .hero-text > :nth-child(3) { animation-delay: 0.25s; }
+    .hero-text > :nth-child(4) { animation-delay: 0.35s; }
+    .hero-text > :nth-child(5) { animation-delay: 0.45s; }
+    .hero-text > :nth-child(6) { animation-delay: 0.55s; }
+
+    .hero-media {
+        opacity: 0;
+        animation: rise 1.1s 0.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .hero-text > *,
+        .hero-media {
+            opacity: 1 !important;
+            animation: none !important;
+        }
+    }
+
+    .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.45rem 0.85rem;
+        background: var(--bg-elev);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        font-size: var(--fs-xs);
+        font-weight: 500;
+        color: var(--muted);
+        width: fit-content;
+        box-shadow: var(--shadow-sm);
+    }
+
+    .status-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
+        animation: pulse 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+    }
+
+    .title {
+        font-size: var(--fs-hero);
         font-weight: 700;
-        padding: 0.7rem 4rem;
-        cursor: pointer;
+        line-height: 0.95;
+        letter-spacing: -0.035em;
+    }
+
+    .kicker {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: var(--fs-xs);
+        color: var(--muted);
+        letter-spacing: 0.02em;
+        margin-top: -0.25rem;
+    }
+
+    .title-accent {
+        font-style: italic;
+        font-weight: 500;
+        background: linear-gradient(120deg, var(--accent), #ff8a5c);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .lede {
+        font-size: var(--fs-md);
+        color: var(--muted);
+        max-width: 50ch;
+        line-height: 1.6;
+    }
+
+    .cta-row {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-top: 0.25rem;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.85rem 1.4rem;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: var(--fs-sm);
         text-decoration: none;
-        text-align: center;
+        transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary {
+        background: var(--ink);
+        color: var(--bg);
+    }
+
+    .btn-primary:hover {
+        background: var(--accent);
+        transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+        background: transparent;
+        color: var(--ink);
+        border: 1px solid var(--border-strong);
+    }
+
+    .btn-ghost:hover {
+        background: var(--bg-elev);
+        transform: translateY(-2px);
+    }
+
+    .meta {
+        display: flex;
+        align-items: center;
+        gap: clamp(0.8rem, 2.5vw, 1.8rem);
+        margin-top: 1.25rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+    }
+
+    .meta-num {
+        font-size: var(--fs-lg);
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+
+    .meta-label {
+        font-size: var(--fs-xs);
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    .meta-divider {
+        width: 1px;
+        height: 28px;
+        background: var(--border);
+    }
+
+    /* media */
+    .hero-media {
+        position: relative;
+        aspect-ratio: 1 / 1;
+        width: clamp(280px, 36vw, 500px);
+        margin-left: auto;
+        justify-self: end;
+    }
+
+    .photo-ring {
+        position: absolute;
+        inset: 12%;
+        border-radius: 50%;
+        padding: 6px;
+        box-shadow: var(--shadow-lg);
+        isolation: isolate;
+    }
+
+    .photo-ring::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        background: conic-gradient(from 180deg, var(--accent), #ffb199, var(--ink), var(--accent));
+        z-index: -1;
+    }
+
+    /* curved perimeter labels */
+    .ring-labels {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        pointer-events: none;
+    }
+
+    .ring-labels text {
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 22px;
+        font-weight: 600;
+        fill: var(--ink);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    .photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        background: var(--bg-elev);
+    }
+
+    @media (max-width: 860px) {
+        .hero {
+            grid-template-columns: 1fr;
+            text-align: left;
+        }
+
+        .hero-media {
+            order: -1;
+            width: clamp(260px, 70vw, 360px);
+            margin: 0 auto;
+            justify-self: center;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .meta {
+            gap: 0.8rem;
+        }
+
+        .meta-divider {
+            height: 22px;
+        }
+
+        .ring-labels text {
+            font-size: 24px;
+        }
     }
 </style>
