@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#001020"/>
+      <stop offset="45%" stop-color="#002a40"/>
+      <stop offset="100%" stop-color="#003a55"/>
+    </linearGradient>
+    <linearGradient id="icon-g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00658d"/>
+      <stop offset="100%" stop-color="#00aeef"/>
+    </linearGradient>
+    <linearGradient id="text-g" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00aeef"/>
+      <stop offset="100%" stop-color="#7dd3fc"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="950" cy="315" r="420" fill="#00aeef" fill-opacity="0.04"/>
+  <circle cx="200" cy="80"  r="250" fill="#00aeef" fill-opacity="0.03"/>
+
+  <!-- Favicon icon (T mark) -->
+  <rect x="80" y="80" width="68" height="68" rx="16" fill="url(#icon-g)"/>
+  <rect x="95"  y="101" width="38" height="9"  rx="4" fill="white"/>
+  <rect x="110" y="110" width="8"  width="8" height="22" rx="4" fill="white"/>
+
+  <!-- Brand name -->
+  <text
+    x="80" y="285"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-weight="800" font-size="104" fill="white" letter-spacing="-4"
+  >TapMeja</text>
+
+  <!-- Headline line 1 -->
+  <text
+    x="80" y="362"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-weight="400" font-size="40" fill="rgba(255,255,255,0.5)"
+  >Food court,</text>
+
+  <!-- Headline line 2 — gradient -->
+  <text
+    x="80" y="416"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-weight="700" font-size="40" fill="url(#text-g)"
+  >reimagined.</text>
+
+  <!-- Divider rule -->
+  <rect x="80" y="452" width="56" height="2" rx="1" fill="#00aeef" fill-opacity="0.45"/>
+
+  <!-- Feature tags -->
+  <text
+    x="80" y="498"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-size="22" fill="rgba(255,255,255,0.28)" letter-spacing="2.5"
+  >QRIS · Real-time · Multi-Merchant · KDS · Runner</text>
+
+  <!-- Credit -->
+  <text
+    x="80" y="582"
+    font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif"
+    font-size="18" fill="rgba(255,255,255,0.18)"
+  >Didesain &amp; dikembangkan oleh rach.im</text>
+
+  <!-- Phone silhouette (right side) -->
+  <rect x="856" y="55"  width="274" height="520" rx="44" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1.5"/>
+  <rect x="876" y="85"  width="234" height="460" rx="28" fill="rgba(255,255,255,0.025)"/>
+  <!-- Notch -->
+  <rect x="962" y="85"  width="62"  height="18"  rx="9"  fill="#001020" fill-opacity="0.6"/>
+  <!-- Screen shimmer lines -->
+  <rect x="900" y="130" width="140" height="8"  rx="4" fill="rgba(255,255,255,0.06)"/>
+  <rect x="900" y="150" width="100" height="8"  rx="4" fill="rgba(255,255,255,0.04)"/>
+  <rect x="900" y="200" width="155" height="60" rx="12" fill="rgba(255,255,255,0.04)"/>
+  <rect x="900" y="280" width="155" height="60" rx="12" fill="rgba(255,255,255,0.04)"/>
+  <rect x="900" y="360" width="155" height="60" rx="12" fill="rgba(255,255,255,0.04)"/>
+  <!-- Bottom nav dots -->
+  <circle cx="920" cy="490" r="6" fill="rgba(0,174,239,0.4)"/>
+  <circle cx="950" cy="490" r="6" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="980" cy="490" r="6" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1010" cy="490" r="6" fill="rgba(255,255,255,0.1)"/>
+</svg>

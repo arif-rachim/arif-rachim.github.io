@@ -6,22 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="aabd34b8-bc89-4e25-99f0-1d80930edecf" name="Changes" comment="Configure IntelliJ IDEA project files for arif-rachim.github.io">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astro.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/astro.config.mjs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/index.vs3erzY5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/assets/linkedin.DHifK0AR_1ljJxB.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/robots.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Contact.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contact.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Education.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Education.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Experience.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Experience.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LandingPage.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LandingPage.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Page.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Page.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SeasonedEngineer.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SeasonedEngineer.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layouts/Layout.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/layouts/Layout.astro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.astro" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.astro" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +54,11 @@
     "npm.build.executor": "Run",
     "ts.external.directory.path": "C:\\Users\\arif\\WebstormProjects\\arif-rachim.github.io\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -126,7 +115,8 @@
       <workItem from="1757302130348" duration="21000" />
       <workItem from="1759633537598" duration="79000" />
       <workItem from="1759633714595" duration="911000" />
-      <workItem from="1775386033033" duration="1304000" />
+      <workItem from="1775386033033" duration="2007000" />
+      <workItem from="1775479713637" duration="2990000" />
     </task>
     <task id="LOCAL-00001" summary="Remove CNAME and unused SVG icon&#10;&#10;Deleted the CNAME file from the docs directory, which contained the custom domain name. Also removed an unused SVG icon file from the assets directory to clean up unnecessary files in the repository.">
       <option name="closed" value="true" />
@@ -173,6 +163,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update changes" />
